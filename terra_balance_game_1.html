@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terra Balance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#080f09;min-height:100vh;display:flex;justify-content:center;padding:16px}
+  #tb{font-family:'EB Garamond',serif;color:#e9d8a6;padding:14px;background:#080f09;border-radius:12px;width:100%;max-width:720px}
+  h1{font-family:'Cinzel',serif;color:#c9a227;font-size:18px;letter-spacing:.06em}
+  .tb-panel{background:#0d1a10;border:1px solid #1a3320;border-radius:10px;padding:11px 13px;margin-bottom:10px}
+  .tb-label{font-family:'Cinzel',serif;color:#c9a227;font-size:10px;letter-spacing:.1em;margin-bottom:7px}
+  .bar-wrap{margin-bottom:7px}
+  .bar-row{display:flex;justify-content:space-between;font-size:11px;color:#6d9470;margin-bottom:3px}
+  .bar-bg{background:#050c06;border-radius:3px;height:5px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:3px;transition:width .5s}
+  .sbtn{display:block;width:100%;background:#0a1a0d;border:1px solid #1a3320;border-radius:8px;padding:8px 10px;cursor:pointer;text-align:left;color:#e9d8a6;margin-bottom:5px;font-family:'EB Garamond',serif;transition:border-color .15s,background .15s}
+  .sbtn:hover{border-color:#52b788;background:#0f2014}
+  .cbtn{display:block;width:100%;background:#0a1a0d;border:1px solid #1a3320;border-radius:8px;padding:10px 12px;cursor:pointer;text-align:left;color:#e9d8a6;margin-bottom:6px;font-family:'EB Garamond',serif;transition:border-color .15s,background .15s}
+  .cbtn:hover{border-color:#c9a227;background:#151f0e}
+  .skipbtn{width:100%;background:transparent;border:1px solid #1a3320;border-radius:8px;padding:8px;color:#6d9470;cursor:pointer;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.04em;margin-top:4px}
+  .skipbtn:hover{background:#0f2014}
+  .map-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+  .map-cell{aspect-ratio:1;background:#050c06;border:1px solid #0a1a0d;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:15px;color:#6d9470}
+  .map-cell.filled{border-color:#1a3320}
+  .log-entry{font-size:12px;padding:3px 0;border-bottom:1px solid #0a1a0d;line-height:1.4;color:#6d9470}
+  .log-entry.first{color:#e9d8a6}
+  .fact-box{background:#0e2414;border:1px solid rgba(82,183,136,.3);border-radius:10px;padding:12px 14px;margin-top:10px}
+  .fact-title{font-family:'Cinzel',serif;color:#52b788;font-size:9px;letter-spacing:.12em;margin-bottom:5px}
+  .fact-text{color:#e9d8a6;font-size:13px;line-height:1.65}
+  .two-col{display:grid;grid-template-columns:1fr 1.1fr;gap:10px}
+  .yr-bar{background:#050c06;border-radius:3px;height:4px;margin-bottom:10px;overflow:hidden}
+  .yr-fill{height:100%;background:linear-gradient(90deg,#52b788,#c9a227);transition:width .5s}
+  .deficit-warn{color:#e63946;font-size:11px;text-align:center;margin-top:6px}
+  .over-screen{text-align:center;padding:24px 16px}
+  .over-icon{font-size:56px;margin-bottom:8px}
+  .over-title{font-family:'Cinzel',serif;font-size:22px;margin-bottom:10px}
+  .over-body{font-size:14px;line-height:1.7;margin-bottom:18px;color:#e9d8a6}
+  .over-stats{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+  .stat-card{background:#050c06;border-radius:8px;padding:10px 12px;text-align:center}
+  .restart-btn{background:#c9a227;color:#000;border:none;border-radius:8px;padding:11px 28px;font-family:'Cinzel',serif;font-size:12px;font-weight:600;cursor:pointer;letter-spacing:.05em}
+  .sname{font-family:'Cinzel',serif;font-size:11px;color:#c9a227;letter-spacing:.03em}
+  .sfx{font-size:10px;color:#6d9470;margin-top:3px;display:flex;flex-wrap:wrap;gap:3px 7px}
+  .evt-title{font-family:'Cinzel',serif;color:#f4a261;font-size:13px;margin-bottom:6px;letter-spacing:.03em}
+  .evt-desc{font-size:13px;line-height:1.65;margin-bottom:12px}
+  .choice-fx{font-size:10px;color:#6d9470;margin-top:4px;display:flex;gap:7px}
+  @media(max-width:520px){.two-col{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="tb">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+    <div><h1>Terra Balance</h1><div style="color:#6d9470;font-size:11px;margin-top:2px">Energy · Ecology · Civilization</div></div>
+    <div style="text-align:right"><div id="yr-disp" style="font-family:'Cinzel',serif;color:#c9a227;font-size:26px;font-weight:600;line-height:1">Yr 1</div><div style="color:#6d9470;font-size:11px">of 20</div></div>
+  </div>
+  <div class="yr-bar"><div class="yr-fill" id="yr-prog" style="width:0%"></div></div>
+  <div id="main-area"></div>
+</div>
+
+<script>
+const STRUCT={
+  coal:{name:"Coal Plant",icon:"🏭",ep:30,ed:0,n:-18,f:0,p:15,fact:"Coal produces 2.2 lbs of CO₂ per kWh — the most polluting energy source. One plant can power 10,000 homes, but reduces the life expectancy of nearby residents by 1.5 years on average."},
+  solar:{name:"Solar Array",icon:"☀️",ep:18,ed:0,n:3,f:0,p:5,fact:"Solar panel costs dropped 90% from 2010 to 2020. It is now the cheapest electricity source in history. A single panel can operate for 25–30 years with virtually zero fuel cost."},
+  wind:{name:"Wind Farm",icon:"🌬️",ep:14,ed:0,n:4,f:0,p:4,fact:"Wind turbines coexist beautifully with farmland — crops grow right up to the base. Wind power uses 98% less water than coal and creates 3× more jobs per dollar invested."},
+  hydro:{name:"Hydro Dam",icon:"💧",ep:22,ed:0,n:-8,f:0,p:10,fact:"Hydropower is reliable 24/7, unlike solar or wind. But large dams flood ecosystems and block fish migration. Run-of-river designs are a far gentler alternative."},
+  residential:{name:"Housing District",icon:"🏘️",ep:0,ed:18,n:-5,f:0,p:35,fact:"Buildings consume 40% of global energy. Passive house design can slash heating needs by 90%. Green roofs reduce city temperatures by up to 5°C and cut stormwater runoff by 80%."},
+  forest:{name:"Forest Preserve",icon:"🌲",ep:0,ed:-2,n:22,f:6,p:0,fact:"One acre of forest absorbs 2.5 tons of CO₂ per year. Old-growth forests store 4× more carbon than young plantations, and host 80% of Earth's terrestrial biodiversity."},
+  farm:{name:"Eco Farm",icon:"🌾",ep:0,ed:4,n:5,f:22,p:0,fact:"Regenerative farming rebuilds soil while sequestering carbon. A teaspoon of healthy soil contains more organisms than there are humans on Earth — and we've lost half our topsoil in 150 years."},
+  research:{name:"Research Hub",icon:"🔬",ep:0,ed:6,n:4,f:0,p:8,fact:"Every $1 invested in clean energy R&D returns $3–10 in economic benefit. Knowledge compounds — each breakthrough enables the next generation of solutions."},
+  geothermal:{name:"Geothermal Plant",icon:"🌋",ep:24,ed:0,n:8,f:0,p:6,fact:"Iceland generates 30% of its electricity and nearly all its heating from geothermal energy — with near-zero emissions. The Earth's core has been producing heat for 4.5 billion years."},
+  wetland:{name:"Wetland Restore",icon:"🦢",ep:0,ed:0,n:28,f:10,p:0,fact:"Wetlands store more carbon per acre than tropical rainforests, naturally filter water, prevent flooding, and support 40% of all species — yet half have been destroyed since 1900."},
+};
+const EVENTS=[
+  {id:"drought",title:"Severe Drought 🌵",desc:"Extended drought is threatening crops and water supplies across your region.",choices:[
+    {text:"Build rainwater harvesting systems",ef:{e:0,n:-3,f:-8},fact:"Rainwater harvesting can cut municipal water demand by 40%. In Ethiopia, community water harvesting transformed arid hillsides into productive farmland and ended seasonal water crises."},
+    {text:"Divert a nearby river (fast fix)",ef:{e:5,n:-22,f:0},fact:"The Aral Sea — once Earth's 4th largest lake — virtually disappeared after Soviet engineers diverted its rivers for irrigation. An entire ecosystem and fishing industry were erased in 60 years."},
+  ]},
+  {id:"oil",title:"Oil Discovery! 🛢️",desc:"Vast oil reserves have been found beneath your territory. Extract for quick energy, or protect the land?",choices:[
+    {text:"Extract and use the oil",ef:{e:35,n:-25,f:0},fact:"To limit warming to 1.5°C, 60% of known oil reserves must stay in the ground. Norway invested its oil wealth into a sovereign fund for renewables — now worth over $1.4 trillion."},
+    {text:"Leave it in the ground",ef:{e:0,n:12,f:0},fact:"The concept of 'stranded assets' — fossil fuels that can never be burned — represents trillions in value locked away for climate safety. Restraint is sometimes the most powerful form of wealth."},
+  ]},
+  {id:"species",title:"Species Crisis 🦅",desc:"A keystone species is on the brink of extinction. Its loss could cascade through your entire food web.",choices:[
+    {text:"Create a wildlife corridor",ef:{e:0,n:18,f:5},fact:"When wolves returned to Yellowstone in 1995, rivers literally changed course. Wolves changed deer behavior, plants regrew along riverbanks, and stabilized water flow. One species transformed an entire landscape."},
+    {text:"Prioritize development instead",ef:{e:0,n:-20,f:-10},fact:"Biodiversity loss costs the global economy $2–5 trillion annually in lost ecosystem services: pollination, water purification, flood control, and climate regulation — services nature provides for free."},
+  ]},
+  {id:"heatwave",title:"Record Heatwave 🌡️",desc:"Unprecedented temperatures are straining your energy grid and threatening lives.",choices:[
+    {text:"Plant an urban tree canopy",ef:{e:-5,n:12,f:3},fact:"A single mature tree cools the air equivalent to 10 room-sized air conditioners running for 20 hours. Cities with 30% tree cover are up to 5°C cooler than treeless neighborhoods."},
+    {text:"Max out all power plants",ef:{e:20,n:-15,f:0},fact:"The cooling trap: more heat → more air conditioning → more emissions → more heat. Without major efficiency improvements, cooling energy demand will triple globally by 2050."},
+  ]},
+  {id:"flood",title:"Coastal Flooding 🌊",desc:"Rising sea levels are threatening your coastal settlements and infrastructure.",choices:[
+    {text:"Restore mangrove forests",ef:{e:0,n:20,f:5},fact:"Mangroves absorb 5× more carbon per acre than tropical forests and reduce wave height by up to 70% during storms. They are cheaper than seawalls — and they grow back after damage."},
+    {text:"Build concrete seawalls",ef:{e:-5,n:-10,f:0},fact:"Hard seawalls often increase long-term flood risk by destroying natural sediment buffers. Nature-based solutions outperform engineered structures in 70% of coastal resilience studies."},
+  ]},
+  {id:"breakthrough",title:"Energy Breakthrough! 💡",desc:"Your Research Hub has cracked revolutionary battery storage. The future of clean energy is at a crossroads.",choices:[
+    {text:"Deploy across the public grid",ef:{e:20,n:8,f:0},fact:"Battery storage costs fell 97% between 1991 and 2021. Grid-scale batteries solve renewable energy's core challenge: storing sunshine for cloudy nights and wind for calm days."},
+    {text:"License the patent to corporations",ef:{e:10,n:-5,f:0},fact:"General Motors' EV1 electric car was recalled and crushed in 2003 despite high demand. The technology existed decades early — deployment decisions determined whether civilization actually changed."},
+  ]},
+  {id:"pollution",title:"Toxic Algae Bloom 🟢",desc:"Industrial runoff is causing massive algae blooms, depleting oxygen in rivers and lakes.",choices:[
+    {text:"Mandate pollution controls",ef:{e:-8,n:14,f:8},fact:"The Rhine River was declared 'biologically dead' in the 1970s. Strict regulations reversed this — salmon returned by 1990. Ecological recovery is possible, but requires bold action."},
+    {text:"Allow industry to continue",ef:{e:8,n:-18,f:-12},fact:"The Deepwater Horizon spill released 4.9 million barrels of oil. The long-term cost to fisheries, tourism, and ecosystem health far exceeded any short-term economic benefit of deregulation."},
+  ]},
+];
+const OUTCOMES={
+  win:{icon:"🌿",color:"#52b788",title:"Civilization Thrives",body:"You reached Year 20 with ecosystems intact, energy balanced, and a flourishing population. This is what a sustainable future looks like — built one decision at a time."},
+  survive:{icon:"⚖️",color:"#f4a261",title:"Survived — Barely",body:"Your civilization persisted, but nature paid a heavy price. Earlier investments in renewables and ecosystems could have created a truly balanced future."},
+  collapse_nature:{icon:"💀",color:"#e63946",title:"Ecological Collapse",body:"Nature Health reached zero. Without functioning ecosystems — clean water, stable climate, pollination, soil fertility — no civilization can survive. There is no wall high enough to keep out a dying biosphere."},
+  collapse_energy:{icon:"⚡",color:"#e63946",title:"Energy Crisis",body:"Three consecutive years of energy deficit brought your civilization to its knees. Sustainable energy is not optional — it is the foundation on which everything else is built."},
+  collapse_food:{icon:"🌾",color:"#e63946",title:"Famine",body:"Food supplies collapsed. No civilization survives without feeding its people — and food security is inseparable from the health of soil, water, and ecosystems."},
+};
+
+let G={};
+function initGame(){
+  G={year:1,ep:20,ed:20,nature:72,food:58,pop:30,built:["residential","farm"],
+     log:["🌍 Year 1 — Your civilization stirs. Balance energy and nature across 20 years."],
+     phase:"build",event:null,deficitYears:0,lowFoodYears:0,fact:null};
+  render();
+}
+
+function clamp(v,lo,hi){return Math.max(lo,Math.min(hi,v));}
+function barColor(pct){return pct>55?"#52b788":pct>28?"#f4a261":"#e63946";}
+
+function renderBar(label,value,max,unit,rightLabel){
+  const pct=clamp((value/max)*100,0,100);
+  const col=barColor(pct);
+  const disp=rightLabel||(unit==="%"?Math.round(value)+"%":value+unit);
+  return `<div class="bar-wrap">
+    <div class="bar-row"><span>${label}</span><span style="color:${col}">${disp}</span></div>
+    <div class="bar-bg"><div class="bar-fill" style="width:${pct}%;background:${col}"></div></div>
+  </div>`;
+}
+
+function renderEnergyBar(){
+  const bal=G.ep-G.ed;
+  const mx=Math.max(G.ep,G.ed,40);
+  const pp=clamp((G.ep/mx)*100,0,100);
+  const dp=clamp((G.ed/mx)*100,0,100);
+  const col=bal>0?"#48cae4":bal===0?"#f4a261":"#e63946";
+  const balStr=(bal>=0?"+":"")+bal;
+  return `<div class="bar-wrap">
+    <div class="bar-row"><span>⚡ Energy</span><span style="color:${col}">${G.ep} prod / ${G.ed} demand (${balStr})</span></div>
+    <div class="bar-bg" style="position:relative;height:5px">
+      <div style="position:absolute;width:${pp}%;height:100%;background:#48cae4;opacity:.5;border-radius:3px"></div>
+      <div style="position:absolute;width:${Math.min(pp,dp)}%;height:100%;background:#48cae4;border-radius:3px"></div>
+      ${bal<0?`<div style="position:absolute;width:${dp}%;height:100%;border:1px solid #e63946;border-radius:3px;top:-1px"></div>`:""}
+    </div>
+  </div>`;
+}
+
+function factHtml(){
+  if(!G.fact)return "";
+  return `<div class="fact-box"><div class="fact-title">💡 DID YOU KNOW</div><div class="fact-text">${G.fact}</div></div>`;
+}
+
+function renderBuild(){
+  const structs=Object.entries(STRUCT).map(([k,s])=>{
+    const fxs=[];
+    if(s.ep>0)fxs.push(`<span style="color:#48cae4">+${s.ep}⚡</span>`);
+    if(s.ed>0)fxs.push(`<span style="color:#f4a261">+${s.ed}🔌</span>`);
+    if(s.ed<0)fxs.push(`<span style="color:#52b788">${s.ed}🔌</span>`);
+    if(s.n>0)fxs.push(`<span style="color:#52b788">+${s.n}🌿</span>`);
+    if(s.n<0)fxs.push(`<span style="color:#e63946">${s.n}🌿</span>`);
+    if(s.f>0)fxs.push(`<span style="color:#9dc88d">+${s.f}🌾</span>`);
+    if(s.p>0)fxs.push(`<span style="color:#6d9470">+${s.p}👥</span>`);
+    return `<button class="sbtn" onclick="doBuild('${k}')"><div style="display:flex;align-items:center;gap:8px"><span style="font-size:16px">${s.icon}</span><div><div class="sname">${s.name}</div><div class="sfx">${fxs.join("")}</div></div></div></button>`;
+  }).join("");
+  return `<div class="tb-panel"><div class="tb-label">BUILD THIS YEAR</div><div style="max-height:320px;overflow-y:auto;padding-right:2px">${structs}</div><button class="skipbtn" onclick="doSkip()">Skip — Consolidate existing infrastructure</button></div>`;
+}
+
+function renderEvent(){
+  const ev=G.event;
+  const choices=ev.choices.map((c,i)=>{
+    const fxs=[];
+    if(c.ef.e!==0)fxs.push(`<span style="color:${c.ef.e>0?"#48cae4":"#e63946"}">${c.ef.e>0?"+":""}${c.ef.e}⚡</span>`);
+    if(c.ef.n!==0)fxs.push(`<span style="color:${c.ef.n>0?"#52b788":"#e63946"}">${c.ef.n>0?"+":""}${c.ef.n}🌿</span>`);
+    if(c.ef.f!==0)fxs.push(`<span style="color:${c.ef.f>0?"#9dc88d":"#e63946"}">${c.ef.f>0?"+":""}${c.ef.f}🌾</span>`);
+    return `<button class="cbtn" onclick="doResolve(${i})"><div style="font-size:13px;margin-bottom:4px">${c.text}</div><div class="choice-fx">${fxs.join("")}</div></button>`;
+  }).join("");
+  return `<div class="tb-panel" style="border-color:rgba(244,162,97,.4)"><div class="evt-title">${ev.title}</div><div class="evt-desc">${ev.desc}</div><div class="tb-label" style="margin-bottom:8px">YOUR DECISION:</div>${choices}</div>`;
+}
+
+function renderMap(){
+  const slots=Array.from({length:20},(_,i)=>G.built[i]?STRUCT[G.built[i]]:null);
+  const cells=slots.map(s=>s?`<div class="map-cell filled" title="${s.name}">${s.icon}</div>`:`<div class="map-cell">·</div>`).join("");
+  return `<div class="tb-panel"><div class="tb-label">YOUR LAND</div><div class="map-grid">${cells}</div></div>`;
+}
+
+function renderLog(){
+  const entries=G.log.map((e,i)=>`<div class="log-entry${i===0?" first":""}">${e}</div>`).join("");
+  return `<div class="tb-panel" style="flex:1"><div class="tb-label">CHRONICLE</div>${entries}</div>`;
+}
+
+function render(){
+  document.getElementById("yr-disp").textContent="Yr "+G.year;
+  document.getElementById("yr-prog").style.width=((G.year-1)/20*100)+"%";
+
+  if(G.phase==="over"){
+    const o=OUTCOMES[G.result]||OUTCOMES.survive;
+    const bal=G.ep-G.ed;
+    document.getElementById("main-area").innerHTML=`<div class="over-screen">
+      <div class="over-icon">${o.icon}</div>
+      <div class="over-title" style="color:${o.color}">${o.title}</div>
+      <div class="over-body">${o.body}</div>
+      <div class="over-stats">
+        ${[["🌿","Nature",Math.round(G.nature)+"%"],["⚡","Energy",(bal>=0?"+":"")+bal],["👥","People",G.pop],["🌾","Food",Math.round(G.food)+"%"]].map(([ic,lb,v])=>`<div class="stat-card"><div style="font-size:20px">${ic}</div><div style="color:#6d9470;font-size:10px;margin-top:2px">${lb}</div><div style="color:#e9d8a6;font-weight:600;font-size:14px">${v}</div></div>`).join("")}
+      </div>
+      <button class="restart-btn" onclick="initGame()">Begin Again</button>
+    </div>`;
+    return;
+  }
+
+  const res=`<div class="tb-panel">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 18px">
+      ${renderBar("🌿 Nature Health",G.nature,100,"%")}
+      ${renderEnergyBar()}
+      ${renderBar("🌾 Food Security",G.food,100,"%")}
+      ${renderBar("👥 Population: "+G.pop,G.pop,200,"")}
+    </div>
+    ${G.deficitYears>0?`<div class="deficit-warn">⚠️ Energy deficit for ${G.deficitYears} year${G.deficitYears>1?"s":""}. 3 years = collapse.</div>`:""}
+  </div>`;
+
+  const right=G.phase==="build"?renderBuild():renderEvent();
+  const left=`<div style="display:flex;flex-direction:column;gap:10px">${renderMap()}${renderLog()}</div>`;
+  document.getElementById("main-area").innerHTML=`${res}<div class="two-col">${left}${right}</div>${factHtml()}`;
+}
+
+function endOfYear(){
+  const bal=G.ep-G.ed;
+  const newDef=bal<0?G.deficitYears+1:0;
+  const newLowFood=G.food<20?G.lowFoodYears+1:0;
+  const natureDrift=bal<-15?-5:bal<0?-2:0;
+  G.nature=clamp(G.nature+natureDrift,0,100);
+  G.deficitYears=newDef;
+  G.lowFoodYears=newLowFood;
+  if(G.nature<=0){G.phase="over";G.result="collapse_nature";return;}
+  if(newDef>=3){G.phase="over";G.result="collapse_energy";return;}
+  if(newLowFood>=2){G.phase="over";G.result="collapse_food";return;}
+  G.year++;
+  if(G.year>20){
+    const won=G.nature>=50&&bal>=0&&G.food>=30&&G.pop>=80;
+    const ok=G.nature>=30&&G.food>=20;
+    G.phase="over";G.result=won?"win":ok?"survive":"collapse_nature";return;
+  }
+  G.phase="build";G.event=null;
+}
+
+function maybeEvent(){
+  if(Math.random()<0.44){
+    G.event=EVENTS[Math.floor(Math.random()*EVENTS.length)];
+    G.phase="event";
+    return true;
+  }
+  return false;
+}
+
+function doBuild(key){
+  const s=STRUCT[key];
+  G.ep+=s.ep;
+  G.ed=Math.max(0,G.ed+s.ed);
+  G.nature=clamp(G.nature+s.n,0,100);
+  G.food=clamp(G.food+s.f,0,100);
+  G.pop+=s.p;
+  G.built=[...G.built,key];
+  G.log=["📍 Year "+G.year+": Built "+s.name,...G.log].slice(0,7);
+  G.fact=s.fact;
+  if(!maybeEvent())endOfYear();
+  render();
+}
+
+function doSkip(){
+  G.log=["⏭️ Year "+G.year+": Consolidation",...G.log].slice(0,7);
+  G.fact=null;
+  if(!maybeEvent())endOfYear();
+  render();
+}
+
+function doResolve(i){
+  const c=G.event.choices[i];
+  const ef=c.ef;
+  G.ep=Math.max(0,G.ep+(ef.e>0?ef.e:0));
+  G.ed=Math.max(0,G.ed+(ef.e<0?-ef.e:0));
+  G.nature=clamp(G.nature+ef.n,0,100);
+  G.food=clamp(G.food+ef.f,0,100);
+  G.log=["⚡ "+G.event.title,...G.log].slice(0,7);
+  G.fact=c.fact;
+  endOfYear();
+  render();
+}
+
+initGame();
+</script>
+</body>
+</html>
