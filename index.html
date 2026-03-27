@@ -873,6 +873,14 @@ function animate(ts){
   animId=requestAnimationFrame(animate);
   const dt=Math.min((ts-lastTs)/16.67,3); lastTs=ts;
   if(!isDrag) earthGroup.rotation.y+=.0012*dt;
+  if(cloudMesh) cloudMesh.rotation.y+=.0007*dt;
+  windTurbines.forEach(wt=>wt.group.rotation.z+=wt.speed*dt);
+  if(globeBuilt){
+    const nf=G&&G.nature?G.nature/100:1;
+    updateGlobeHealth(nf);
+  }
+  renderer.render(scene,camera);
+}
 
 // ════════════════════════════════════════════════════════════
 //  TERRA BALANCE v3 — FULL SIMULATOR + MULTIPLAYER + QUIZZES
@@ -2959,7 +2967,6 @@ function renderStart(){
     +'<div style="text-align:center;padding-bottom:12px">'
     +'<button class="stbtn" onclick="initGame()" '+(selMp&&selSc===selSc2?'disabled style="opacity:.4;cursor:not-allowed"':'')
     +'>Begin Civilisation</button></div>';
-}
 }
 
 function pickSc(k){  selSc  = k; renderStart(); }
