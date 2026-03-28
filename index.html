@@ -157,6 +157,400 @@ window.addEventListener('error', function(e) {
 </div>
 <script>
 // ════════════════════════════════════════════════════════════
+//  PORTUGUESE TRANSLATIONS  —  Tradução Completa
+// ════════════════════════════════════════════════════════════
+const PT = {
+
+  // ── UI CHROME ─────────────────────────────────────────────
+  ui: {
+    title:       'Terra Balance',
+    subtitle:    'SIMULADOR COMPLETO v3 · EDIÇÃO GLOBO',
+    tagline:     'Construa uma civilização. Proteja o planeta. Sobreviva até o fim.',
+    game_mode:   'MODO DE JOGO',
+    one_player:  '1 Jogador',
+    solo:        'Desafio individual',
+    two_player:  '2 Jogadores',
+    hotseat:     'Modo versus alternado',
+    choose_region:'ESCOLHA SUA REGIÃO',
+    player1_region:'JOGADOR 1 — ESCOLHA A REGIÃO',
+    player2_region:'JOGADOR 2 — ESCOLHA A REGIÃO',
+    difficulty:  'DIFICULDADE',
+    begin:       'Começar Civilização',
+    diff_easy:   'Guardião Ecológico',
+    diff_normal: 'Civilizador',
+    diff_hard:   'Gestor de Crises',
+    diff_extreme:'Última Chance',
+    diff_easy_d: '50 anos · Crises suaves · Ideal para aprender',
+    diff_normal_d:'35 anos · Equilibrado · Recomendado',
+    diff_hard_d: '25 anos · Brutal · Apenas para especialistas',
+    diff_extreme_d:'18 anos · Quase impossível',
+    yr_label:    'Ano',
+    of_label:    'de',
+    loading:     'CARREGANDO A TERRA',
+    loading_msg: 'Renderizando textura da Terra…',
+    loading_sat: 'Buscando imagens de satélite…',
+    hud_nature:  '🌿 Natureza',
+    hud_energy:  '⚡ Energia',
+    hud_temp:    '🌡️ Temp',
+    hud_biodiv:  '🦋 Biodiversidade',
+    hud_food:    '🌾 Alimento',
+    hud_pop:     '👥 Pop',
+    hud_co2:     '🌫️ CO2',
+    hud_water:   '💧 Água',
+    tab_build:   '🏗️ Construir',
+    tab_policy:  '📋 Política',
+    tab_tech:    '🔬 Pesquisa',
+    tab_wildlife:'🦋 Espécies',
+    tab_achiev:  '🏅 Prêmios',
+    tab_enc:     '📖 Fatos',
+    skip_btn:    '⏭️ Pular — Consolidar infraestrutura existente',
+    build_tab_lbl:'ÁRVORE DE PESQUISA',
+    rp_label:    'PR',
+    enacted:     'aprovadas',
+    rp_yr:       'PR/ano',
+    rp_total:    'total',
+    unlock_btn:  'Desbloquear',
+    need_rp:     'Precisa de',
+    req_label:   'Req:',
+    enact_btn:   'Aprovar',
+    locked:      'Bloqueado',
+    need_rp_short:'Falta PR',
+    biodiv_lbl:  'RASTREADOR DE BIODIVERSIDADE — ÍNDICE',
+    thriving:    'Prosperando',
+    at_risk:     'Em risco',
+    endangered:  'Em perigo',
+    achievements:'CONQUISTAS',
+    unlocked:    'desbloqueadas',
+    search_terms:'Pesquisar termos climáticos…',
+    your_decision:'SUA DECISÃO:',
+    quiz_title:  'QUIZ RÁPIDO — resposta certa vale +3 PR',
+    quiz_sub:    'Com base no que você acabou de aprender',
+    correct:     'Correto! +3 PR',
+    not_quite:   'Não foi dessa vez…',
+    correct_ans: 'A resposta correta era:',
+    quiz_score:  'Pontuação do quiz neste jogo',
+    continue_btn:'Continuar →',
+    play_again:  '🔄 Jogar Novamente',
+    share_score: '📋 Compartilhar Pontuação',
+    year_complete:'Completo',
+    years_rem:   'anos restantes',
+    year_rem1:   'ano restante',
+    next_year:   'Continuar para o Ano',
+    climate_trends:'📈 TENDÊNCIAS CLIMÁTICAS',
+    global_biodiv:'🌐 STATUS GLOBAL DA BIODIVERSIDADE',
+    surviving:   '% sobrevivendo',
+    animals:     'Animais rastreados',
+    plants:      'Plantas rastreadas',
+    flagship:    'espécies emblemáticas monitoradas',
+    ecology_lbl: '🔬 ECOLOGIA',
+    politics_lbl:'⚖️ POLÍTICA & DIREITO',
+    econ_lbl:    '💰 ECONOMIA',
+    threat_lbl:  '⚠️ AMEAÇA PRINCIPAL',
+    score_lbl:   'PONTUAÇÃO',
+    grade_lbl:   'NOTA',
+    learning_rpt:'📚 RELATÓRIO DE APRENDIZAGEM',
+    quiz_grade:  'Nota do Quiz',
+    quiz_score2: 'Pontuação',
+    topics:      'Tópicos Explorados',
+    topics_unit: 'tópicos',
+    quiz_note:   'Cada pergunta do quiz é baseada em ciência real — os mesmos fatos que informam as decisões de política climática hoje.',
+    ach_unlocked:'CONQUISTAS DESBLOQUEADAS',
+    ach_of:      'de',
+    ach_total:   'no total',
+    did_you_know:'💡 VOCÊ SABIA',
+    immediate:   '⚠️ DESAFIOS IMEDIATOS',
+    advantages:  '✅ SUAS VANTAGENS',
+    pressures:   'PRESSÕES ESPECIAIS DE CRISE',
+    begin_year:  'Começar Ano 1 →',
+    open_enc:    'Abrir enciclopédia',
+    energy_deficit:'⚠️ Déficit de energia',
+    yr_short:    'ano',
+    yrs_short:   'anos',
+    collapse_next:'— COLAPSO NO PRÓXIMO!',
+    species_count:'8 ESPÉCIES',
+    awaiting:    'Aguardando o outro jogador terminar…',
+    waiting_fin: 'Esperando o outro jogador finalizar…',
+    overall_score:'Pontuação Geral',
+    perfect_draw: 'Empate Perfeito!',
+    wins:        'Vence!',
+    awards:      'PRÊMIOS',
+    nature_champ:'🌿 Campeão da Natureza',
+    biodiv_lead: '🦋 Líder em Biodiversidade',
+    climate_lead:'🌫️ Líder Climático',
+    peoples_champ:'👥 Campeão do Povo',
+    food_sec:    '🌾 Segurança Alimentar',
+    quiz_champ:  '🧠 Campeão do Quiz',
+    correct_unit:'corretos',
+    threats_lbl: '⚠️ AMEAÇAS',
+    good_news:   '🟢',
+    energy_surplus:'⚡ Superávit de energia limpa',
+    biodiv_rec:  '🦋 Biodiversidade se recuperando bem',
+    co2_milestone:'🌫️ CO2 abaixo de 400 ppm — marco histórico',
+    research_acc:'🔬 Programa de pesquisa acelerando',
+    nature_thriv:'🌿 Natureza prosperando a',
+    news_lbl:    '📰',
+    rp_earned:   '+{n} PR/ano',
+    research_hub:'Construa um Hub de Pesquisa para ganhar Pontos de Pesquisa a cada ano',
+    tree_title:  '🌲 Escolher Espécie de Árvore',
+    tree_back:   '← Voltar',
+    tree_sub:    'Clique numa espécie para ler toda a ciência antes de plantar.',
+    tree_plant:  'Plantar Esta ✓',
+    co2_cap_lbl: 'Captura de CO2',
+    growth_lbl:  'Taxa de crescimento',
+    biodiv_lbl2: 'Biodiversidade',
+    climate_lbl: 'Clima',
+    soil_lbl:    'Efeito no solo',
+    lifespan_lbl:'Vida útil',
+    hemp_next:   'Próximo turno: construa um Distrito de Hempcrete para travar o carbono permanentemente.',
+    deficit_warn:'⚠️ Déficit de energia',
+    yr_cons:     'ano consecutivo de déficit. 3 = colapso.',
+    yrs_cons:    'anos consecutivos de déficit. 3 = colapso.',
+  },
+
+  // ── DIFFICULTIES ─────────────────────────────────────────
+  diff: {
+    easy:    { label:'Guardião Ecológico',  desc:'50 anos · Crises suaves · Perfeito para aprender' },
+    normal:  { label:'Civilizador',         desc:'35 anos · Equilibrado · Recomendado' },
+    hard:    { label:'Gestor de Crises',    desc:'25 anos · Brutal · Apenas para especialistas' },
+    extreme: { label:'Última Chance',       desc:'18 anos · Quase impossível' },
+  },
+
+  // ── SCENARIOS ─────────────────────────────────────────────
+  scen: {
+    global:        { name:'Terra',           desc:'O planeta inteiro é sua tela. Cada sistema está interconectado.', challenges:'Todos os tipos de crise · Árvore tecnológica completa · Mais difícil de dominar' },
+    north_america: { name:'América do Norte', desc:'Cidades densas, vastas terras agrícolas e infraestrutura de combustíveis fósseis que precisa se transformar.', challenges:'Alta demanda de energia · Expansão urbana · Seca' },
+    south_america: { name:'América do Sul',   desc:'A biodiversidade da Amazônia é inigualável — mas a pressão do desmatamento é implacável.', challenges:'Ponto de inflexão do desmatamento · Risco de inundações' },
+    europe:        { name:'Europa',           desc:'Pioneira na transição para energia limpa. População densa, infraestrutura envelhecida.', challenges:'População densa · Importações de energia' },
+    africa:        { name:'África',           desc:'Continente mais jovem, população de crescimento mais rápido, emissões históricas mínimas.', challenges:'Insegurança alimentar · Escassez de água' },
+    asia:          { name:'Ásia',             desc:'Lar da maior parte da humanidade. Megacidades e enormes frotas de carvão.', challenges:'Enorme dependência de carvão · Poluição do ar' },
+    australia:     { name:'Austrália',        desc:'Extraordinários recursos de energia solar e eólica. Mas incêndios, recifes branqueando e escassez de água.', challenges:'Incêndios extremos · Branqueamento de corais' },
+  },
+
+  // ── BUILDINGS ─────────────────────────────────────────────
+  struct: {
+    coal:           { name:'Usina de Carvão',          fact:'O carvão produz 2,2 libras de CO2 por kWh — mais do que qualquer outra fonte. Uma única usina emite cerca de 3 milhões de toneladas de CO2 por ano.' },
+    gas_plant:      { name:'Usina de Gás Natural',     fact:'O gás natural emite 50% menos CO2 que o carvão por kWh, mas vazamentos de metano durante a extração podem tornar seu impacto climático comparável ao carvão em escalas de 20 anos.' },
+    solar:          { name:'Parque Solar',              fact:'Os custos da energia solar caíram 90% entre 2010 e 2020. Agora é a eletricidade mais barata da história — a 1,5 centavo de dólar por kWh nas regiões mais ensolaradas.' },
+    solar_tower:    { name:'Torre Solar',               fact:'Torres de energia solar concentrada armazenam calor em sal fundido, gerando eletricidade por até 15 horas após o pôr do sol. A planta Noor de Marrocos alimenta 1 milhão de casas com zero emissões.' },
+    wind:           { name:'Parque Eólico',             fact:'Turbinas eólicas coexistem lindamente com terras agrícolas. A energia eólica offshore agora gera eletricidade mais barata do que novas usinas a gás na Europa.' },
+    offshore_wind:  { name:'Eólica Offshore',           fact:'O conjunto Hornsea 2 ao largo de Yorkshire alimenta 1,4 milhão de casas no Reino Unido e é o maior parque eólico offshore do mundo.' },
+    hydro:          { name:'Barragem Hidrelétrica',     fact:'A energia hidrelétrica é confiável 24 horas por dia, mas grandes represas inundam ecossistemas, bloqueiam a migração de peixes e deslocam comunidades.' },
+    nuclear:        { name:'Usina Nuclear',             fact:'A energia nuclear tem as menores emissões de carbono do ciclo de vida de qualquer fonte. A França gera 70% de sua energia a partir do nuclear com as menores emissões de rede da Europa.' },
+    smr:            { name:'Reator Modular Pequeno',    fact:'Reatores Modulares Pequenos podem ser construídos em fábrica e implantados em áreas remotas. Produzem zero emissões operacionais e funcionam por 60+ anos com uma única carga de combustível.' },
+    geothermal:     { name:'Usina Geotérmica',          fact:'A Islândia gera quase 100% de eletricidade e calor a partir de energia geotérmica e hidráulica. O núcleo da Terra produzirá calor por bilhões de anos.' },
+    tidal:          { name:'Energia das Marés',         fact:'A energia das marés é quase perfeitamente previsível. A variação das marés da Baía de Fundy de 16 metros poderia alimentar todo o Canadá Atlântico.' },
+    wave_energy:    { name:'Matriz de Energia das Ondas',fact:'Só a Escócia tem potencial de energia das ondas equivalente a 14% da demanda global de eletricidade.' },
+    fusion:         { name:'Reator de Fusão',           fact:'Reatores de fusão produzem zero gases de efeito estufa, apenas resíduos de vida curta, e poderiam funcionar com hidrogênio da água do mar por bilhões de anos.' },
+    residential:    { name:'Distrito Habitacional',     fact:'Os edifícios consomem 40% da energia global. O design passivo pode reduzir as necessidades de aquecimento em 90% através de isolamento e massa térmica.' },
+    green_housing:  { name:'Bloco de Habitação Verde',  fact:'Edifícios verdes alcançam 30-50% menor uso de energia. A certificação LEED impulsionou um mercado de construção verde de trilhões de dólares no mundo todo.' },
+    hempcrete:      { name:'Distrito de Hempcrete',     fact:'O hempcrete bloqueia cerca de 110 kg de carbono por metro cúbico enquanto cura. O edifício ativamente sequestra carbono durante toda a sua vida útil.' },
+    smart_city:     { name:'Bloco de Cidade Inteligente',fact:'A infraestrutura de cidade inteligente reduz o uso de energia urbana em 10-15%, reduz as emissões de tráfego em 25% e permite monitoramento ambiental em tempo real.' },
+    transit_hub:    { name:'Trânsito Subterrâneo',      fact:'Sistemas de metrô transportam 7-10× mais passageiros por unidade de energia do que carros. Os valores dos imóveis perto das estações aumentam 15-25%.' },
+    transit:        { name:'Transporte Público',        fact:'Uma única linha de metrô pode mover tantas pessoas quanto 10 faixas de rodovia. A rede ferroviária de Tóquio transporta 40 milhões de passageiros por dia.' },
+    eco_farm:       { name:'Fazenda Ecológica',         fact:'A agricultura regenerativa sequestra carbono enquanto produz alimentos. Uma colher de chá de solo saudável tem mais organismos do que pessoas na Terra.' },
+    vertical_farm:  { name:'Fazenda Vertical',          fact:'Fazendas verticais usam 95% menos água do que a agricultura convencional, produzem zero escoamento de pesticidas e podem operar em qualquer lugar da Terra.' },
+    aquaculture:    { name:'Aquicultura Sustentável',   fact:'Fazendas de peixes bem gerenciadas produzem 20× mais proteína por área de terra do que a carne bovina, com uma fração das emissões.' },
+    insect_farm:    { name:'Fazenda de Proteína de Insetos',fact:'Insetos produzem 80× menos metano do que o gado e precisam de 12× menos ração por kg de proteína. Podem ser criados com resíduos alimentares.' },
+    lab_meat:       { name:'Laboratório de Carne Cultivada',fact:'A carne cultivada usa 99% menos terra, 82-96% menos água e emite 92% menos gases de efeito estufa do que a carne bovina convencional.' },
+    seaweed_farm:   { name:'Fazenda de Algas Marinhas', fact:'Uma fazenda de algas do tamanho da Austrália poderia compensar todas as emissões globais. Não precisa de água doce, fertilizante e produz alimento.' },
+    forest:         { name:'Reserva Florestal',         fact:'Uma árvore madura absorve 22 kg de CO2 por ano. Florestas antigas armazenam 4× mais carbono do que plantações. Escolha sua espécie com cuidado.' },
+    wetland:        { name:'Restauração de Zonas Úmidas',fact:'Zonas úmidas armazenam mais carbono por acre do que florestas tropicais e suportam 40% de todas as espécies. Metade das zonas úmidas do mundo foi perdida desde 1900.' },
+    mangrove:       { name:'Costa de Manguezal',        fact:'Manguezais armazenam carbono a 4× a taxa das florestas tropicais e reduzem a altura das ondas em 70% durante tempestades.' },
+    coral_restore:  { name:'Restauração de Recife de Coral',fact:'Recifes de coral suportam 25% de todas as espécies marinhas e fornecem $375 bilhões em alimentos e turismo anualmente.' },
+    grassland:      { name:'Restauração de Pradaria',   fact:'As pradarias temperadas armazenam 30% do carbono global do solo — principalmente invisível no subsolo. Restaurar pradarias nativas reconstrói microbiomas do solo.' },
+    peatland:       { name:'Restauração de Turfeira',   fact:'Turfeiras cobrem 3% da terra da Terra mas armazenam duas vezes mais carbono que todas as florestas combinadas. A turfa restaurada sequestra carbono por milênios.' },
+    recycling:      { name:'Centro de Reciclagem',      fact:'Reciclar alumínio usa 95% menos energia do que produzi-lo a partir do minério. Uma economia circular poderia reduzir o uso global de materiais em 28% até 2050.' },
+    green_factory:  { name:'Fábrica Verde',             fact:'Aço com hidrogênio verde e cimento de baixo carbono agora custam menos de 5% a mais do que os equivalentes convencionais.' },
+    dac_plant:      { name:'Captura Direta de Ar',      fact:'A planta da Climeworks na Islândia extrai CO2 do ar e o armazena permanentemente em rocha basáltica — alimentada inteiramente por energia geotérmica.' },
+    biochar:        { name:'Usina de Biochar',          fact:'O biochar bloqueia carbono no solo por milhares de anos enquanto melhora a fertilidade. Povos indígenas da Amazônia o usaram há 2.500 anos para criar a terra preta.' },
+    green_hydrogen: { name:'Hub de Hidrogênio Verde',   fact:'O hidrogênio verde pode descarbonizar navegação, aviação e indústria pesada onde as baterias são impraticáveis. Emite apenas água quando usado.' },
+    research:       { name:'Hub de Pesquisa',           fact:'Cada dólar investido em P&D de energia limpa retorna $3-10 em benefício econômico. A pesquisa desbloqueia tecnologias que transformam sistemas energéticos inteiros.' },
+  },
+
+  // ── TECHNOLOGIES ──────────────────────────────────────────
+  techs: {
+    solar_eff:   { name:'Eficiência Solar+',           desc:'+12 energia de Parques Solares · desbloqueia maior eficiência dos painéis',         fact:'Células tândem de perovskita-silício atingiram 33,9% de eficiência — quase o dobro dos painéis convencionais. A produção em massa começa em meados dos anos 2020.' },
+    wind_scale:  { name:'Escalonamento de Turbinas',   desc:'+10 energia de Eólica Terrestre e Offshore',                                        fact:'As últimas turbinas offshore têm 260 metros de altura com pás de 107 metros. Cada rotação gera energia suficiente para alimentar uma casa por dois dias.' },
+    smart_grid:  { name:'Rede Inteligente',            desc:'Reduz a demanda total em 14 imediatamente',                                         fact:'Redes inteligentes equilibram automaticamente oferta e demanda entre milhares de fontes simultaneamente — a internet da energia.' },
+    prec_agri:   { name:'Agricultura de Precisão',     desc:'+14 alimento de Fazendas Ecológicas · +8 alimento de Fazendas Verticais',          fact:'Imagens de satélite, sensores de solo e IA reduzem o uso de fertilizantes em 25% e aumentam os rendimentos em 15%.' },
+    green_build: { name:'Código de Construção Verde',  desc:'-12 demanda de Habitação · -6 de Habitação Verde',                                  fact:'Os padrões de casa passiva reduzem a energia de aquecimento em 80% sem sistemas ativos — apenas isolamento, orientação e massa térmica.' },
+    water_mgmt:  { name:'Gestão de Bacias Hidrográficas',desc:'+8 água · Reduz perdas de água de todos os edifícios',                          fact:'A gestão integrada de bacias hidrográficas pode restaurar a segurança hídrica para bilhões a uma fração do custo da dessalinização.' },
+    battery_stor:{ name:'Armazenamento em Baterias',   desc:'Evita desperdício renovável · +8 balanço energético efetivo',                      fact:'Os custos das baterias caíram 97% entre 1991 e 2021. O armazenamento resolve o problema de intermitência que antes tornava as renováveis impraticáveis.' },
+    carbon_cap:  { name:'Tecnologia de Captura de Carbono',desc:'+5 natureza/ano · Aumenta output de DAC em 60%',                              fact:'BECCS (Bioenergia com Captura de Carbono) pode ser carbono-negativo — plantas absorvem CO2, alimentam a rede e o CO2 é armazenado no subsolo.' },
+    rewilding:   { name:'Protocolo de Rewilding',      desc:'+16 natureza de Florestas, Zonas Úmidas, Pradarias, Turfeiras',                    fact:'O rewilding de Yellowstone com lobos mudou o curso dos rios. O retorno de um predador de topo transformou toda uma paisagem.' },
+    ocean_farm:  { name:'Agricultura Oceânica',        desc:'+12 alimento de todas as estruturas costeiras e oceânicas',                        fact:'Fazendas oceânicas 3D cultivam algas, mexilhões, vieiras e kelp em camadas verticais — zero insumos, múltiplos outputs, carbono absorvido enquanto cresce.' },
+    green_steel: { name:'Aço Verde & Cimento',         desc:'+10 economia · -4 CO2/ano de processos industriais',                              fact:'Aço reduzido a hidrogênio e cimento de baixo carbono agora custam menos de 5% a mais do que os equivalentes convencionais.' },
+    circular_eco:{ name:'Economia Circular',           desc:'+8 economia · Efeito do Centro de Reciclagem dobrado',                             fact:'Uma economia circular elimina o conceito de resíduo. O plano da UE poderia gerar 700.000 novos empregos enquanto reduz o uso de recursos em 28% até 2050.' },
+    fusion_tech: { name:'Energia de Fusão',            desc:'Desbloqueia Reator de Fusão — base limpa ilimitada',                               fact:'O ITER, apoiado por 35 nações, visa produzir 10× a energia que consome. A Commonwealth Fusion Systems planeja um piloto comercial até 2030.' },
+    biosphere:   { name:'Restauração da Biosfera',     desc:'+10 natureza/ano · +6 biodiversidade/ano permanentemente',                         fact:'A zona de exclusão de Chernobyl foi colonizada por lobos, linces e 200 espécies de pássaros em 30 anos de ausência humana.' },
+    atm_water:   { name:'Água Atmosférica',            desc:'Segurança hídrica +12 · Água doce em qualquer lugar',                              fact:'Geradores de água atmosférica produzem 10.000 litros por dia da umidade do ar. Comunidades do deserto no Chile colhem redes de nevoeiro que abastecem aldeias inteiras.' },
+    synth_photo: { name:'Fotossíntese Sintética',      desc:'Cada Floresta e Fazenda ganha +8 absorção de CO2/ano',                             fact:'Dispositivos de folha artificial dividem água com luz solar a 10× a eficiência das plantas, produzindo combustível de hidrogênio ou fixando CO2 diretamente.' },
+    climate_ai:  { name:'IA Climática',                desc:'Todos os efeitos negativos de crises são reduzidos à metade · Previsão antecipada',  fact:'O modelo meteorológico DeepMind supera a previsão tradicional a uma fração do custo computacional. A IA climática pode otimizar redes nacionais inteiras em tempo real.' },
+    deep_geo:    { name:'Geotérmica Profunda',         desc:'+18 energia de Geotérmica em qualquer lugar da Terra',                             fact:'Sistemas geotérmicos melhorados perfuram 5-10km e injetam água para criar vapor em qualquer lugar da Terra — não apenas regiões vulcânicas.' },
+    nature_econ: { name:'Economia da Natureza',        desc:'+6 economia para cada edifício positivo para a natureza construído',               fact:'A economia global depende da natureza para $44 trilhões de valor anualmente. Precificar os serviços da natureza transforma cada decisão de investimento.' },
+    full_decarb: { name:'Descarbonização Total',       desc:'CO2 caindo 3× mais rápido · Condição de vitória facilitada',                       fact:'Uma economia totalmente descarbonizada é alcançável até 2050 usando apenas tecnologias que já existem. O ingrediente ausente é vontade política.' },
+  },
+
+  // ── POLICIES ──────────────────────────────────────────────
+  policies: {
+    carbon_tax:     { name:'Imposto sobre Carbono',           desc:'Tributar emissões de combustíveis fósseis. Comprovado que reduz emissões 15-20% em 5 anos em todos os países que o implementaram.' },
+    plastic_ban:    { name:'Proibição de Plásticos',          desc:'Proibir plásticos descartáveis. A proibição de Ruanda de 2008 levou a rios visivelmente mais limpos em dois anos.' },
+    meat_tax:       { name:'Taxa sobre Carne e Laticínios',   desc:'Taxar produtos animais de alto carbono. A pecuária é responsável por 14,5% das emissões globais.' },
+    free_transit:   { name:'Transporte Público Gratuito',     desc:'Luxemburgo tornou-se o primeiro país a oferecer transporte gratuito em 2020, reduzindo o uso de carros em 5% no primeiro ano.' },
+    renew_mandate:  { name:'Mandato 100% Renovável',          desc:'Costa Rica, Islândia e Noruega já geram praticamente toda a eletricidade a partir de renováveis.' },
+    reforest_law:   { name:'Lei de Reflorestamento',          desc:'A Etiópia plantou 350 milhões de árvores em um único dia em 2019. O Tsunami de 10 Bilhões de Árvores do Paquistão plantou mais de 3 bilhões.' },
+    fishing_quota:  { name:'Sistema de Cotas de Pesca',       desc:'Reservas marinhas aumentam a biomassa de peixes em 670% e transbordam para reabastecer as pescarias circundantes.' },
+    ev_mandate:     { name:'Mandato de Transição para VEs',   desc:'A Noruega atinge mais de 80% de participação de mercado de VEs através de isenções fiscais. O transporte rodoviário causa 12% das emissões globais de CO2.' },
+    circular_law:   { name:'Lei do Direito à Reparação',      desc:'A UE estima que as leis do direito à reparação poderiam poupar aos consumidores 12 bilhões de euros anualmente, reduzindo os resíduos.' },
+    green_finance:  { name:'Política de Títulos Verdes',      desc:'Os títulos verdes arrecadaram $500 bilhões em 2021. Cada $1 de investimento verde retorna $4-8 em benefício econômico.' },
+    ocean_protect:  { name:'Proteção Oceânica 30×30',         desc:'Áreas oceânicas protegidas recuperam populações de peixes 5× mais rápido e absorvem enormes quantidades de carbono.' },
+    indigenous_land:{ name:'Direitos Territoriais Indígenas', desc:'Terras gerenciadas por indígenas contêm 80% da biodiversidade restante a uma fração dos custos de conservação governamental.' },
+    climate_edu:    { name:'Política de Educação Climática',  desc:'Os jovens educados sobre o clima reduzem mensuravelmente o uso de energia doméstica. O currículo da Finlândia é o padrão global de ouro.' },
+    subsidy_shift:  { name:'Corte de Subsídios a Combustíveis',desc:'Redirecionar $7 trilhões em subsídios anuais de combustíveis fósseis para energia limpa seria a política climática de maior impacto já realizada.' },
+    urban_greening: { name:'Lei de Verdeamento Urbano',       desc:'Cingapura plantou 1 milhão de árvores, reduziu as temperaturas urbanas em 5°C e melhorou os resultados de saúde mental de forma mensurável.' },
+    food_waste_law: { name:'Lei de Redução do Desperdício',   desc:'A lei antidesperdício da França reduziu o desperdício alimentar em supermercados em 80%. Um terço de todos os alimentos produzidos globalmente é desperdiçado.' },
+    carbon_border:  { name:'Ajuste de Carbono Fronteiriço',   desc:'O Mecanismo de Ajustamento de Carbono na Fronteira da UE — o primeiro de seu tipo — foi lançado em 2023, evitando vazamento de carbono.' },
+    degrowth:       { name:'Política de Decrescimento Seletivo',desc:'Encolher intencionalmente os setores de alto impacto enquanto os verdes crescem. Crescimento perpétuo num planeta finito é matematicamente impossível.' },
+    nature_rights:  { name:'Direitos da Natureza',            desc:'O Rio Whanganui da Nova Zelândia foi o primeiro curso d\'água a receber direitos legais. Equador e Bolívia consagraram os direitos da natureza em suas constituições.' },
+    meat_free_day:  { name:'Dia Semanal Sem Carne',           desc:'Campanhas de Segunda Sem Carne em cidades de todo o mundo reduziram o consumo de carne nas cantinas em 20%.' },
+  },
+
+  // ── OUTCOMES ──────────────────────────────────────────────
+  outcomes: {
+    perfect:         { title:'Civilização Floresce',         body:'A natureza se recuperou, a temperatura estabilizou, a biodiversidade voltou e a civilização prospera em genuína harmonia com o planeta. É assim que o futuro pode ser quando cada decisão é tomada com coragem e visão.' },
+    win:             { title:'Civilização Sustentável',       body:'Você chegou ao fim com ecossistemas intactos, energia equilibrada e uma população próspera. Não perfeito — mas genuinamente sustentável. Assim é a ambição na prática.' },
+    survive:         { title:'Sobreviveu — Vitória Custosa',  body:'A civilização persistiu, mas a natureza pagou um preço alto. Com investimento anterior em ecossistemas e renováveis, isso poderia ter sido um triunfo.' },
+    narrow:          { title:'Escape por um Fio',             body:'Você cruzou a linha de chegada — por pouco. A recuperação levará gerações. A próxima civilização enfrenta isso com menos recursos.' },
+    collapse_nature: { title:'Colapso Ecológico',             body:'A Saúde da Natureza chegou a zero. Sem ecossistemas funcionais — água limpa, clima estável, polinização, fertilidade do solo — nenhuma civilização pode sobreviver.' },
+    collapse_energy: { title:'Colapso da Crise Energética',   body:'Três anos consecutivos de déficit energético levaram a civilização ao joelho. A energia é a fundação sobre a qual tudo mais é construído. E deve ser limpa.' },
+    collapse_food:   { title:'Fome Civilizacional',           body:'Os suprimentos de alimentos entraram em colapso. A segurança alimentar é inseparável de solo saudável, água limpa, clima estável e ecossistemas funcionais. São o mesmo problema.' },
+  },
+
+  // ── ADVISORS ──────────────────────────────────────────────
+  advisors: [
+    { name:'Dra. Ana Costa',       role:'Ecóloga',            comments:{
+        good:'O ecossistema está respondendo. Dê espaço à natureza e ela se cura mais rápido do que qualquer um espera.',
+        bad:'A perda de biodiversidade está acelerando. Uma vez que uma espécie-chave desaparece, a cascata é quase impossível de parar.',
+        neutral:'Todo ecossistema tem pontos de inflexão. Você está mais próximo de alguns do que imagina.' }},
+    { name:'Prof. James Wei',      role:'Economista',         comments:{
+        good:'A economia verde está superando as projeções. A energia limpa cria 3× mais empregos por dólar do que os combustíveis fósseis.',
+        bad:'As pressões de curto prazo estão criando passivos de longo prazo. O custo da inação é sempre maior.',
+        neutral:'Os retornos de investimento verde agora consistentemente superam os portfólios de combustíveis fósseis em horizontes de 10 anos.' }},
+    { name:'Noa Lindqvist',        role:'Ativista Jovem',     comments:{
+        good:'É assim que a verdadeira ambição parece. A ciência é clara — precisamos desse ritmo e mais.',
+        bad:'Mais um ano de mudança incremental. As crianças que viverão com essas decisões merecem melhor.',
+        neutral:'Você está gerenciando a transição. Mas gerenciar não é liderar. Uma ação mais ousada é necessária agora.' }},
+    { name:'Ministro Chen',        role:'Estrategista de Políticas',comments:{
+        good:'Excelente execução. A política sustentável precisa de apoio público — você está construindo isso.',
+        bad:'O capital político está se esgotando. Sem apoio público, mesmo as melhores políticas climáticas entram em colapso.',
+        neutral:'Soluções climáticas que geram empregos e reduzem contas duram. As que não o fazem, não duram.' }},
+    { name:'Anciã Amara Diallo',   role:'Conhecimento Indígena',comments:{
+        good:'Você está ouvindo a terra. O conhecimento tradicional e a ciência moderna são parceiros, não opostos.',
+        bad:'A terra lembra tudo que fazemos a ela. O solo, a água, a floresta — eles estão falando. Você está ouvindo?',
+        neutral:'Toda cultura que sobreviveu por longo prazo entendeu uma coisa: você não possui a terra. Você a pede emprestada dos seus filhos.' }},
+  ],
+
+  // ── ENCYCLOPEDIA ──────────────────────────────────────────
+  encyclopedia: [
+    { term:'Orçamento de Carbono',    icon:'📊', body:'A quantidade total de CO2 que os humanos ainda podem emitir enquanto mantêm o aquecimento global abaixo de um determinado limiar. No ritmo atual, o orçamento de carbono de 1,5°C será esgotado dentro de uma década. Cada tonelada poupada agora vale mais do que uma tonelada poupada mais tarde.' },
+    { term:'Pontos de Inflexão',      icon:'⚠️', body:'Limiares nos sistemas terrestres que, uma vez cruzados, desencadeiam mudanças autorreforçadoras. Exemplos: morte do Amazonas, colapso da Calota de Gelo do Antártico Ocidental, liberação de carbono do permafrost. Estes são irreversíveis em escalas de tempo humanas.' },
+    { term:'Emissão Líquida Zero',    icon:'⚖️', body:'Um estado onde as emissões de gases de efeito estufa são equilibradas por remoções da atmosfera. Não é o mesmo que "zero emissões" — alguns setores ainda podem emitir, mas precisam ser compensados por florestas, captura direta de ar ou outros sumidouros.' },
+    { term:'Sumidouro de Carbono',    icon:'🌳', body:'Qualquer sistema que absorve mais carbono do que libera. Os principais sumidouros naturais incluem florestas, oceanos e solos. Esses sumidouros estão enfraquecendo à medida que o planeta aquece — a Amazônia agora libera mais carbono do que absorve em alguns anos.' },
+    { term:'Albedo',                  icon:'☀️', body:'A refletividade de uma superfície. Gelo e neve têm alto albedo (refletem a luz solar); água oceânica escura e solo nu têm baixo albedo (absorvem calor). À medida que o gelo derrete, superfícies de menor albedo são expostas, absorvendo mais calor — um feedback de aquecimento autorreforçador.' },
+    { term:'Metano',                  icon:'💨', body:'Um gás de efeito estufa 80× mais potente que o CO2 em 20 anos, embora se decomponha mais rapidamente. Fontes: gado, arrozais, aterros, vazamentos de gás natural e permafrost em degelo. Cortar o metano é a maneira mais rápida de desacelerar o aquecimento próximo.' },
+    { term:'Acidificação dos Oceanos',icon:'🌊', body:'À medida que o CO2 se dissolve na água do mar, forma ácido carbônico, reduzindo o pH do oceano. Desde 1750, o pH do oceano caiu de 8,2 para 8,1 — um aumento de 30% na acidez. Mariscos, corais e muitos plânctons não conseguem formar conchas em água mais ácida.' },
+    { term:'Ciclo de Retroalimentação',icon:'🔄', body:'Um processo onde uma mudança em uma variável causa mais mudança na mesma direção (retroalimentação positiva) ou na direção oposta (retroalimentação negativa). Degelo do gelo expondo oceano escuro = retroalimentação positiva. Maior crescimento de plantas absorvendo mais CO2 = retroalimentação negativa.' },
+    { term:'Biodiversidade',          icon:'🦋', body:'A variedade de vida na Terra em todas as escalas — de genes a ecossistemas. A biodiversidade fornece resiliência: ecossistemas diversos se recuperam de perturbações; monoculturas entram em colapso. Atualmente estamos vivenciando a sexta extinção em massa.' },
+    { term:'Permafrost',              icon:'🧊', body:'Solo permanentemente congelado cobrindo 24% da superfície terrestre do Hemisfério Norte. Armazena aproximadamente o dobro do carbono atualmente na atmosfera. À medida que descongela, esse carbono é liberado como CO2 e metano.' },
+    { term:'Decrescimento',           icon:'📉', body:'Uma teoria econômica que propõe que nações ricas deveriam intencionalmente reduzir o fluxo de materiais e o uso de energia enquanto melhoram o bem-estar. Um número crescente de economistas argumenta que o crescimento perpétuo num planeta finito é matematicamente impossível.' },
+    { term:'Transição Justa',         icon:'⚖️', body:'O princípio de que a mudança para uma economia de baixo carbono deve ser justa — protegendo trabalhadores e comunidades dependentes de combustíveis fósseis, garantindo que os benefícios da energia limpa sejam compartilhados de forma equitativa.' },
+    { term:'Greenwashing',            icon:'🎨', body:'Quando empresas ou governos fazem alegações enganosas sobre suas credenciais ambientais. Exemplos incluem publicidade de compensações de carbono que não reduzem emissões, e anunciar metas de emissão líquida zero sem políticas vinculativas para alcançá-las.' },
+    { term:'Compensação de Carbono',  icon:'💳', body:'Um crédito representando uma tonelada de CO2 removida ou mantida fora da atmosfera. A qualidade varia enormemente — algumas compensações genuinamente previnem emissões; outras são exercícios de papel. Os críticos argumentam que as compensações permitem emissões contínuas em vez de mudança fundamental.' },
+    { term:'Energia Renovável',       icon:'⚡', body:'Energia de fontes que são naturalmente repostas: sol, vento, água, calor geotérmico e marés. Os custos da energia solar e eólica caíram mais de 90% desde 2010, tornando as renováveis a fonte de eletricidade nova mais barata na maior parte do mundo.' },
+    { term:'Acordo de Paris',         icon:'🌍', body:'Um tratado internacional de 2015 comprometendo 196 nações a limitar o aquecimento global a "bem abaixo" 2°C e buscar esforços para limitá-lo a 1,5°C. As NDCs atuais, se implementadas, colocam a Terra no caminho para cerca de 2,5-3°C de aquecimento.' },
+    { term:'IPCC',                    icon:'📚', body:'O Painel Intergovernamental sobre Mudanças Climáticas — um órgão da ONU que sintetiza a ciência climática mais recente. Seus Relatórios de Avaliação são os resumos mais abrangentes do conhecimento climático disponíveis, revisados por milhares de cientistas em todo o mundo.' },
+    { term:'Perdas e Danos',          icon:'💔', body:'Impactos climáticos aos quais não se pode adaptar — comunidades costeiras perdidas para a elevação do nível do mar, culturas deslocadas, ecossistemas permanentemente destruídos. Uma área-chave das negociações de justiça climática: quem paga pelo dano causado principalmente pelas emissões de nações ricas?' },
+    { term:'Bioenergia',              icon:'🌿', body:'Energia gerada pela queima de material orgânico (madeira, colheitas, resíduos). Pode ser carbono-neutro se as plantas crescerem novamente. BECCS pode ser carbono-negativo. Mas a bioenergia em grande escala compete com a produção de alimentos e a biodiversidade.' },
+    { term:'Serviços Ecossistêmicos', icon:'🌐', body:'Os benefícios que ecossistemas funcionais fornecem aos humanos: água limpa, ar limpo, polinização, controle de cheias, regulação climática, fertilidade do solo, saúde mental. O Fórum Econômico Mundial estima que a natureza fornece $44 trilhões em valor econômico anualmente.' },
+  ],
+
+  // ── TREE SPECIES ──────────────────────────────────────────
+  trees: {
+    oak:          { name:'Floresta de Carvalho',          latin:'Quercus robur',                    co2:'25 kg/árvore/ano',  growth:'Lento (80-100 anos)',          lifespan:'500-1000 anos',     biodiversity:'Excepcional — 500+ insetos',     soil:'Raízes profundas evitam erosão',    climate:'Temperado', detail:'A árvore de maior biodiversidade na Europa temperada. Um carvalho hospeda 500+ espécies de insetos. Carvalhos antigos sequestram vasto carbono ao longo dos séculos e seus troncos ocos tornam-se micro-habitats para besouros raros e corujas.' },
+    douglas_fir:  { name:'Abeto de Douglas',              latin:'Pseudotsuga menziesii',            co2:'35 kg/árvore/ano',  growth:'Rápido (40-60 anos)',          lifespan:'500-1000 anos',     biodiversity:'Moderada — aves, insetos',       soil:'Forte em encostas íngremes',        climate:'Temperado frio, montanhas', detail:'Uma das árvores de maior captura de carbono por hectare. O Abeto de Douglas é a espinha dorsal das florestas antigas do Noroeste do Pacífico — suportando corujas manchadas, martas e salmões através de habitat de troncos caídos.' },
+    mangrove_tree:{ name:'Manguezal Costeiro',            latin:'Rhizophora / Avicennia spp.',      co2:'4× taxa floresta tropical',growth:'Moderado (30-40 anos)',  lifespan:'100-200 anos',      biodiversity:'Muito alta — 80% dos peixes tropicais',soil:'Constrói linha costeira, retém sedimentos',climate:'Costas tropicais e subtropicais', detail:'Manguezais sequestram carbono 4× mais rápido que florestas tropicais, armazenando-o em sedimentos encharcados por milênios. Seus sistemas radiculares protegem costas e criam habitat para 80% das espécies de peixes tropicais.' },
+    amazon_mix:   { name:'Floresta Tropical Mista da Amazônia',latin:'Conjunto tropical poliespecífico',co2:'180 t CO2/ha em biomassa',growth:'Dossel rápido, séculos até floresta antiga',lifespan:'Indefinida se intacta',biodiversity:'Inigualável — 50.000+ plantas/ha',soil:'Todos os nutrientes circulam pela biomassa',climate:'Zonas tropicais úmidas', detail:'A Amazônia armazena 150-200 bilhões de toneladas de carbono. Ela cria sua própria chuva através de rios voadores. Uma vez que mais de 20-25% é desmatado, o sistema arrisca chegar a um ponto de inflexão irreversível tornando-se savana permanente.' },
+    bamboo:       { name:'Plantação de Bambu',            latin:'Phyllostachys / Moso bamboo',      co2:'35% mais rápido que árvores/ha',growth:'Muito rápido (3-5 anos)',lifespan:'Perene — rebrota após colheita',biodiversity:'Moderada — aves e pandas',soil:'Excelente em encostas degradadas',climate:'Subtropical a temperado', detail:'O bambu sequestra carbono 35% mais rápido que plantações de árvores e rebrota das raízes após a colheita. Produz 30% mais oxigênio por área que as árvores e seu tapete de raízes estabiliza encostas sujeitas à erosão.' },
+    boreal_spruce:{ name:'Abeto Boreal / Pinheiro',       latin:'Picea abies / Pinus sylvestris',   co2:'Moderado/árvore, massivo total',growth:'Lento-Moderado (60-80 anos)',lifespan:'300-500 anos',biodiversity:'Moderada — lobos, ursos, linces',soil:'Moderado, acidifica ao longo do tempo',climate:'Zonas boreais: Canadá, Rússia, Escandinávia', detail:'A floresta boreal é o maior armazenamento terrestre de carbono na Terra. A restauração boreal também evita o degelo do permafrost — que liberaria metano catastrófico armazenado desde a última era glacial.' },
+    agroforestry: { name:'Mistura de Agrofloresta',       latin:'Montagem de policultura de alimento + madeira',co2:'10-20 t CO2/ha/ano',growth:'Valor rápido, 20 anos de carbono completo',lifespan:'Gerenciado indefinidamente',biodiversity:'Alta — árvores nativas + culturas alimentares',soil:'Excelente, fixação de nitrogênio',climate:'Todos os climas', detail:'A agrofloresta integra árvores com culturas e gado. Árvores fixadoras de nitrogênio fertilizam o solo naturalmente. Comunidades com agrofloresta são mensuravelmente mais resilientes a secas e choques de preços alimentares.' },
+    pumped_hydro:  {name:'Hidroelétrico por Bombeamento',fact:'O hidro por bombeamento armazena 94% do armazenamento global de energia em rede.'},
+    urban_farm:    {name:'Floresta Alimentar Urbana',fact:'Produzem alimentos enquanto resfriam ilhas de calor em até 8°C e reconstroem a biodiversidade urbana.'},
+    kelp_forest:   {name:'Restauração de Kelp',fact:'O kelp cresce 60 cm por dia, absorve CO2 como florestas tropicais e suporta 700+ espécies.'},
+    compressed_air:{name:'Armazenamento de Ar Comprimido',fact:'Pressuriza cavernas subterrâneas com eletricidade excedente. Sem degradação, 50+ anos de vida.'},
+    green_roof:    {name:'Coberturas Verdes',fact:'Reduzem escoamento em 75%, cortam energia em 25%. Estugarda cortou inundações em 40%.'},
+    soil_restore:  {name:'Restauração do Solo',fact:'1 cm de solo leva 500 anos para se formar. A agricultura regenerativa reconstrói em anos.'},
+    hemp:         { name:'Cânhamo Industrial',            latin:'Cannabis sativa (var. industrialis)',co2:'15 t CO2/ha por temporada de 4 meses',growth:'Extremamente rápido (3-5 meses)',lifespan:'Anual — replante cada temporada',biodiversity:'Moderada — excelente para polinizadores',soil:'Excepcional — raízes profundas reconstroem solo degradado',climate:'Temperado a subtropical, 90% das zonas agrícolas', detail:'O cânhamo industrial sequestra 1,63 toneladas de CO2 por tonelada de biomassa seca. A permanência do carbono depende do uso: queimado = CO2 retorna; feito em hempcrete = carbono bloqueado por séculos. Construa um Distrito de Hempcrete no próximo turno para travar a colheita!' },
+  },
+
+  // ── TUTORIAL ──────────────────────────────────────────────
+  tutorial: [
+    { title:'A Saúde do Seu Planeta',    body:'Essas 8 barras mostram o estado do seu mundo. Natureza e Energia são mais críticas — se qualquer uma chegar a zero, a civilização entra em colapso.' },
+    { title:'Tome Sua Ação',             body:'A cada ano, escolha UMA ação: construir uma estrutura, aprovar uma política, desbloquear uma tecnologia ou pular para consolidar.' },
+    { title:'Aba Construir',             body:'A aba 🏗️ Construir tem 36 estruturas em 6 categorias. Cada uma mostra seu efeito exato em todas as 8 barras de recursos antes de confirmar.' },
+    { title:'Reserva Florestal',         body:'Clicar em Reserva Florestal abre um seletor de espécies. Leia a ciência real do CO2 para cada uma das 8 espécies antes de plantar.' },
+    { title:'Política & Pesquisa',       body:'A aba 📋 Política aprova leis climáticas reais. A aba 🔬 Pesquisa desbloqueia 20 tecnologias em 5 camadas. Construa um Hub de Pesquisa para ganhar pontos.' },
+    { title:'Eventos de Crise',          body:'A cada ano há uma chance de uma crise. Leia o cenário com atenção — sua escolha tem embasamento no mundo real e consequências duradouras.' },
+    { title:'Você Sabia?',               body:'Toda ação revela um fato científico real. Após algumas ações, um quiz aparece — responda corretamente para bônus de Pontos de Pesquisa.' },
+  ],
+
+  // ── ACHIEVEMENTS ─────────────────────────────────────────
+  achievements: {
+    first_solar:   { name:'Pioneiro Solar',          desc:'Construa seu primeiro Parque Solar' },
+    forest_keeper: { name:'Guardião da Floresta',    desc:'Plante 3 florestas' },
+    ten_builds:    { name:'Construtor de Cidades',   desc:'Construa 10 edifícios' },
+    policy_maker:  { name:'Político',                desc:'Aprove 5 políticas' },
+    researcher:    { name:'Cientista',               desc:'Desbloqueie 5 tecnologias' },
+    nature_hero:   { name:'Herói da Natureza',       desc:'Alcance 80% de saúde da Natureza' },
+    clean_energy:  { name:'Rede Limpa',              desc:'Superávit de energia de 20+ sem carvão' },
+    hemp_chain:    { name:'Travador de Carbono',     desc:'Plante cânhamo e depois construa Hempcrete' },
+    quiz_ace:      { name:'Ás do Quiz',              desc:'Acerte 10 perguntas do quiz' },
+    biodiversity:  { name:'Guardião da Biodiversidade',desc:'Índice de biodiversidade acima de 75%' },
+    co2_fighter:   { name:'Combatente do CO2',       desc:'Reduza o CO2 abaixo de 400 ppm' },
+    survivor:      { name:'Sobrevivente',            desc:'Alcance o ano final sem colapso' },
+    zero_coal:     { name:'Sem Carvão',              desc:'Chegue ao Ano 15 sem nunca construir carvão' },
+    tech_master:   { name:'Mestre da Tecnologia',    desc:'Desbloqueie 12 tecnologias' },
+    nature_leader: { name:'Campeão da Natureza',     desc:'Alcance 85% de saúde da natureza' },
+    ark_builder:   { name:'Construtor da Arca',      desc:'Todas as 12 espécies Prosperando simultaneamente' },
+  },
+
+  // ── HEADLINES ─────────────────────────────────────────────
+  headlines: {
+    nature_high:  'Cientistas Comemoram Recuperação de Ecossistemas Antigos',
+    nature_low:   'Colapso Ecológico se Acelera — Alerta de Emergência Emitido',
+    temp_high:    'Temperatura Global Agora',
+    temp_high2:   '°C — Eventos Extremos são Rotineiros',
+    temp_low:     'Aumento de Temperatura Desacelerando — Meta de Paris de Volta ao Alcance',
+    co2_low:      'CO2 Caindo — Primeiro Declínio Sustentado Desde a Revolução Industrial',
+    co2_high:     'CO2 a',
+    co2_high2:    'ppm — Nível Mais Alto em 3 Milhões de Anos',
+    biodiv_high:  'Índice de Biodiversidade Se Recupera — Corredores de Vida Selvagem Mostram Resultados',
+    biodiv_low:   'Extinção em Massa se Acelera',
+    default:      'Negociações Climáticas Continuam em Meio a Progresso Misto',
+  },
+};
+
+// ─── PT aliases ─────────────────────────────────────────────────────────────
+PT.tech   = PT.techs;
+PT.policy = PT.policies;
+PT.achiev = PT.achievements;
+PT.encyclo= PT.encyclopedia;
+PT.bars   = {nature:'🌿 Natureza',energy:'⚡ Energia',temp:'🌡️ Temp.',
+  biodiv:'🦋 Biodiversidade',food:'🌾 Alimento',pop:'👥 Pop.',co2:'🌫️ CO2',water:'💧 Água'};
+
+PT.eventTitles={drought:'Seca Severa 🌵',oil:'Petróleo 🛢️',species:'Colapso de Espécies 🦅',heatwave:'Onda de Calor 🌡️',flood:'Inundação Costeira 🌊',breakthrough:'Avanço em Energia ⚡',pollution:'Crise de Algas 🟢',pandemic:'Pandemia Global 🦠',wildfire:'Incêndio Florestal 🔥',uprising:'Levante Climático ✊',coral:'Branqueamento de Coral 🪸',lobbying:'Lobby Corporativo 💼',arctic_melt:'Colapso do Gelo Ártico 🧊',cyclone:'Super Ciclone 🌀',deforestation:'Desmatamento 🪓',desertification:'Desertificação 🏜️',methane_bomb:'Liberação de Metano 💨',ocean_acid:'Acidificação dos Oceanos 🐚',insect_collapse:'Apocalipse dos Insetos 🐛',water_crisis:'Crise Hídrica 💧',green_tech_boom:'Tecnologia Limpa 📈',youth_movement:'Movimento Jovem 🌱',mining_crisis:'Crise de Minerais ⛏️',indigenous_land:'Soberania Indígena 🪶',heat_dome:'Domo de Calor 🌡️',pipeline_leak:'Falha Fóssil 🛢️',food_price:'Preços de Alimentos 🌾',social_denial:'Negacionismo 📱',soil_collapse:'Crise do Solo 🌱',biodiversity_summit:'Cúpula da Biodiversidade 🌍',hurricane:'Furacão Cat.6 🌀',green_bond_boom:'Finanças Verdes 💹',river_dry:'Colapso Fluvial 🏜️',algae_bloom:'Floração de Algas 🟩',ancient_forest:'Floresta Antiga 🌳',ev_grid:'Crise de VEs ⚡',teacher_strike:'Greve de Professores 📚',arctic_shipping:'Rota Ártica 🚢',carbon_tax_revolt:'Revolta Fiscal 🪧',nature_markets:'Mercado de Biodiversidade 🌿',heat_at_work:'Calor no Trabalho 🌡️',carbon_sequestration:'Sequestro de Carbono 🧪',monsoon_failure:'Monções Perturbadas 🌧️',space_solar:'Solar Espacial ☀️',rewilding_success:'Rewilding 🦌',ocean_plastic:'Plástico Oceânico 🛢️',fusion_delay:'Atraso na Fusão ⚛️',climate_migration:'Migração Climática 🏙️',data_privacy:'Privacidade ⚖️',green_olympics:'Olimpíadas Verdes 🏅',nuclear_accident:'Incidente Nuclear ☢️'};
+PT.eventDescs={drought:'O terceiro ano consecutivo de seca severa. Os rios atingem níveis mínimos históricos, as colheitas murcham e os reservatórios se aproximam de níveis críticos.',oil:'Levantamentos geológicos revelaram vastas reservas de petróleo. A indústria pressiona por direitos de extração, prometendo empregos e segurança energética.',species:'Um predador-chave colapsou para números criticamente baixos. A teia alimentar está desestabilizando.',heatwave:'Uma cúpula de calor prende sua região por seis semanas. Hospitais ficam lotados e a rede elétrica tensiona.',flood:'Marés de tempestade romperam as defesas costeiras. Centenas de milhares estão deslocados.',breakthrough:'Sua infraestrutura de pesquisa desenvolveu nova tecnologia de bateria de estado sólido.',pollution:'Uma floração de algas foi desencadeada pelo escoamento de fertilizantes. O colapso de oxigênio mata a vida aquática.',pandemic:'Um novo patógeno se espalha. Os lockdowns reduzem emissões mas perturbam as cadeias de suprimentos.',wildfire:'Incêndios sem precedentes engolfam milhares de km². Ecossistemas antigos não se recuperarão.',uprising:'Milhões marcham por ação climática mais rápida. O momento político exige resposta.',coral:'As temperaturas desencadearam branqueamento em massa. Recifes antigos morrem em semanas.',lobbying:'Uma coalizão de combustíveis fósseis oferece financiar infraestrutura em troca de regulamentações favoráveis.',arctic_melt:'O gelo marinho do Ártico atingiu mínimo histórico. A região aquece quatro vezes mais rápido.',cyclone:'Um ciclone Categoria 5 atingiu a costa com marés de seis metros.',deforestation:'Dados de satélite confirmam desmatamento recorde. O colapso irreversível está a 5 anos.',desertification:'As dunas avançam sobre antigas terras agrícolas. Aquíferos de milênios foram esgotados.',methane_bomb:'O permafrost libera enormes plumas de metano. Um ciclo perigoso está se formando.',ocean_acid:'O pH do oceano caiu ao nível mais baixo em 300 milhões de anos.',insect_collapse:'A biomassa de insetos caiu 75% em 27 anos. Os polinizadores estão em queda livre.',water_crisis:'Múltiplos aquíferos atingiram níveis críticos. Cidades enfrentam racionamento severo.',green_tech_boom:'Suas tecnologias de energia limpa têm enorme demanda global.',youth_movement:'Uma coalizão jovem organizou a maior manifestação climática da história.',mining_crisis:'A demanda por lítio e cobalto supera a oferta. Minas ameaçam ecossistemas prístinos.',indigenous_land:'Comunidades indígenas afirmam soberania sobre territórios com 80% da biodiversidade restante.',heat_dome:'Uma cúpula de calor estacionária aquece cidades 12°C acima do normal por três semanas.',pipeline_leak:'Ruptura de gasoduto contaminou vasta bacia hidrográfica. Milhões de pessoas sem água potável.',food_price:'Seca e conflito elevaram os preços dos alimentos 65% acima da média de cinco anos.',social_denial:'Uma campanha nas redes sociais cortou 15 pontos no apoio público à ação climática.',soil_collapse:'Um terço das terras agrícolas está criticamente degradado.',biodiversity_summit:'Uma cúpula internacional histórica sobre biodiversidade.',hurricane:'Cientistas propõem Categoria 6 para tempestades sem precedentes.',green_bond_boom:'Os mercados de títulos verdes ultrapassaram 2 trilhões de dólares.',river_dry:'Três grandes rios caíram a níveis historicamente baixos.',algae_bloom:'A maior floração de algas já registrada mata peixes em massa.',ancient_forest:'Levantamento revela floresta antiga com 2 bilhões de toneladas de carbono.',ev_grid:'A adoção de VEs superou a capacidade da rede. Apagões nas cidades.',teacher_strike:'Educadores paralisaram exigindo ciência climática integrada ao currículo.',arctic_shipping:'O derretimento abriu rota comercial ártica durante todo o ano.',carbon_tax_revolt:'A precificação do carbono tornou-se politicamente tóxica.',nature_markets:'Mercado de créditos de biodiversidade atrai bilhões em investimentos.',heat_at_work:'Temperaturas perigosas proíbem trabalho externo por 60+ dias ao ano.',carbon_sequestration:'Cientistas anunciam processo de baixo custo para remover CO2 em escala.',monsoon_failure:'A mudança climática perturbou o ciclo de monções.',space_solar:'Consórcio propõe satélites solares que transmitem energia por micro-ondas.',rewilding_success:'Uma iniciativa de rewilding de uma década superou todas as projeções.',ocean_plastic:'Microplásticos afetam reprodução de mamíferos marinhos.',fusion_delay:'O principal projeto de fusão anuncia atraso de 15 anos.',climate_migration:'A primeira cidade para refugiados climáticos está sendo proposta.',data_privacy:'Proposta exige monitoramento de emissões por vigilância por satélite.',green_olympics:'Sua região sediará os primeiros Jogos Olímpicos carbono-negativos.',nuclear_accident:'Pequena falha técnica em usina nuclear gerou alarmismo na mídia.'};
+
+// ════════════════════════════════════════════════════════════
 //  GLOBE ENGINE
 // ════════════════════════════════════════════════════════════
 const GR = 1.8;
@@ -1244,6 +1638,14 @@ const ENCYCLOPEDIA = [
   {term:'Loss and Damage',     icon:'💔', body:'Climate impacts that cannot be adapted to — coastal communities lost to sea level rise, cultures displaced, ecosystems permanently destroyed. A key area of climate justice negotiations: who pays for harm caused primarily by the emissions of wealthy nations, suffered disproportionately by the poorest?'},
   {term:'Biomass Energy',      icon:'🌿', body:'Energy generated by burning organic material (wood, crops, waste). Can be carbon-neutral if plants regrow and reabsorb the emitted carbon. BECCS (biomass energy with carbon capture) can be carbon-negative. But large-scale biomass competes with food production and biodiversity.'},
   {term:'Ecosystem Services',  icon:'🌐', body:'The benefits that functioning ecosystems provide to humans: clean water, clean air, pollination, flood control, climate regulation, soil fertility, mental health. The World Economic Forum estimates nature provides $44 trillion in economic value annually — most of it unpriced and unprotected.'},
+  {tags:['pumped_hydro'],q:'Pumped hydropower provides what percentage of global grid-scale energy storage?',q_pt:'A hidroeletricidade de bombeamento fornece que percentagem do armazenamento global em rede?',opts:['25%','50%','75%','94%'],opts_pt:['25%','50%','75%','94%'],ans:3,explain:'Pumped hydro accounts for 94% of all grid-scale energy storage worldwide. Despite all excitement around batteries, this century-old technology remains the backbone of grid flexibility.',explain_pt:'A hidroeletricidade de bombeamento representa 94% do armazenamento global de energia em rede. Apesar da agitação em torno das baterias, esta tecnologia centenária é a espinha dorsal da flexibilidade da rede.'},
+  {tags:['kelp_forest'],q:'Kelp can grow up to how much per day under ideal conditions?',q_pt:'O kelp pode crescer até quanto por dia em condições ideais?',opts:['2 cm','10 cm','30 cm','60 cm'],opts_pt:['2 cm','10 cm','30 cm','60 cm'],ans:3,explain:'Kelp can grow up to 60 cm per day — one of the fastest-growing organisms on Earth. Giant kelp forests support over 700 species and absorb CO2 at rates comparable to tropical rainforests.',explain_pt:'O kelp pode crescer até 60 cm por dia — um dos organismos de crescimento mais rápido da Terra. Suporta 700+ espécies e absorve CO2 como as florestas tropicais.'},
+  {tags:['soil_restore'],q:'How many microorganisms live in a single teaspoon of healthy forest soil?',q_pt:'Quantos microrganismos vivem em uma colher de chá de solo saudável?',opts:['Thousands','Millions','Billions','More than all humans who have ever lived'],opts_pt:['Milhares','Milhões','Bilhões','Mais do que todos os humanos que já viveram'],ans:3,explain:'A teaspoon of healthy soil contains more microorganisms than all humans who have ever lived (~108 billion). Industrial agriculture has reduced this biological diversity by 50-70% in 150 years.',explain_pt:'Uma colher de chá de solo saudável contém mais microrganismos do que todos os humanos que já viveram na Terra. A agricultura industrial reduziu esta diversidade em 50-70% em 150 anos.'},
+  {tags:['green_roof'],q:'By how much can green roofs reduce local air temperatures above a city?',q_pt:'Em quanto as coberturas verdes podem reduzir as temperaturas locais do ar?',opts:['1-2°C','3-4°C','5-8°C','10-15°C'],opts_pt:['1-2°C','3-4°C','5-8°C','10-15°C'],ans:2,explain:"Green roofs can reduce local air temperatures by 5-8°C. Stuttgart's 60% green roof coverage documented a 40% reduction in urban flooding and measurable improvements in resident wellbeing.",explain_pt:'As coberturas verdes podem reduzir as temperaturas locais em 5-8°C. Estugarda documentou uma redução de 40% nas inundações urbanas com 60% de cobertura verde.'},
+  {tags:['carbon_tax','subsidy_shift'],q:'IMF estimated global fossil fuel subsidies in 2023 at how much per year?',q_pt:'O FMI estimou os subsídios globais a combustíveis fósseis em quanto por ano em 2023?',opts:['$700 billion','$3 trillion','$7 trillion','$13 trillion'],opts_pt:['$700 mil milhões','$3 biliões','$7 biliões','$13 biliões'],ans:2,explain:'The IMF estimated fossil fuel subsidies at $7 trillion per year — $13 million every minute. This is 7% of global GDP. Explicit subsidies total $1 trillion; the rest is uncounted health, climate and traffic costs.',explain_pt:'O FMI estimou os subsídios a combustíveis fósseis em $7 biliões por ano — $13 milhões por minuto. São 7% do PIB global.'},
+  {tags:['rewilding','species'],q:"When wolves returned to Yellowstone in 1995 after 70 years' absence, what unexpected change occurred?",q_pt:'Quando os lobos retornaram a Yellowstone em 1995, que mudança inesperada ocorreu?',opts:['Elk populations tripled','Rivers changed their physical course','Bird populations declined','Soil carbon dropped'],opts_pt:['Populações de alce triplicaram','Os rios mudaram de curso físico','Populações de aves diminuíram','O carbono do solo caiu'],ans:1,explain:"Wolves changed elk behaviour near rivers, allowing vegetation to recover and stabilising banks. Rivers changed course. Beavers returned. Songbirds arrived. This 'trophic cascade' documented by Ripple & Beschta (2012) is one of ecology's most cited examples.",explain_pt:'Os lobos mudaram o comportamento dos alces. A vegetação ribeirinha recuperou, os rios mudaram de curso. Esta "cascata trófica" documentada em 2012 é um dos exemplos mais citados da ecologia.'},
+  {tags:['ocean_protect','coral'],q:'What proportion of marine fish species depend on coral reefs during their lifecycle?',q_pt:'Que proporção das espécies de peixes marinhos depende dos recifes de coral?',opts:['5%','15%','25%','40%'],opts_pt:['5%','15%','25%','40%'],ans:2,explain:'About 25% of all marine fish species depend on coral reefs, despite reefs covering less than 1% of the ocean floor. 500 million people depend on reef fisheries and tourism for food and income.',explain_pt:'Cerca de 25% de todas as espécies de peixes marinhos dependem dos recifes de coral, apesar de cobrirem menos de 1% do fundo oceânico.'},
+  {tags:['methane_bomb'],q:'Methane is how many times more potent than CO2 as a greenhouse gas over 20 years?',q_pt:'O metano é quantas vezes mais potente que o CO2 num período de 20 anos?',opts:['8×','20×','80×','200×'],opts_pt:['8×','20×','80×','200×'],ans:2,explain:'Methane is about 80× more potent than CO2 over 20 years, though it breaks down faster (10-12 year lifetime vs centuries for CO2). Cutting methane is the fastest way to slow near-term warming.',explain_pt:'O metano é cerca de 80 vezes mais potente que o CO2 durante 20 anos, embora se decomponha mais rapidamente. Reduzir o metano é a forma mais rápida de desacelerar o aquecimento.'}
 ];
 
 let encyclopediaSearch = '';
@@ -1251,9 +1653,13 @@ function setEncyclopediaSearch(val){ encyclopediaSearch = val; renderEncyclopedi
 
 function renderEncyclopedia(){
   const term = encyclopediaSearch.toLowerCase().trim();
+  const encItems = ENCYCLOPEDIA.map((e,i) => {
+    if(GAME_LANG==='pt' && PT.encyclo[i]) return {...e, term:PT.encyclo[i].term, body:PT.encyclo[i].body};
+    return e;
+  });
   const items = term
-    ? ENCYCLOPEDIA.filter(e => e.term.toLowerCase().includes(term) || e.body.toLowerCase().includes(term))
-    : ENCYCLOPEDIA;
+    ? encItems.filter(e => e.term.toLowerCase().includes(term) || e.body.toLowerCase().includes(term))
+    : encItems;
 
   const cards = items.map(e => `
     <div style="background:#060c16;border:1px solid #12203a;border-radius:9px;padding:10px 13px;margin-bottom:6px">
@@ -1265,14 +1671,14 @@ function renderEncyclopedia(){
     </div>`).join('');
 
   const el = document.getElementById('encyclopedia-content');
-  if(el) el.innerHTML = cards || '<div style="color:#3d6880;text-align:center;padding:20px">No results for "'+encyclopediaSearch+'"</div>';
+  if(el) el.innerHTML = cards || '<div style="color:#3d6880;text-align:center;padding:20px">'+(GAME_LANG==='pt'?'Nenhum resultado para':'No results for')+' "'+encyclopediaSearch+'"</div>';
 }
 
 function renderEncyclopediaTab(){
   return `
     <div>
       <div style="margin-bottom:10px">
-        <input id="enc-search" type="text" placeholder="Search climate terms..."
+        <input id="enc-search" type="text" placeholder="${ui('encSearch')}"
           value="${encyclopediaSearch}"
           oninput="setEncyclopediaSearch(this.value)"
           style="width:100%;background:#040a12;border:1px solid #12203a;border-radius:7px;padding:8px 12px;
@@ -1338,6 +1744,12 @@ const STRUCT={
   biochar:      {name:'Biochar Plant',        icon:'🔥',cat:'carbon',  ep:4, ed:0, n:14, f:8, p:3, w:2, eco:5, bd:6,  co2:-10,tmp:-0.04,fact:'Biochar locks carbon in soil for thousands of years while improving fertility. Indigenous Amazon peoples used it 2,500 years ago to create terra preta.'},
   green_hydrogen:{name:'Green Hydrogen Hub',  icon:'⚗️',cat:'carbon', ep:14,ed:8, n:4,  f:0, p:8, w:-3,eco:12,bd:2,  co2:-5,tmp:-0.02,fact:'Green hydrogen can decarbonise shipping, aviation, and heavy industry where batteries are impractical. It emits only water when used.'},
   research:     {name:'Research Hub',         icon:'🔬',cat:'industry',ep:0, ed:6, n:4,  f:0, p:8, w:0, eco:6, bd:3,  co2:-2,tmp:-0.01,fact:'Every dollar invested in clean energy R&D returns $3-10 in economic benefit. Research unlocks technologies that transform entire energy systems.'},
+  pumped_hydro: {name:'Pumped Hydro Storage',icon:'🌊',cat:'energy', ep:18,ed:0,n:-4,f:0,p:6,w:-5,eco:7,bd:-2,co2:-4,tmp:-0.01,fact:'Pumped hydro stores 94% of grid-scale energy globally. Water pumped uphill during surplus hours falls through turbines on demand.'},
+  urban_farm:   {name:'Urban Food Forest',   icon:'🏙️',cat:'food',  ep:0,ed:2,n:12,f:14,p:4,w:4,eco:6,bd:6,co2:-4,tmp:-0.02,fact:'City food forests cool urban heat islands up to 8°C while producing food, absorbing stormwater and rebuilding urban biodiversity.'},
+  kelp_forest:  {name:'Kelp Forest Restore', icon:'🌿',cat:'nature', ep:0,ed:0,n:20,f:10,p:0,w:5,eco:5,bd:14,co2:-7,tmp:-0.03,fact:'Kelp grows up to 60 cm per day, absorbs CO2 like tropical rainforests, supports 700+ species and protects coastlines from erosion.'},
+  compressed_air:{name:'Compressed Air Storage',icon:'💨',cat:'carbon',ep:12,ed:0,n:2,f:0,p:4,w:0,eco:6,bd:1,co2:-3,tmp:-0.01,fact:'Compressed air storage pressurises underground caverns with surplus renewable electricity. No exotic materials, 50+ year lifespan.'},
+  green_roof:   {name:'Green Roof District', icon:'🌱',cat:'urban',  ep:0,ed:-8,n:16,f:6,p:18,w:6,eco:8,bd:8,co2:-4,tmp:-0.02,fact:'Green roofs reduce stormwater runoff 75%, cut building cooling 25%, and improve mental health. Stuttgart 60% coverage cut flooding 40%.'},
+  soil_restore: {name:'Soil Restoration',    icon:'🟫',cat:'nature', ep:0,ed:0,n:20,f:12,p:2,w:7,eco:5,bd:10,co2:-8,tmp:-0.03,fact:'Soil restoration rebuilds degraded farmland through regenerative practices. 1 cm of topsoil takes 500 years to form naturally.'},
 };
 
 const TECH_S = { fusion: STRUCT.fusion };
@@ -1879,7 +2291,21 @@ const EVENTS=[
     {text:'Scale back ambitions to reduce cost',ef:{eco:10,n:2},fact:'The economic return from major events depends heavily on legacy infrastructure. Games built on green principles generate measurable long-term returns in tourism, clean energy adoption, and urban quality of life.'}]},
   {id:'nuclear_accident',title:'Nuclear Incident Scare ☢️',desc:'A minor technical fault at a nuclear plant triggers public alarm. No radiation was released, but the media coverage is generating anti-nuclear sentiment. Your energy policy is under pressure.',choices:[
     {text:'Maintain the fleet and invest in safety communications',ef:{ep:4,n:4,eco:-2,co2:-4},fact:'Nuclear power has the lowest deaths per terawatt-hour of any energy source — including wind and solar. Chernobyl and Fukushima combined caused fewer deaths than coal plants cause every week from air pollution. Risk communication is a skill separate from actual risk.'},
-    {text:'Begin phase-out of all nuclear capacity',ef:{ep:-20,ed:8,co2:10,tmp:0.04},fact:'Germany closed its last nuclear plants in 2023, replacing clean baseload with gas and coal. Carbon emissions rose by 80 million tonnes as a result. Anti-nuclear sentiment, however understandable, has been one of the most effective vectors for increasing carbon emissions in history.'}]}
+    {text:'Begin phase-out of all nuclear capacity',ef:{ep:-20,ed:8,co2:10,tmp:0.04},fact:'Germany closed its last nuclear plants in 2023, replacing clean baseload with gas and coal. Carbon emissions rose by 80 million tonnes as a result. Anti-nuclear sentiment, however understandable, has been one of the most effective vectors for increasing carbon emissions in history.'}]}  ,{id:'deep_sea_mining',title:'Deep-Sea Mining Rush 🌊',desc:'A company received permits to mine polymetallic nodules from the abyssal plain — an ecosystem millions of years in the making. The nodules contain cobalt and lithium needed for the energy transition.',choices:[
+    {text:'Impose a moratorium until ecosystem science is complete',ef:{n:10,bd:12,eco:-4},fact:'The ISA approved exploration contracts across 1.5 million km² of ocean floor. Scientists warn mining plumes could blanket hundreds of square kilometres of never-studied ecosystem. Recovery at 4,000 metres takes decades — if it happens at all.'},
+    {text:'Allow controlled extraction with strict monitoring',ef:{eco:10,n:-8,bd:-10},fact:'Deep ocean mining machines work like bulldozers through ecosystems that evolved over millions of years. Current monitoring cannot detect long-range sediment plume impacts. The precautionary principle exists for situations where consequences are irreversible.'}]}
+  ,{id:'wildfire_season',title:'Record Wildfire Season 🔥',desc:"This year's wildfire season burned three times the historical average. Smoke blanketed cities for months. The fire season now runs year-round in some regions.",choices:[
+    {text:'Invest in prescribed burning and forest thinning',ef:{n:-4,f:-2,bd:-3,co2:-3},fact:'Indigenous-managed prescribed fire prevented catastrophic fire for millennia. A century of fire suppression created tinderbox conditions. Prescribed burning is 10-50× cheaper than emergency firefighting but requires accepting short-term smoke.'},
+    {text:'Emergency aerial suppression only — protect all settlements',ef:{n:-18,bd:-12,eco:-6},fact:"The 2019-20 Australian fires released CO2 equivalent to 80% of Australia's annual emissions and killed or displaced 3 billion animals. Aerial firefighting protects structures but cannot stop ecological collapse."}]}
+  ,{id:'coral_restoration',title:'Coral Reef Restoration Breakthrough 🪸',desc:'Marine biologists developed heat-resistant coral strains through selective breeding and assisted gene flow. Full reef restoration is now scientifically feasible — but requires massive political commitment.',choices:[
+    {text:'Launch a national reef restoration programme',ef:{n:16,f:12,bd:18,eco:6,w:4},fact:"The Great Barrier Reef contributes AU$6.4 billion to Australia's economy annually. Lab-grown corals bred for heat resistance survived bleaching events that killed 90% of wild corals beside them. But scaling requires addressing ocean warming."},
+    {text:'Continue monitoring without active intervention',ef:{n:-6,bd:-8},fact:'Without intervention, 70-90% of tropical reefs will be functionally extinct by 2050. Coral reefs support 25% of all marine species and protect 500 million people from storm damage.'}]}
+  ,{id:'soil_microbiome',title:'Soil Microbiome Crisis 🌱',desc:'Scientists announce that soil microbiome health is collapsing 10× faster than known. Without intervention, crop yields are projected to fall 40% by 2050. The foundation of food security is eroding.',choices:[
+    {text:'Mandate regenerative agriculture transition',ef:{n:18,f:6,w:8,bd:10,co2:-5},fact:"Regenerative agriculture rebuilds the soil microbiome. Farmers using it report higher yields after 5 years, lower costs, and drought resilience. France's 4 per 1000 initiative aims to increase soil carbon globally."},
+    {text:'Accelerate synthetic inputs to maximise short-term yield',ef:{f:14,n:-14,w:-8,bd:-10},fact:"Industrial agriculture's dependence on synthetic inputs increased 800% since 1960 while yields rose only 200%. We are drawing down a biological bank account that took 10,000 years to accumulate."}]}
+  ,{id:'climate_bonds',title:'Climate Finance Breakthrough 💰',desc:'A landmark $500 billion agreement channels funds from wealthy nations to climate-vulnerable countries. How you deploy them shapes global trust and future cooperation.',choices:[
+    {text:'Deploy through community-led adaptation projects',ef:{n:12,f:8,bd:8,eco:8,p:6},fact:"Community-led climate adaptation has 3-5× better ROI than top-down infrastructure. Bangladesh's \$1 billion investment in cyclone shelters reduced storm mortality 100-fold between 1970 and 2020."},
+    {text:'Invest in large-scale infrastructure projects',ef:{eco:14,n:4,ep:8},fact:"Large infrastructure delivers visible results but often bypasses vulnerable communities. The Green Climate Fund's own analysis found 80% of projects lacked meaningful consultation with affected communities."}]}
 ];
 
 const OUTCOMES={
@@ -1900,6 +2326,109 @@ let MP = {
   currentPlayer: 1,
   players: {},  // { 1: { G, sc, name }, 2: { G, sc, name } }
 };
+// ════════════════════════════════════════════════════════════
+//  PORTUGUESE TRANSLATIONS  —  Tradução Completa
+// ════════════════════════════════════════════════════════════
+
+
+// ════════════════════════════════════════════════════════════
+//  LANGUAGE SYSTEM  —  'en' | 'pt'
+// ════════════════════════════════════════════════════════════
+let GAME_LANG = 'en';
+function t(en, pt){ return (GAME_LANG === 'pt' && pt) ? pt : en; }
+function setLang(l){ GAME_LANG = l; try{ localStorage.setItem('tb_lang',l); }catch(e){} renderStart(); }
+function loadLang(){ try{ const s=localStorage.getItem('tb_lang'); if(s) GAME_LANG=s; }catch(e){} }
+
+// ─── UI STRING HELPER ─────────────────────────────────────────────────────
+const UI = {
+  en: {
+    title:'Terra Balance', subtitle:'FULL SIMULATOR v3 · GLOBE EDITION',
+    tagline:'Build a civilisation. Protect the planet. Survive to the end.',
+    gameMode:'GAME MODE', mode1p:'1 Player', mode1p_sub:'Solo challenge',
+    mode2p:'2 Players', mode2p_sub:'Hot-seat vs mode',
+    chooseRegion:'CHOOSE YOUR REGION', p1region:'PLAYER 1 — CHOOSE REGION',
+    p2region:'PLAYER 2 — CHOOSE REGION', difficulty:'DIFFICULTY',
+    beginCiv:'Begin Civilisation', diffPlayers:'Players must choose different regions',
+    tabs:['🏗️ Build','📋 Policy','🔬 Research','🦋 Species','🏅 Awards','📖 Facts'],
+    skipBtn:'⏭️ Skip — Consolidate existing infrastructure',
+    didYouKnow:GAME_LANG==='pt'?'💡 VOCÊ SABIA':'💡 DID YOU KNOW', quizTitle:'QUICK QUIZ — correct answer earns +3 RP',
+    quizSub:'Based on what you just learned', correct:'Correct! +3 RP',
+    incorrect:'Not quite…', correctAns:'The correct answer was:',
+    quizScore:'Quiz score this game', continueBtn:'Continue →',
+    beginYear:'Begin Year 1 →', continueYear:'Continue to Year',
+    yearComplete:'Complete', yearsRemaining:'year', yearsRemainingPl:'years',
+    remaining:'remaining', playAgain:'🔄 Play Again', shareScore:'📋 Share Score',
+    yearNum:'Yr', of:'of', research:'RESEARCH TREE',
+    tierLabels:['FOUNDATIONS','TRANSITION','ACCELERATION','MASTERY','CIVILISATIONAL'],
+    policyLabel:'POLICY LEVERS', policyEnacted:'enacted',
+    policyImmediately:'Policies apply immediately and permanently.',
+    enact:'Enact', unlock:'Unlock', need:'Need', req:'Req:', locked:'Locked', needRP:'Need RP',
+    buildResearch:'Build a Research Hub to earn Research Points each year',
+    speciesChooser:'🌲 Choose Tree Species', speciesBack:'← Back',
+    speciesRead:'Click a species to read the full science before planting.',
+    plantThis:'Plant This ✓', yourDecision:'YOUR DECISION:',
+    learning:'LEARNING REPORT', quizGrade:'Quiz Grade',
+    quizScoreLabel:'Quiz Score', topicsExplored:'Topics Explored',
+    learnFooter:'Each quiz question was based on real science.',
+    overallScore:'Overall Score', achievUnlocked:'ACHIEVEMENTS UNLOCKED',
+    biodivTracker:'BIODIVERSITY TRACKER', flagshipLabel:'FLAGSHIP SPECIES',
+    globalBiodiv:'🌐 GLOBAL BIODIVERSITY STATUS', surviving:'% surviving',
+    animalsTracked:'🐾 Animals tracked', plantsTracked:'🌱 Plants tracked',
+    climateChart:'📈 CLIMATE TRENDS', encSearch:'Search climate terms...',
+    ecoLabel:'🔬 ECOLOGY', politicsLabel:'⚖️ POLITICS & LAW',
+    economicsLabel:'💰 ECONOMICS', threatLabel:'⚠️ PRIMARY THREAT',
+    awardsLabel:'🏅 ACHIEVEMENTS', deficitWarn:'Energy deficit',
+    yrConsec:'consecutive year', collapse:'= collapse next!',
+    tutSkip:'Skip tutorial', tutNext:'Next →', tutDone:"Got it! Let's play",
+  },
+  pt: {
+    title:'Terra Balance', subtitle:'SIMULADOR COMPLETO v3 · EDIÇÃO GLOBO',
+    tagline:'Construa uma civilização. Proteja o planeta. Sobreviva até o fim.',
+    gameMode:'MODO DE JOGO', mode1p:'1 Jogador', mode1p_sub:'Desafio solo',
+    mode2p:'2 Jogadores', mode2p_sub:'Modo versus local',
+    chooseRegion:'ESCOLHA SUA REGIÃO', p1region:'JOGADOR 1 — ESCOLHA A REGIÃO',
+    p2region:'JOGADOR 2 — ESCOLHA A REGIÃO', difficulty:'DIFICULDADE',
+    beginCiv:'Iniciar Civilização', diffPlayers:'Os jogadores devem escolher regiões diferentes',
+    tabs:['🏗️ Construir','📋 Política','🔬 Pesquisa','🦋 Espécies','🏅 Prêmios','📖 Fatos'],
+    skipBtn:'⏭️ Pular — Consolidar infraestrutura existente',
+    didYouKnow:'💡 VOCÊ SABIA', quizTitle:'QUIZ RÁPIDO — resposta correta vale +3 PR',
+    quizSub:'Baseado no que você acabou de aprender', correct:'Correto! +3 PR',
+    incorrect:'Não foi dessa vez…', correctAns:'A resposta correta era:',
+    quizScore:'Pontuação do quiz nesta partida', continueBtn:'Continuar →',
+    beginYear:'Começar Ano 1 →', continueYear:'Continuar para o Ano',
+    yearComplete:'Concluído', yearsRemaining:'ano', yearsRemainingPl:'anos',
+    remaining:'restante', playAgain:'🔄 Jogar Novamente', shareScore:'📋 Compartilhar Pontuação',
+    yearNum:'Ano', of:'de', research:'ÁRVORE DE PESQUISA',
+    tierLabels:['FUNDAMENTOS','TRANSIÇÃO','ACELERAÇÃO','MAESTRIA','CIVILIZATÓRIO'],
+    policyLabel:'ALAVANCAS DE POLÍTICA', policyEnacted:'aprovadas',
+    policyImmediately:'Políticas se aplicam imediata e permanentemente.',
+    enact:'Aprovar', unlock:'Desbloquear', need:'Precisa', req:'Req:',
+    locked:'Bloqueado', needRP:'Precisa de PR',
+    buildResearch:'Construa um Centro de Pesquisa para ganhar Pontos de Pesquisa a cada ano',
+    speciesChooser:'🌲 Escolher Espécie de Árvore', speciesBack:'← Voltar',
+    speciesRead:'Clique em uma espécie para ler a ciência completa antes de plantar.',
+    plantThis:'Plantar Esta ✓', yourDecision:'SUA DECISÃO:',
+    learning:'RELATÓRIO DE APRENDIZAGEM', quizGrade:'Nota no Quiz',
+    quizScoreLabel:'Pontuação', topicsExplored:'Tópicos Explorados',
+    learnFooter:'Cada pergunta do quiz foi baseada em ciência real.',
+    overallScore:'Pontuação Geral', achievUnlocked:'CONQUISTAS DESBLOQUEADAS',
+    biodivTracker:'RASTREADOR DE BIODIVERSIDADE', flagshipLabel:'ESPÉCIES EMBLEMÁTICAS',
+    globalBiodiv:'🌐 STATUS GLOBAL DA BIODIVERSIDADE', surviving:'% sobrevivendo',
+    animalsTracked:'🐾 Animais rastreados', plantsTracked:'🌱 Plantas rastreadas',
+    climateChart:'📈 TENDÊNCIAS CLIMÁTICAS', encSearch:'Pesquisar termos climáticos...',
+    ecoLabel:'🔬 ECOLOGIA', politicsLabel:'⚖️ POLÍTICA E DIREITO',
+    economicsLabel:'💰 ECONOMIA', threatLabel:'⚠️ AMEAÇA PRINCIPAL',
+    awardsLabel:'🏅 CONQUISTAS', deficitWarn:'Déficit de energia',
+    yrConsec:'ano consecutivo', collapse:'= colapso no próximo!',
+    tutSkip:'Pular tutorial', tutNext:'Próximo →', tutDone:'Entendi! Vamos jogar',
+  }
+};
+function ui(key){ return UI[GAME_LANG]?.[key] ?? UI.en[key] ?? key; }
+
+// ─── Load saved language preference ──────────────────────────────────────
+try { const s=localStorage.getItem('tb_lang'); if(s) GAME_LANG=s; } catch(e){}
+
+
 let selSc  = 'global';
 let selSc2 = 'africa';
 let selDf  = 'normal';
@@ -1923,7 +2452,7 @@ function makeInitState(scKey, dfKey) {
     ep:sc.ep, ed:sc.ed, nature:sc.nature, food:sc.food, pop:sc.pop,
     water:sc.water, economy:sc.economy, biodiversity:sc.biodiversity,
     co2:sc.co2, temp:sc.temp,
-    built:[], log:['🌍 Year 1 — '+df.label+' begins.'],
+    built:[], log:[(GAME_LANG==='pt'?'🌍 Ano 1 — '+((PT.diff[selDf]&&PT.diff[selDf].label)||df.label)+' começa.':'🌍 Year 1 — '+df.label+' begins.')],
     phase:'build', event:null, deficitYears:0, lowFoodYears:0,
     fact:null, rp:0, unlockedTechs:[], annualNatureBonus:0,
     annualBdBonus:0, annualCo2Bonus:0,
@@ -1976,11 +2505,15 @@ function eventPool(state){
 
 function getAdvisorComment(state){
   const s = state || G;
-  const a = ADVISORS[s.year % ADVISORS.length];
+  const _a = ADVISORS[s.year % ADVISORS.length];
+  const _aPT = GAME_LANG==='pt' ? PT.advisors[s.year % PT.advisors.length] : null;
+  const a = _aPT ? {name:_aPT.name,role:_aPT.role,icon:_a.icon,color:_a.color,comments:_aPT.comments} : _a;
+  const aIdx = s.year % ADVISORS.length;
   let type = 'neutral';
   if(s.nature>65&&s.biodiversity>55&&s.economy>50) type='good';
   else if(s.nature<40||s.biodiversity<30||s.temp>2.5) type='bad';
-  return {...a, comment:a.comments[type]};
+  const comment = (GAME_LANG==='pt' && PT.advisors[aIdx]) ? PT.advisors[aIdx][type] : a.comments[type];
+  return {...a, comment};
 }
 
 function getSpeciesStatus(key, state){
@@ -2081,22 +2614,22 @@ function renderWildlifeTab(){
   let html = `
     <div style="background:#040a12;border:1px solid #12203a;border-radius:9px;padding:10px 13px;margin-bottom:10px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-        <div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:11px;letter-spacing:.05em">🌐 GLOBAL BIODIVERSITY STATUS</div>
-        <div style="font-family:Cinzel,serif;color:${barCol};font-size:14px">${survPct}% surviving</div>
+        <div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:11px;letter-spacing:.05em">${GAME_LANG==='pt'?'🌐 STATUS GLOBAL DA BIODIVERSIDADE':'🌐 GLOBAL BIODIVERSITY STATUS'}</div>
+        <div style="font-family:Cinzel,serif;color:${barCol};font-size:14px">${survPct}% ${GAME_LANG==='pt'?'sobrevivendo':'surviving'}</div>
       </div>
       <div style="background:#040a12;border:1px solid #12203a;border-radius:5px;height:8px;overflow:hidden;margin-bottom:6px">
         <div style="height:100%;background:${barCol};width:${survPct}%;transition:width .6s"></div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:2px">
         <div style="background:#060c16;border-radius:6px;padding:6px 9px;text-align:center">
-          <div style="font-size:11px;color:#3d6880">🐾 Animals tracked</div>
+          <div style="font-size:11px;color:#3d6880">${GAME_LANG==='pt'?'🐾 Animais rastreados':'🐾 Animals tracked'}</div>
           <div style="font-family:Cinzel,serif;color:#e9d8a6;font-size:12px">${totalAnimals.toLocaleString()}</div>
-          <div style="font-size:10px;color:${barCol};margin-top:1px">~${estSurv.toLocaleString()} surviving</div>
+          <div style="font-size:10px;color:${barCol};margin-top:1px">~${estSurv.toLocaleString()} ${GAME_LANG==='pt'?'sobrevivendo':'surviving'}</div>
         </div>
         <div style="background:#060c16;border-radius:6px;padding:6px 9px;text-align:center">
-          <div style="font-size:11px;color:#3d6880">🌱 Plants tracked</div>
+          <div style="font-size:11px;color:#3d6880">${GAME_LANG==='pt'?'🌱 Plantas rastreadas':'🌱 Plants tracked'}</div>
           <div style="font-family:Cinzel,serif;color:#e9d8a6;font-size:12px">${totalPlants.toLocaleString()}</div>
-          <div style="font-size:10px;color:${barCol};margin-top:1px">~${estPlSurv.toLocaleString()} surviving</div>
+          <div style="font-size:10px;color:${barCol};margin-top:1px">~${estPlSurv.toLocaleString()} ${GAME_LANG==='pt'?'sobrevivendo':'surviving'}</div>
         </div>
       </div>
       <div style="font-size:10px;color:#3d6880;text-align:center;margin-top:4px;font-style:italic">
@@ -2129,7 +2662,7 @@ function renderWildlifeTab(){
               <div style="font-size:10px;color:#e9d8a6">${(n||0).toLocaleString()}</div>
             </div>`:'').join('')}
         </div>
-        <div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.07em;margin-bottom:5px">FLAGSHIP SPECIES</div>
+        <div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.07em;margin-bottom:5px">${GAME_LANG==='pt'?'ESPÉCIES EMBLEMÁTICAS':'FLAGSHIP SPECIES'}</div>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(75px,1fr));gap:4px">
           ${species.map(([k,sp])=>{
             const st = getSpeciesStatus(k,s);
@@ -2163,17 +2696,19 @@ function renderWildlifeTab(){
 function getHeadline(state){
   const s = state || G;
   const yr=s.year, n=s.nature, t=s.temp, c=s.co2, bd=s.biodiversity;
+  const pt = GAME_LANG==='pt';
+  const yrl = pt?`Ano ${yr}`:`Year ${yr}`;
   const candidates=[
-    n>80?[`Year ${yr}: Scientists Hail Recovery of Ancient Ecosystems`,'#52b4e8']:null,
-    n<30?[`Year ${yr}: Ecological Collapse Accelerating — Emergency Warning Issued`,'#e63946']:null,
-    t>2.5?[`Year ${yr}: Global Temperature Now +${t.toFixed(1)}°C — Extreme Events Routine`,'#e63946']:null,
-    t<1.2?[`Year ${yr}: Temperature Rise Slowing — Paris Target Back In Reach`,'#52b4e8']:null,
-    c<390?[`Year ${yr}: CO2 Falling — First Sustained Decline Since Industrial Revolution`,'#9dc88d']:null,
-    c>450?[`Year ${yr}: CO2 at ${c} ppm — Highest Level in 3 Million Years`,'#e63946']:null,
-    bd>75?[`Year ${yr}: Biodiversity Index Recovering — Wildlife Corridors Showing Results`,'#9dc88d']:null,
-    bd<30?[`Year ${yr}: Mass Extinction Accelerating`,'#e63946']:null,
+    n>80?[`${yrl}: ${pt?'Cientistas Celebram Recuperação de Ecossistemas Antigos':'Scientists Hail Recovery of Ancient Ecosystems'}`,'#52b4e8']:null,
+    n<30?[`${yrl}: ${pt?'Colapso Ecológico Acelerando — Alerta de Emergência Emitido':'Ecological Collapse Accelerating — Emergency Warning Issued'}`,'#e63946']:null,
+    t>2.5?[`${yrl}: ${pt?'Temperatura Global +'+t.toFixed(1)+'°C — Eventos Extremos São Rotineiros':'Global Temperature Now +'+t.toFixed(1)+'°C — Extreme Events Routine'}`,'#e63946']:null,
+    t<1.2?[`${yrl}: ${pt?'Aquecimento Desacelerando — Meta de Paris ao Alcance':'Temperature Rise Slowing — Paris Target Back In Reach'}`,'#52b4e8']:null,
+    c<390?[`${yrl}: ${pt?'CO2 Caindo — Primeiro Declínio Sustentado Desde a Revolução Industrial':'CO2 Falling — First Sustained Decline Since Industrial Revolution'}`,'#9dc88d']:null,
+    c>450?[`${yrl}: ${pt?'CO2 em '+c+' ppm — Nível Mais Alto em 3 Milhões de Anos':'CO2 at '+c+' ppm — Highest Level in 3 Million Years'}`,'#e63946']:null,
+    bd>75?[`${yrl}: ${pt?'Índice de Biodiversidade Recuperando — Corredores de Vida Selvagem Mostram Resultados':'Biodiversity Index Recovering — Wildlife Corridors Showing Results'}`,'#9dc88d']:null,
+    bd<30?[`${yrl}: ${pt?'Extinção em Massa Acelerando':'Mass Extinction Accelerating'}`,'#e63946']:null,
   ].filter(Boolean);
-  if(!candidates.length) return [`Year ${yr}: Climate Negotiations Continue Amid Mixed Progress`,'#c9a227'];
+  if(!candidates.length) return [`${yrl}: ${pt?'Negociações Climáticas Continuam em Meio a Progresso Misto':'Climate Negotiations Continue Amid Mixed Progress'}`,'#c9a227'];
   return candidates[Math.floor(Math.random()*candidates.length)];
 }
 
@@ -2254,6 +2789,7 @@ function endOfYear(state){
   checkAchievements(s);
   recordHistory(s);
   s.year++;
+  if(!MP.enabled&&s.year%3===0)setTimeout(saveGame,500);
   if(s.year > s.maxYears){
     const won   = s.nature>=50 && bal>=0 && s.food>=30 && s.pop>=df.popTarget;
     const great = won && s.nature>=70 && s.biodiversity>=60 && s.temp<1.8 && s.co2<410;
@@ -2261,6 +2797,7 @@ function endOfYear(state){
     s.result    = great?'perfect':won?'win':narrow?'narrow':s.nature<35?'collapse_nature':s.food<18?'collapse_food':'survive';
     s.phase     = 'over';
     if(['perfect','win'].includes(s.result)) setTimeout(SFX.win,300); else setTimeout(SFX.lose,300);
+    try{saveHighScore(s);}catch(e){}
     return;
   }
   s.phase='year_summary'; s.event=null;
@@ -2298,6 +2835,7 @@ function checkMPSwitch(justFinishedState){
   G = MP.players[MP.currentPlayer].G;
   // Rotate globe to current player's region
   const sc = SCEN[G.sc];
+  const scIntPT = GAME_LANG==='pt'&&PT.scen[G.sc] ? PT.scen[G.sc] : sc;
   earthGroup.rotation.y = sc.earthRot || 0;
   camTheta = sc.camT || 0.0;
   camPhi   = sc.camP || 0.26;
@@ -2325,8 +2863,8 @@ function doBuild(key){
   const pn = MP.enabled ? MP.currentPlayer : 1;
   const {lat,lon} = pickLatLon(s.sc, key);
   addBuilding(key, lat, lon, pn);
-  s.log = ['📍 Yr '+s.year+': Built '+st.name, ...s.log].slice(0, 8);
-  s.fact = st.fact;
+  s.log = ['📍 '+ui('yearNum')+' '+s.year+': '+(GAME_LANG==='pt'&&PT.struct[key]?PT.struct[key].name:st.name), ...s.log].slice(0, 8);
+  s.fact = (GAME_LANG==='pt' && PT.struct[key] && PT.struct[key].fact) ? PT.struct[key].fact : st.fact;
   // Sound & feedback
   if(['solar','solar_tower','wind','offshore_wind','tidal','wave_energy','geothermal','nuclear','smr','fusion'].includes(key)) SFX.energy();
   else if(['forest','wetland','grassland','peatland','mangrove','coral_restore'].includes(key)) SFX.nature();
@@ -2387,7 +2925,8 @@ function doTech(id){
   s.log  = ['🔬 Yr '+s.year+': '+t.name, ...s.log].slice(0, 8);
   s.fact = t.fact;
   SFX.tech();
-  showToast('🔬 Unlocked: <strong>'+t.name+'</strong>', '#48cae4', 2000);
+  const tnm = (GAME_LANG==='pt'&&PT.tech[id])?PT.tech[id].name:t.name;
+  showToast('🔬 '+(GAME_LANG==='pt'?'Desbloqueado':'Unlocked')+': <strong>'+tnm+'</strong>', '#48cae4', 2000);
   checkAchievements(s); popAchievements(s);
   if(maybeShowQuiz(id, s)) { renderUI(); return; }
   renderUI();
@@ -2439,7 +2978,10 @@ function cancelForest(){ pendingForestBuild=false; G.phase='build'; renderUI(); 
 
 function confirmForest(speciesKey){
   const s = G;
-  const sp = TREE_SPECIES[speciesKey], b = sp.bonus;
+  const _sp = TREE_SPECIES[speciesKey], _spPT = GAME_LANG==='pt'&&PT.trees[speciesKey]?PT.trees[speciesKey]:null;
+  const sp = _spPT ? {..._sp,name:_spPT.name,detail:_spPT.detail} : _sp, b = sp.bonus;
+  const spNamePT = (GAME_LANG==='pt'&&PT.trees[speciesKey]) ? PT.trees[speciesKey].name : sp.name;
+  const spDetailPT = (GAME_LANG==='pt'&&PT.trees[speciesKey]) ? PT.trees[speciesKey].detail : sp.detail;
   s.ed = Math.max(0, s.ed - 2);
   s.nature       = clamp(s.nature       + (b.n||0), 0, 100);
   s.food         = clamp(s.food         + (b.f||0), 0, 100);
@@ -2450,9 +2992,9 @@ function confirmForest(speciesKey){
   const pn = MP.enabled ? MP.currentPlayer : 1;
   const {lat, lon} = pickLatLon(s.sc, speciesKey);
   addBuilding('forest', lat, lon, pn);
-  s.log  = ['🌿 Yr '+s.year+': Planted '+sp.name, ...s.log].slice(0, 8);
+  s.log  = ['🌿 '+ui('yearNum')+' '+s.year+': '+(GAME_LANG==='pt'?'Plantado':'Planted')+' '+spNamePT, ...s.log].slice(0, 8);
   s.fact = speciesKey==='hemp'
-    ? sp.detail+' <strong style="color:#8ac840">Next turn: build a Hempcrete District to lock the carbon permanently.</strong>'
+    ? sp.detail+' <strong style="color:#8ac840">'+t('Next turn: build a Hempcrete District to lock the carbon permanently.','Próximo turno: construa um Distrito de Hempcrete para travar o carbono permanentemente.')+'</strong>'
     : sp.detail;
   s.phase = 'build'; pendingForestBuild = false;
   SFX.forest();
@@ -2484,7 +3026,7 @@ function showSpeciesDetail(key){
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;border-top:1px solid #12203a;padding-top:9px">
         <div style="font-size:11px;color:#52b4e8;font-family:Cinzel,serif">${sp.co2label}</div>
-        <button onclick="confirmForest('${key}')" style="background:#c9a227;color:#000;border:none;border-radius:7px;padding:8px 16px;font-family:Cinzel,serif;font-size:11px;font-weight:600;cursor:pointer">Plant This ✓</button>
+        <button onclick="confirmForest('${key}')" style="background:#c9a227;color:#000;border:none;border-radius:7px;padding:8px 16px;font-family:Cinzel,serif;font-size:11px;font-weight:600;cursor:pointer">${t('Plant This ✓','Plantar Esta ✓')}</button>
       </div>
     </div>`;
   document.getElementById('species-detail').scrollIntoView({behavior:'smooth',block:'nearest'});
@@ -2493,6 +3035,7 @@ function showSpeciesDetail(key){
 function renderForestChooser(){
   const cards=Object.entries(TREE_SPECIES).map(([k,sp])=>{
     const tags=[sp.bonus.n?`<span style="color:#52b4e8">+${sp.bonus.n}🌿</span>`:'',sp.bonus.f?`<span style="color:#9dc88d">+${sp.bonus.f}🌾</span>`:'',sp.bonus.p?`<span style="color:#7ab8e8">+${sp.bonus.p}👥</span>`:''].filter(Boolean).join(' ');
+    const spNamePT = (GAME_LANG==='pt'&&PT.trees[k]) ? PT.trees[k].name : sp.name;
     return `<div onclick="showSpeciesDetail('${k}')" style="background:#060c16;border:1px solid #12203a;border-radius:9px;padding:9px 12px;cursor:pointer;margin-bottom:5px;transition:border-color .12s,background .12s" onmouseover="this.style.borderColor='#2a5a88';this.style.background='#091624'" onmouseout="this.style.borderColor='#12203a';this.style.background='#060c16'">
       <div style="display:flex;align-items:center;gap:9px">
         <div style="font-size:20px;flex-shrink:0">${sp.icon}</div>
@@ -2510,10 +3053,10 @@ function renderForestChooser(){
   }).join('');
   return `<div class="panel" style="border-color:rgba(82,180,232,.25)">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:7px">
-      <div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:13px">🌲 Choose Tree Species</div>
-      <button onclick="cancelForest()" style="background:transparent;border:1px solid #12203a;border-radius:6px;padding:3px 10px;color:#3d6880;cursor:pointer;font-size:10px;font-family:Cinzel,serif">← Back</button>
+      <div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:13px">${t('🌲 Choose Tree Species','🌲 Escolher Espécie de Árvore')}</div>
+      <button onclick="cancelForest()" style="background:transparent;border:1px solid #12203a;border-radius:6px;padding:3px 10px;color:#3d6880;cursor:pointer;font-size:10px;font-family:Cinzel,serif">${t('← Back','← Voltar')}</button>
     </div>
-    <div style="color:#c4b8a0;font-size:12px;margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid #12203a">Click a species to read the full science before planting.</div>
+    <div style="color:#c4b8a0;font-size:12px;margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid #12203a">${t('Click a species to read the full science before planting.','Clique numa espécie para ler toda a ciência antes de plantar.')}</div>
     <div style="max-height:280px;overflow-y:auto;padding-right:2px">${cards}</div>
     <div id="species-detail"></div>
   </div>`;
@@ -2555,11 +3098,14 @@ function initGame(){
   if(animId) cancelAnimationFrame(animId);
   lastTs = 0; animate(0);
 
-  document.getElementById('yr-mx').textContent = 'of ' + DIFF[selDf].years;
+  document.getElementById('yr-mx').textContent = ui('of') + ' ' + DIFF[selDf].years;
   maybeTutorial();
   recordHistory(G);
   G.phase = 'intro';
-  const label = selMp ? `${P_HEX[1]}●</span> ${SCEN[selSc].name} vs <span style="color:${P_HEX[2]}">●</span> ${SCEN[selSc2].name}` : sc.flag + ' ' + sc.name + ' · ' + DIFF[selDf].label;
+  const scName  = (GAME_LANG==='pt'&&PT.scen[selSc])  ? PT.scen[selSc].name  : sc.name;
+  const sc2Name = (GAME_LANG==='pt'&&PT.scen[selSc2]) ? PT.scen[selSc2].name : SCEN[selSc2].name;
+  const dfLabel = (GAME_LANG==='pt'&&PT.diff[selDf])   ? PT.diff[selDf].label : DIFF[selDf].label;
+  const label = selMp ? `${P_HEX[1]}●</span> ${scName} vs <span style="color:${P_HEX[2]}">●</span> ${sc2Name}` : sc.flag + ' ' + scName + ' · ' + dfLabel;
   document.getElementById('g-sub').textContent = '';
   renderUI();
 }
@@ -2615,17 +3161,17 @@ function hudHtml(){
   }
   return `${mpBanner}<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 16px">
     <div>
-      ${barHtml('🌿 Nature',s.nature,100,'%')}
+      ${barHtml(GAME_LANG==='pt'?PT.bars['nature']:'🌿 Nature',s.nature,100,'%')}
       ${eBarHtml(s)}
-      ${barHtml('🌡️ Temp',s.temp,4,'°C',true)}
-      ${barHtml('🦋 Biodiversity',s.biodiversity,100,'%')}
+      ${barHtml(GAME_LANG==='pt'?PT.bars['temp']:'🌡️ Temp',s.temp,4,'°C',true)}
+      ${barHtml(GAME_LANG==='pt'?PT.bars['biodiv']:'🦋 Biodiversity',s.biodiversity,100,'%')}
     </div>
     <div>
-      ${barHtml('🌾 Food',s.food,100,'%')}
+      ${barHtml(GAME_LANG==='pt'?PT.bars['food']:'🌾 Food',s.food,100,'%')}
       ${barHtml('👥 Pop: '+s.pop,s.pop,300,'')}
-      ${barHtml('🌫️ CO2',s.co2,500,'ppm',true)}
-      ${barHtml('💧 Water',s.water,100,'%')}
-      ${s.deficitYears>0?`<div class="def-w">⚠️ Energy deficit ${s.deficitYears} yr${s.deficitYears>1?'s':''}. 3 = collapse.</div>`:''}
+      ${barHtml(GAME_LANG==='pt'?PT.bars['co2']:'🌫️ CO2',s.co2,500,'ppm',true)}
+      ${barHtml(GAME_LANG==='pt'?PT.bars['water']:'💧 Water',s.water,100,'%')}
+      ${s.deficitYears>0?`<div class="def-w">⚠️ ${GAME_LANG==='pt'?'Déficit de energia':'Energy deficit'} ${s.deficitYears} ${GAME_LANG==='pt'?'ano'+(s.deficitYears>1?'s':'')+'. 3 = colapso!':'yr'+(s.deficitYears>1?'s':'')+'. 3 = collapse.'}</div>`:''}
       ${rh>0?`<div style="color:#48cae4;font-size:10px;text-align:right;margin-top:2px">🔬 +${rh*3} RP/yr · ${s.rp} total</div>`:''}
     </div>
   </div>
@@ -2634,7 +3180,7 @@ function hudHtml(){
 
 function renderBuildTab(){
   const s = G;
-  const cats={energy:'⚡ Energy',urban:'🏙️ Urban',food:'🌾 Food',nature:'🌿 Nature',industry:'♻️ Industry',carbon:'💨 Carbon'};
+  const cats=GAME_LANG==='pt'?{energy:'⚡ Energia',urban:'🏙️ Urbano',food:'🌾 Alimento',nature:'🌿 Natureza',industry:'♻️ Indústria',carbon:'💨 Carbono'}:{energy:'⚡ Energy',urban:'🏙️ Urban',food:'🌾 Food',nature:'🌿 Nature',industry:'♻️ Industry',carbon:'💨 Carbon'};
   const allS={...STRUCT,...(s.unlockedTechs.includes('fusion_tech')?{fusion:STRUCT.fusion}:{})};
   let html='';
   Object.entries(cats).forEach(([cat,catLabel])=>{
@@ -2642,13 +3188,14 @@ function renderBuildTab(){
     if(!items.length)return;
     html+=`<div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.1em;margin:8px 0 4px">${catLabel}</div>`;
     items.forEach(([k,st])=>{
+      const stName = (GAME_LANG==='pt' && PT.struct[k]) ? PT.struct[k].name : st.name;
       const eff=bStats(k,s);
       const isForest=k==='forest';
       html+=`<button class="sbtn" onclick="doBuild('${k}')" style="${isForest?'border-color:rgba(82,180,232,.35);':''}">
         <div style="display:flex;align-items:center;gap:8px">
           <span style="font-size:14px">${st.icon}</span>
           <div style="flex:1"><div style="display:flex;align-items:center;gap:5px">
-            <div class="sname">${st.name}</div>
+            <div class="sname">${stName}</div>
             ${isForest?'<div style="font-size:9px;color:#52b4e8;background:rgba(82,180,232,.12);border:1px solid rgba(82,180,232,.3);border-radius:3px;padding:1px 4px;font-family:Cinzel,serif">8 SPECIES</div>':''}
           </div>${fxSpans(eff)}</div>
         </div>
@@ -2656,21 +3203,23 @@ function renderBuildTab(){
     });
   });
   return `<div style="max-height:300px;overflow-y:auto;padding-right:2px">${html}</div>
-    <button class="skipbtn" onclick="doSkip()">⏭️ Skip — Consolidate existing infrastructure</button>`;
+    <button class="skipbtn" onclick="doSkip()">${ui('skipBtn')}</button>`;
 }
 
 function renderTechTab(){
   const s=G;
-  let html=`<div style="display:flex;justify-content:space-between;margin-bottom:8px"><div class="lbl" style="margin-bottom:0">RESEARCH TREE</div><div style="font-family:Cinzel,serif;color:#48cae4;font-size:11px">🔬 ${s.rp} RP</div></div>`;
-  if(!s.built.includes('research')) html+=`<div style="color:#3d6880;font-size:13px;font-style:italic;text-align:center;padding:12px">Build a Research Hub to earn Research Points each year</div>`;
+  let html=`<div style="display:flex;justify-content:space-between;margin-bottom:8px"><div class="lbl" style="margin-bottom:0">${ui('research')}</div><div style="font-family:Cinzel,serif;color:#48cae4;font-size:11px">🔬 ${s.rp} RP</div></div>`;
+  if(!s.built.includes('research')) html+=`<div style="color:#3d6880;font-size:13px;font-style:italic;text-align:center;padding:12px">${t('Build a Research Hub to earn Research Points each year','Construa um Hub de Pesquisa para ganhar Pontos de Pesquisa a cada ano')}</div>`;
   [1,2,3,4,5].forEach(tier=>{
-    html+=`<div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.1em;margin:8px 0 4px">— TIER ${tier} ${['FOUNDATIONS','TRANSITION','ACCELERATION','MASTERY','CIVILISATIONAL'][tier-1]} —</div>`;
+    html+=`<div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.1em;margin:8px 0 4px">— TIER ${tier} ${ui('tierLabels')[tier-1]} —</div>`;
     Object.entries(TECHS).filter(([,t])=>t.tier===tier).forEach(([id,t])=>{
+      const tName = (GAME_LANG==='pt'&&PT.tech[id]) ? PT.tech[id].name : t.name;
+      const tDesc = (GAME_LANG==='pt'&&PT.tech[id]) ? PT.tech[id].desc : t.desc;
       const done=s.unlockedTechs.includes(id),avail=reqMet(id,s)&&!done,canAff=s.rp>=t.cost;
       html+=`<div class="tc${done?' done':!reqMet(id,s)?' locked':''}">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <div><span style="font-size:12px">${t.icon}</span> <span class="sname">${t.name}</span>
-            <div style="font-size:11px;color:#c4b8a0;margin-top:2px">${t.desc}</div>
+          <div><span style="font-size:12px">${t.icon}</span> <span class="sname">${tName}</span>
+            <div style="font-size:11px;color:#c4b8a0;margin-top:2px">${tDesc}</div>
             ${t.req.length?`<div style="color:#3d6880;font-size:10px;margin-top:2px">Req: ${t.req.map(r=>TECHS[r]?TECHS[r].name:r).join(' + ')}</div>`:''}
           </div>
           ${done?`<span style="color:#52b4e8;font-size:11px">✓</span>`:`<span style="color:#3d6880;font-size:10px">${t.cost} RP</span>`}
@@ -2683,31 +3232,33 @@ function renderTechTab(){
 
 function renderPolicyTab(){
   const s=G;
-  let html=`<div style="display:flex;justify-content:space-between;margin-bottom:8px"><div class="lbl" style="margin-bottom:0">POLICY LEVERS</div><div style="font-family:Cinzel,serif;color:#9dc88d;font-size:10px">${s.policies.length} enacted</div></div>
-  <div style="font-size:11px;color:#3d6880;margin-bottom:10px">Policies apply immediately and permanently.</div>`;
+  let html=`<div style="display:flex;justify-content:space-between;margin-bottom:8px"><div class="lbl" style="margin-bottom:0">${ui('policyLabel')}</div><div style="font-family:Cinzel,serif;color:#9dc88d;font-size:10px">${s.policies.length} ${ui('policyEnacted')}</div></div>
+  <div style="font-size:11px;color:#3d6880;margin-bottom:10px">${ui('policyImmediately')}</div>`;
   const groups=[
-    ['💹 Economic',['carbon_tax','subsidy_shift','green_finance','carbon_border','degrowth']],
-    ['📋 Mandates', ['renew_mandate','ev_mandate','plastic_ban','circular_law','food_waste_law']],
-    ['🌍 Land & Nature',['reforest_law','fishing_quota','ocean_protect','indigenous_land','nature_rights','urban_greening']],
-    ['🌱 Social',   ['meat_tax','free_transit','meat_free_day','climate_edu']],
+    [t('💹 Economic','💹 Econômico'),['carbon_tax','subsidy_shift','green_finance','carbon_border','degrowth']],
+    [t('📋 Mandates','📋 Mandatos'), ['renew_mandate','ev_mandate','plastic_ban','circular_law','food_waste_law']],
+    [t('🌍 Land & Nature','🌍 Terra & Natureza'),['reforest_law','fishing_quota','ocean_protect','indigenous_land','nature_rights','urban_greening']],
+    [t('🌱 Social','🌱 Social'),   ['meat_tax','free_transit','meat_free_day','climate_edu']],
   ];
   groups.forEach(([label,ids])=>{
     html+=`<div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.1em;margin:8px 0 4px">${label}</div>`;
     ids.forEach(id=>{
       const p=POLICIES[id]; if(!p)return;
+      const pName = (GAME_LANG==='pt'&&PT.policy[id]) ? PT.policy[id].name : p.name;
+      const pDesc = (GAME_LANG==='pt'&&PT.policy[id]) ? PT.policy[id].desc : p.desc;
       const done=policyPassed(id,s);
       const reqOk=p.req.every(r=>s.unlockedTechs.includes(r)||policyPassed(r,s));
       const canAfford=p.cost===0||s.rp>=p.cost;
       html+=`<div class="tc${done?' done':!reqOk?' locked':''}">
         <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <div style="flex:1"><span style="font-size:12px">${p.icon}</span> <span class="sname">${p.name}</span>
+          <div style="flex:1"><span style="font-size:12px">${p.icon}</span> <span class="sname">${pName}</span>
             ${p.cost>0?`<span style="color:#3d6880;font-size:9px;margin-left:5px">${p.cost} RP</span>`:''}
             <div style="font-size:11px;color:#c4b8a0;margin-top:2px">${fxSpans(p)}</div>
             ${p.req.length?`<div style="color:#3d6880;font-size:10px;margin-top:2px">Req: ${p.req.map(r=>POLICIES[r]?POLICIES[r].name:TECHS[r]?TECHS[r].name:r).join(' + ')}</div>`:''}
           </div>
           ${done?`<span style="color:#52b4e8;font-size:11px;flex-shrink:0;margin-left:6px">✓</span>`:
-            reqOk&&canAfford?`<button onclick="doPolicy('${id}')" style="flex-shrink:0;margin-left:6px;background:#9dc88d;color:#000;border:none;border-radius:5px;padding:3px 9px;font-family:Cinzel,serif;font-size:9px;cursor:pointer">Enact</button>`:
-            `<span style="color:#3d6880;font-size:9px;flex-shrink:0;margin-left:6px">${!reqOk?'Locked':'Need RP'}</span>`}
+            reqOk&&canAfford?`<button onclick="doPolicy('${id}')" style="flex-shrink:0;margin-left:6px;background:#9dc88d;color:#000;border:none;border-radius:5px;padding:3px 9px;font-family:Cinzel,serif;font-size:9px;cursor:pointer">${t('Enact','Aprovar')}</button>`:
+            `<span style="color:#3d6880;font-size:9px;flex-shrink:0;margin-left:6px">${!reqOk?(GAME_LANG==='pt'?'Bloqueado':'Locked'):(GAME_LANG==='pt'?'Precisa PR':'Need RP')}</span>`}
         </div>
       </div>`;
     });
@@ -2717,19 +3268,21 @@ function renderPolicyTab(){
 
 function renderQuiz(){
   if(!activeQuiz) return '';
-  const {quiz} = activeQuiz;
-  const opts = quiz.opts.map((o,i)=>
+  const {quiz}=activeQuiz;
+  const qText=(GAME_LANG==='pt'&&quiz.q_pt)?quiz.q_pt:quiz.q;
+  const qOpts=(GAME_LANG==='pt'&&quiz.opts_pt)?quiz.opts_pt:quiz.opts;
+  const opts=qOpts.map((o,i)=>
     `<button class="cbtn" onclick="answerQuiz(${i})" style="text-align:left;padding:9px 12px;margin-bottom:6px;font-size:13px">${['A','B','C','D'][i]}. ${o}</button>`
   ).join('');
   return `<div class="panel slide-up" style="border-color:rgba(201,162,39,.4)">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
       <div style="font-size:20px">🧠</div>
       <div>
-        <div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px;letter-spacing:.06em">QUICK QUIZ — correct answer earns +3 RP</div>
-        <div style="font-size:12px;color:#3d6880;margin-top:1px">Based on what you just learned</div>
+        <div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px;letter-spacing:.06em">${t('QUICK QUIZ — correct answer earns +3 RP','QUIZ RÁPIDO — resposta certa vale +3 PR')}</div>
+        <div style="font-size:12px;color:#3d6880;margin-top:1px">${t('Based on what you just learned','Com base no que você acabou de aprender')}</div>
       </div>
     </div>
-    <div style="font-size:14px;color:#e9d8a6;line-height:1.65;margin-bottom:12px;font-style:italic">"${quiz.q}"</div>
+    <div style="font-size:14px;color:#e9d8a6;line-height:1.65;margin-bottom:12px;font-style:italic">"${qText}"</div>
     ${opts}
   </div>`;
 }
@@ -2737,19 +3290,21 @@ function renderQuiz(){
 function renderQuizResult(){
   const s = G;
   const {correct, idx, quiz} = s.quizResult || {};
+  const qExplain=(GAME_LANG==='pt'&&quiz&&quiz.explain_pt)?quiz.explain_pt:(quiz?quiz.explain:'');
+  const qOptShow=(GAME_LANG==='pt'&&quiz&&quiz.opts_pt)?quiz.opts_pt:(quiz?quiz.opts:[]);
   const col = correct ? '#52b4e8' : '#f4a261';
   const icon = correct ? '✅' : '💡';
   return `<div class="panel" style="border-color:rgba(${correct?'82,180,232':'244,162,97'},.4);animation:fadeIn .25s">
     <div style="text-align:center;padding:10px 0 6px">
       <div style="font-size:32px;margin-bottom:6px">${icon}</div>
-      <div style="font-family:Cinzel,serif;color:${col};font-size:15px;margin-bottom:8px">${correct?'Correct! +3 RP':'Not quite…'}</div>
-      <div style="font-size:12px;line-height:1.7;color:#c4b8a0;margin-bottom:12px;text-align:left">${quiz.explain}</div>
-      ${!correct?`<div style="font-size:11px;color:#3d6880;margin-bottom:10px;text-align:left">The correct answer was: <strong style="color:#e9d8a6">${quiz.opts[quiz.ans]}</strong></div>`:''}
+      <div style="font-family:Cinzel,serif;color:${col};font-size:15px;margin-bottom:8px">${correct?(GAME_LANG==='pt'?'Correto! +3 PR':'Correct! +3 RP'):(GAME_LANG==='pt'?'Não foi dessa vez…':'Not quite…')}</div>
+      <div style="font-size:12px;line-height:1.7;color:#c4b8a0;margin-bottom:12px;text-align:left">${qExplain}</div>
+      ${!correct?`<div style="font-size:11px;color:#3d6880;margin-bottom:10px;text-align:left">${GAME_LANG==='pt'?'A resposta correta era:':'The correct answer was:'} <strong style="color:#e9d8a6">${qOptShow[quiz.ans]||''}</strong></div>`:''}
       <div style="display:flex;justify-content:space-between;align-items:center;background:#040e1a;border-radius:8px;padding:8px 12px;margin-bottom:10px">
-        <span style="font-size:11px;color:#3d6880">Quiz score this game</span>
-        <span style="font-family:Cinzel,serif;color:#c9a227;font-size:12px">${s.quizCorrect||0} / ${s.quizAttempted||0} correct</span>
+        <span style="font-size:11px;color:#3d6880">${GAME_LANG==='pt'?'Pontuação do quiz':' Quiz score this game'}</span>
+        <span style="font-family:Cinzel,serif;color:#c9a227;font-size:12px">${s.quizCorrect||0} / ${s.quizAttempted||0} ${GAME_LANG==='pt'?'corretos':'correct'}</span>
       </div>
-      <button onclick="continueAfterQuiz()" style="background:#c9a227;color:#000;border:none;border-radius:8px;padding:10px 28px;font-family:Cinzel,serif;font-size:12px;font-weight:600;cursor:pointer">Continue →</button>
+      <button onclick="continueAfterQuiz()" style="background:#c9a227;color:#000;border:none;border-radius:8px;padding:10px 28px;font-family:Cinzel,serif;font-size:12px;font-weight:600;cursor:pointer">${GAME_LANG==='pt'?'Continuar →':'Continue →'}</button>
     </div>
   </div>`;
 }
@@ -2757,15 +3312,15 @@ function renderQuizResult(){
 function renderLearningReport(s){
   const pct = s.quizAttempted > 0 ? Math.round((s.quizCorrect||0)/s.quizAttempted*100) : 0;
   const topics = (s.learnedTopics||[]).length;
-  const grade = pct>=80?'🌟 Outstanding':pct>=60?'✅ Good':pct>=40?'📚 Learning':'🌱 Getting Started';
+  const grade = pct>=80?(GAME_LANG==='pt'?'🌟 Excelente':'🌟 Outstanding'):pct>=60?(GAME_LANG==='pt'?'✅ Bom':'✅ Good'):pct>=40?(GAME_LANG==='pt'?'📚 Aprendendo':'📚 Learning'):(GAME_LANG==='pt'?'🌱 Começando':'🌱 Getting Started');
   return `<div style="background:#040e1a;border:1px solid rgba(82,180,232,.2);border-radius:10px;padding:12px 14px;margin-bottom:14px">
-    <div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:11px;letter-spacing:.08em;margin-bottom:8px">📚 LEARNING REPORT</div>
+    <div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:11px;letter-spacing:.08em;margin-bottom:8px">📚 ${GAME_LANG==='pt'?'📚 RELATÓRIO DE APRENDIZAGEM':'📚 LEARNING REPORT'}</div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px">
-      <div style="text-align:center;background:#060c16;border-radius:7px;padding:8px"><div style="font-size:20px">${grade.split(' ')[0]}</div><div style="color:#3d6880;font-size:9px;margin-top:2px">Quiz Grade</div><div style="font-size:11px;color:#e9d8a6">${grade.split(' ').slice(1).join(' ')}</div></div>
-      <div style="text-align:center;background:#060c16;border-radius:7px;padding:8px"><div style="font-size:20px">🧠</div><div style="color:#3d6880;font-size:9px;margin-top:2px">Quiz Score</div><div style="font-size:11px;color:#e9d8a6">${s.quizCorrect||0}/${s.quizAttempted||0} (${pct}%)</div></div>
-      <div style="text-align:center;background:#060c16;border-radius:7px;padding:8px"><div style="font-size:20px">💡</div><div style="color:#3d6880;font-size:9px;margin-top:2px">Topics Explored</div><div style="font-size:11px;color:#e9d8a6">${topics} topics</div></div>
+      <div style="text-align:center;background:#060c16;border-radius:7px;padding:8px"><div style="font-size:20px">${grade.split(' ')[0]}</div><div style="color:#3d6880;font-size:9px;margin-top:2px">${GAME_LANG==='pt'?'Nota do Quiz':'Quiz Grade'}</div><div style="font-size:11px;color:#e9d8a6">${grade.split(' ').slice(1).join(' ')}</div></div>
+      <div style="text-align:center;background:#060c16;border-radius:7px;padding:8px"><div style="font-size:20px">🧠</div><div style="color:#3d6880;font-size:9px;margin-top:2px">${GAME_LANG==='pt'?'Pontuação':'Quiz Score'}</div><div style="font-size:11px;color:#e9d8a6">${s.quizCorrect||0}/${s.quizAttempted||0} (${pct}%)</div></div>
+      <div style="text-align:center;background:#060c16;border-radius:7px;padding:8px"><div style="font-size:20px">💡</div><div style="color:#3d6880;font-size:9px;margin-top:2px">${GAME_LANG==='pt'?'Tópicos':'Topics Explored'}</div><div style="font-size:11px;color:#e9d8a6">${topics} ${GAME_LANG==='pt'?'tópicos':'topics'}</div></div>
     </div>
-    <div style="font-size:11px;color:#3d6880">Each quiz question was based on real science — the same facts that inform climate policy decisions today.</div>
+    <div style="font-size:11px;color:#3d6880">${GAME_LANG==='pt'?'Cada pergunta foi baseada em ciência real — os mesmos fatos que informam as decisões de política climática.':'Each quiz question was based on real science — the same facts that inform climate policy decisions today.'}</div>
   </div>`;
 }
 
@@ -2794,9 +3349,9 @@ function renderMPEndScreen(){
     <div style="text-align:center;margin-bottom:14px">
       <div style="font-size:44px;margin-bottom:8px">${winner===0?'🤝':winner===1?'🏆':'🏆'}</div>
       <div style="font-family:Cinzel,serif;color:#c9a227;font-size:18px;margin-bottom:4px">
-        ${winner===0?'Perfect Draw!':`${SCEN[MP.players[winner].G.sc].flag} ${SCEN[MP.players[winner].G.sc].name} Wins!`}
+        ${winner===0?(GAME_LANG==='pt'?'Empate Perfeito!':'Perfect Draw!'):`${SCEN[MP.players[winner].G.sc].flag} ${GAME_LANG==='pt'&&PT.scen[MP.players[winner].G.sc]?PT.scen[MP.players[winner].G.sc].name:SCEN[MP.players[winner].G.sc].name} ${GAME_LANG==='pt'?'Vence!':'Wins!'}`}
       </div>
-      <div style="font-size:12px;color:#3d6880">Overall Score: <span style="color:${P_HEX[1]}">${sc1}</span> vs <span style="color:${P_HEX[2]}">${sc2}</span></div>
+      <div style="font-size:12px;color:#3d6880">${GAME_LANG==='pt'?'Pontuação Geral:':'Overall Score:'} <span style="color:${P_HEX[1]}">${sc1}</span> vs <span style="color:${P_HEX[2]}">${sc2}</span></div>
     </div>
     <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-family:Cinzel,serif;font-size:10px;color:#3d6880;padding:0 10px">
       <span style="color:${P_HEX[1]}">● ${s1.flag} ${s1.name}</span>
@@ -2813,20 +3368,22 @@ function renderMPEndScreen(){
 //  SCENARIO INTRO
 // ════════════════════════════════════════════════════════════
 function renderIntro(){
-  const sc = SCEN[G.sc];
-  const df = DIFF[G.df];
+  const sc=SCEN[G.sc];
+  const scIntPT=GAME_LANG==='pt'&&PT.scen[G.sc]?PT.scen[G.sc]:sc;
+  const df=DIFF[G.df];
+  const dfPT=(GAME_LANG==='pt'&&PT.diff[G.df])?PT.diff[G.df]:df;
   const startingThreats = [];
-  if(sc.co2 > 420)  startingThreats.push({icon:'🌫️', text:'CO2 already above 420 ppm — atmosphere under severe stress'});
-  if(sc.temp > 1.4) startingThreats.push({icon:'🌡️', text:'Temperature rise already at +'+sc.temp.toFixed(1)+'°C — near critical thresholds'});
-  if(sc.nature < 60) startingThreats.push({icon:'🌿', text:'Nature health only '+sc.nature+'% — ecosystems already stressed'});
-  if(sc.food < 50)  startingThreats.push({icon:'🌾', text:'Food security at '+sc.food+'% — hunger risk is elevated'});
-  if(sc.water < 50) startingThreats.push({icon:'💧', text:'Water scarcity at '+sc.water+'% — aquifer stress already critical'});
+  if(sc.co2 > 420)  startingThreats.push({icon:'🌫️', text:GAME_LANG==='pt'?'CO2 já acima de 420 ppm — atmosfera sob estresse grave':'CO2 already above 420 ppm — atmosphere under severe stress'});
+  if(sc.temp > 1.4) startingThreats.push({icon:'🌡️', text:GAME_LANG==='pt'?'Aquecimento já em +'+sc.temp.toFixed(1)+'°C — próximo dos limiares críticos':'Temperature rise already at +'+sc.temp.toFixed(1)+'°C — near critical thresholds'});
+  if(sc.nature < 60) startingThreats.push({icon:'🌿', text:GAME_LANG==='pt'?'Saúde da natureza em apenas '+sc.nature+'% — ecossistemas já sob pressão':'Nature health only '+sc.nature+'% — ecosystems already stressed'});
+  if(sc.food < 50)  startingThreats.push({icon:'🌾', text:GAME_LANG==='pt'?'Segurança alimentar em '+sc.food+'% — risco de fome elevado':'Food security at '+sc.food+'% — hunger risk is elevated'});
+  if(sc.water < 50) startingThreats.push({icon:'💧', text:GAME_LANG==='pt'?'Escassez de água em '+sc.water+'% — aquíferos sob estresse crítico':'Water scarcity at '+sc.water+'% — aquifer stress already critical'});
 
   const strengths = [];
-  if(sc.ep > 25)   strengths.push({icon:'⚡', text:'Strong energy infrastructure — '+sc.ep+' units of production to build on'});
-  if(sc.economy > 60) strengths.push({icon:'📊', text:'Developed economy — greater capacity for clean investment'});
-  if(sc.biodiversity > 70) strengths.push({icon:'🦋', text:'Rich biodiversity — natural systems still largely intact'});
-  if(sc.nature > 75) strengths.push({icon:'🌿', text:'Healthy ecosystems — strong foundation to protect and expand'});
+  if(sc.ep > 25)   strengths.push({icon:'⚡', text:GAME_LANG==='pt'?'Forte infraestrutura energética — '+sc.ep+' unidades para construir sobre':'Strong energy infrastructure — '+sc.ep+' units of production to build on'});
+  if(sc.economy > 60) strengths.push({icon:'📊', text:GAME_LANG==='pt'?'Economia desenvolvida — maior capacidade de investimento verde':'Developed economy — greater capacity for clean investment'});
+  if(sc.biodiversity > 70) strengths.push({icon:'🦋', text:GAME_LANG==='pt'?'Rica biodiversidade — sistemas naturais amplamente intactos':'Rich biodiversity — natural systems still largely intact'});
+  if(sc.nature > 75) strengths.push({icon:'🌿', text:GAME_LANG==='pt'?'Ecossistemas saudáveis — base sólida para proteger e expandir':'Healthy ecosystems — strong foundation to protect and expand'});
 
   const threatsHtml = startingThreats.map(t =>
     `<div style="display:flex;align-items:flex-start;gap:8px;background:#0c0810;border:1px solid rgba(230,57,70,.2);border-radius:7px;padding:7px 10px;margin-bottom:4px">
@@ -2843,26 +3400,26 @@ function renderIntro(){
   return `<div class="panel slide-up" style="border-color:rgba(201,162,39,.3)">
     <div style="text-align:center;padding:8px 0 12px">
       <div style="font-size:40px;margin-bottom:6px">${sc.flag}</div>
-      <div style="font-family:Cinzel,serif;color:#c9a227;font-size:17px;letter-spacing:.06em;margin-bottom:4px">${sc.name}</div>
-      <div style="font-size:12px;color:#3d6880;margin-bottom:10px">${df.label} · ${df.years} Years</div>
-      <div style="font-size:13px;color:#c4b8a0;line-height:1.7;margin-bottom:14px;font-style:italic">${sc.desc}</div>
+      <div style="font-family:Cinzel,serif;color:#c9a227;font-size:17px;letter-spacing:.06em;margin-bottom:4px">${scIntPT.name||sc.name}</div>
+      <div style="font-size:12px;color:#3d6880;margin-bottom:10px">${dfPT.label} · ${df.years} ${GAME_LANG==='pt'?'Anos':'Years'}</div>
+      <div style="font-size:13px;color:#c4b8a0;line-height:1.7;margin-bottom:14px;font-style:italic">${scIntPT.desc}</div>
     </div>
 
-    ${startingThreats.length ? `<div style="font-family:Cinzel,serif;color:#e63946;font-size:10px;letter-spacing:.08em;margin-bottom:6px">⚠️ IMMEDIATE CHALLENGES</div>${threatsHtml}` : ''}
-    ${strengths.length ? `<div style="font-family:Cinzel,serif;color:#52b4e8;font-size:10px;letter-spacing:.08em;margin:10px 0 6px">✅ YOUR ADVANTAGES</div>${strengthsHtml}` : ''}
+    ${startingThreats.length ? `<div style="font-family:Cinzel,serif;color:#e63946;font-size:10px;letter-spacing:.08em;margin-bottom:6px">${GAME_LANG==='pt'?'⚠️ DESAFIOS IMEDIATOS':'⚠️ IMMEDIATE CHALLENGES'}</div>${threatsHtml}` : ''}
+    ${strengths.length ? `<div style="font-family:Cinzel,serif;color:#52b4e8;font-size:10px;letter-spacing:.08em;margin:10px 0 6px">${GAME_LANG==='pt'?'✅ SUAS VANTAGENS':'✅ YOUR ADVANTAGES'}</div>${strengthsHtml}` : ''}
 
     <div style="background:#040a12;border-radius:8px;padding:10px 12px;margin:10px 0 12px">
-      <div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.1em;margin-bottom:5px">SPECIAL CRISIS PRESSURES</div>
-      <div style="font-size:12px;color:#5a7a60;line-height:1.6">${sc.challenges}</div>
+      <div style="font-family:Cinzel,serif;color:#3d6880;font-size:9px;letter-spacing:.1em;margin-bottom:5px">${t('SPECIAL CRISIS PRESSURES','PRESSÕES ESPECIAIS DE CRISE')}</div>
+      <div style="font-size:12px;color:#5a7a60;line-height:1.6">${scIntPT.challenges}</div>
     </div>
 
     <div style="font-size:12px;color:#3d6880;text-align:center;margin-bottom:10px;line-height:1.6">
-      Each year you take one action. Nature, energy, food, and population must all survive.
-      <br>The planet is counting on you.
+      ${t('Each year you take one action. Nature, energy, food, and population must all survive.','A cada ano você toma uma ação. Natureza, energia, alimento e população devem todos sobreviver.')}
+      <br>${t('The planet is counting on you.','O planeta conta com você.')}
     </div>
 
     <button onclick="G.phase='build';renderUI();" style="width:100%;background:#c9a227;color:#000;border:none;border-radius:8px;padding:12px;font-family:Cinzel,serif;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.05em">
-      Begin Year 1 →
+      ${GAME_LANG==='pt'?'Começar Ano 1 →':'Begin Year 1 →'}
     </button>
   </div>`;
 }
@@ -2889,39 +3446,58 @@ function calcScore(s){
   return Math.min(100, Math.round(base * dfMult + quizBonus + achBonus));
 }
 
+function loadHighScores(){try{const r=localStorage.getItem('tb_hs');return r?JSON.parse(r):[];}catch(e){return [];}}
+function saveHighScore(s){
+  try{
+    const isPT=GAME_LANG==='pt', scores=loadHighScores();
+    scores.push({score:calcScore(s),region:SCEN[s.sc].flag+' '+((isPT&&PT.scen[s.sc])?PT.scen[s.sc].name:SCEN[s.sc].name),diff:(isPT&&PT.diff[s.df])?PT.diff[s.df].label:DIFF[s.df].label,result:s.result,date:new Date().toLocaleDateString(isPT?'pt-BR':'en-GB'),nature:Math.round(s.nature),temp:s.temp.toFixed(1)});
+    scores.sort((a,b)=>b.score-a.score);
+    localStorage.setItem('tb_hs',JSON.stringify(scores.slice(0,10)));
+  }catch(e){}
+}
+function renderHighScores(){
+  const scores=loadHighScores(),isPT=GAME_LANG==='pt';
+  if(!scores.length)return '<div style="color:#3d6880;text-align:center;padding:16px;font-size:12px">'+(isPT?'Nenhuma pontuação ainda.':'No scores yet.')+'</div>';
+  const RI={perfect:'🌟',win:'🌿',survive:'⚖️',narrow:'⚠️',collapse_nature:'💀',collapse_energy:'⚡',collapse_food:'🌾'};
+  return scores.map((e,i)=>'<div style="display:flex;align-items:center;gap:8px;background:#060c16;border:1px solid #12203a;border-radius:8px;padding:7px 10px;margin-bottom:4px"><div style="font-family:Cinzel,serif;color:'+(i===0?'#c9a227':i===1?'#7ab8e8':i===2?'#9dc88d':'#3d6880')+';font-size:14px;width:20px;text-align:center">'+(i===0?'🥇':i===1?'🥈':i===2?'🥉':i+1)+'</div><div style="flex:1"><div style="display:flex;justify-content:space-between"><span style="font-family:Cinzel,serif;color:#e9d8a6;font-size:12px">'+e.region+'</span><span style="font-family:Cinzel,serif;color:#c9a227;font-size:13px">'+e.score+'</span></div><div style="font-size:10px;color:#3d6880;margin-top:1px">'+(RI[e.result]||'🎮')+' '+e.diff+' · '+e.date+'</div></div></div>').join('');
+}
 function shareScore(){
-  const s = G;
-  const score = calcScore(s);
-  const grade = score>=90?'S':score>=75?'A':score>=60?'B':score>=45?'C':'D';
-  const bal = s.ep - s.ed;
-  const alive = Object.keys(FLAGSHIP_SPECIES).filter(k=>getSpeciesStatus(k,s).status==='Thriving').length;
-  const text = [
-    '🌍 Terra Balance — Climate Simulator',
-    '─────────────────────────────',
-    `Region: ${SCEN[s.sc].flag} ${SCEN[s.sc].name} · ${DIFF[s.df].label}`,
-    `Result: ${OUTCOMES[s.result]?.title || s.result}`,
-    `Score: ${score}/100 (Grade ${grade})`,
+  const s=G, isPT=GAME_LANG==='pt';
+  const score=calcScore(s);
+  const grade=score>=90?'S':score>=75?'A':score>=60?'B':score>=45?'C':'D';
+  const bal=s.ep-s.ed;
+  const alive=Object.keys(FLAGSHIP_SPECIES).filter(k=>getSpeciesStatus(k,s).status==='Thriving').length;
+  const scName=(isPT&&PT.scen[s.sc])?PT.scen[s.sc].name:SCEN[s.sc].name;
+  const dfLabel=(isPT&&PT.diff[s.df])?PT.diff[s.df].label:DIFF[s.df].label;
+  const oRaw=OUTCOMES[s.result]||OUTCOMES.survive;
+  const oTitle=(isPT&&PT.outcomes[s.result])?PT.outcomes[s.result].title:oRaw.title;
+  const BARS={'S':'██████████','A':'████████░░','B':'██████░░░░','C':'████░░░░░░','D':'██░░░░░░░░'};
+  const text=[
+    '🌍 Terra Balance',
+    '════════════════════════',
+    (isPT?'Região:    ':'Region:    ')+SCEN[s.sc].flag+' '+scName,
+    (isPT?'Dificuldade:':'Difficulty:')+' '+dfLabel,
+    (isPT?'Resultado: ':'Result:    ')+oTitle,
     '',
-    `🌿 Nature:  ${Math.round(s.nature)}%`,
-    `⚡ Energy:  ${bal>=0?'+':''}${bal}`,
-    `🌾 Food:    ${Math.round(s.food)}%`,
-    `👥 Pop:     ${s.pop}`,
-    `🌡️ Temp:    +${s.temp.toFixed(1)}°C`,
-    `🌫️ CO2:     ${Math.round(s.co2)} ppm`,
-    `🦋 Biodiv:  ${Math.round(s.biodiversity)}%`,
-    `🟢 Species: ${alive}/12 thriving`,
+    (isPT?'Pontuação: ':'Score:     ')+score+'/100  '+BARS[grade]+'  '+grade,
     '',
-    `🧠 Quiz:    ${s.quizCorrect||0}/${s.quizAttempted||0} correct`,
-    `🏅 Awards:  ${(s.achievements||[]).length}/16 unlocked`,
-    '─────────────────────────────',
-    '📖 Play at: terra-balance.tiiny.site',
+    '🌿 '+(isPT?'Natureza   ':'Nature     ')+Math.round(s.nature)+'%',
+    '⚡ '+(isPT?'Energia    ':'Energy     ')+(bal>=0?'+':'')+bal,
+    '🌾 '+(isPT?'Alimento   ':'Food       ')+Math.round(s.food)+'%',
+    '🌡️ Temp        +'+s.temp.toFixed(1)+'°C',
+    '🌫️ CO2         '+Math.round(s.co2)+' ppm',
+    '🦋 '+(isPT?'Biodiv.    ':'Biodiv     ')+Math.round(s.biodiversity)+'%',
+    '🟢 '+(isPT?'Espécies   ':'Species    ')+alive+'/'+Object.keys(FLAGSHIP_SPECIES).length,
+    '🧠 Quiz        '+(s.quizCorrect||0)+'/'+(s.quizAttempted||0),
+    '🏅 '+(isPT?'Conquistas ':'Awards     ')+(s.achievements||[]).length+'/16',
+    '════════════════════════',
+    '🌐 honnikorn.github.io/terra-balance',
   ].join('\n');
-  try {
+  try{
     navigator.clipboard.writeText(text);
-    showToast('📋 Score copied to clipboard!', '#52b4e8', 2200);
-  } catch(e) {
-    // Fallback — show in a prompt
-    window.prompt('Copy this score to share:', text);
+    showToast(isPT?'📋 Pontuação copiada!':'📋 Score copied!','#52b4e8',2200);
+  }catch(e){
+    window.prompt(isPT?'Copie sua pontuação:':'Copy your score:',text);
   }
 }
 
@@ -2973,19 +3549,19 @@ function renderYearSummary(){
 
   // Threat assessment
   const threats = [];
-  if(s.nature < 35)  threats.push({msg:'⚠️ Nature critically low — ecological collapse risk', col:'#e63946'});
-  else if(s.nature < 50) threats.push({msg:'⚠️ Nature below win threshold (50%)', col:'#f4a261'});
+  if(s.nature < 35)  threats.push({msg:GAME_LANG==='pt'?'⚠️ Natureza criticamente baixa — risco de colapso':'⚠️ Nature critically low — ecological collapse risk', col:'#e63946'});
+  else if(s.nature < 50) threats.push({msg:GAME_LANG==='pt'?'⚠️ Natureza abaixo do limiar de vitória (50%)':'⚠️ Nature below win threshold (50%)', col:'#f4a261'});
   if(bal < 0) threats.push({msg:'⚠️ Energy deficit — '+s.deficitYears+' consecutive year'+(s.deficitYears>1?'s':'')+(s.deficitYears>=2?' — COLLAPSE NEXT!':''), col:s.deficitYears>=2?'#e63946':'#f4a261'});
-  if(s.food < 25) threats.push({msg:'⚠️ Food insecurity — famine risk approaching', col:'#f4a261'});
-  if(s.temp > 2.2) threats.push({msg:'⚠️ Temperature '+s.temp.toFixed(1)+'°C — ecosystem tipping points near', col:'#e63946'});
+  if(s.food < 25) threats.push({msg:GAME_LANG==='pt'?'⚠️ Insegurança alimentar — risco de fome elevado':'⚠️ Food insecurity — famine risk approaching', col:'#f4a261'});
+  if(s.temp > 2.2) threats.push({msg:GAME_LANG==='pt'?'⚠️ Temperatura '+s.temp.toFixed(1)+'°C — pontos de inflexão próximos':'⚠️ Temperature '+s.temp.toFixed(1)+'°C — ecosystem tipping points near', col:'#e63946'});
 
   // Good news
   const goods = [];
-  if(s.nature > 70)  goods.push('🌿 Nature thriving at '+Math.round(s.nature)+'%');
-  if(bal > 20)       goods.push('⚡ Strong clean energy surplus: +'+bal);
-  if(s.biodiversity > 65) goods.push('🦋 Biodiversity recovering well');
-  if(s.co2 < 400)    goods.push('🌫️ CO2 below 400 ppm — historic milestone');
-  if((s.unlockedTechs||[]).length >= 8) goods.push('🔬 Research programme accelerating');
+  if(s.nature > 70)  goods.push(GAME_LANG==='pt'?'🌿 Natureza prosperando em '+Math.round(s.nature)+'%':'🌿 Nature thriving at '+Math.round(s.nature)+'%');
+  if(bal > 20)       goods.push(GAME_LANG==='pt'?'⚡ Forte excedente de energia limpa: +'+bal:'⚡ Strong clean energy surplus: +'+bal);
+  if(s.biodiversity > 65) goods.push(GAME_LANG==='pt'?'🦋 Biodiversidade se recuperando bem':'🦋 Biodiversity recovering well');
+  if(s.co2 < 400)    goods.push(GAME_LANG==='pt'?'🌫️ CO2 abaixo de 400 ppm — marco histórico':'🌫️ CO2 below 400 ppm — historic milestone');
+  if((s.unlockedTechs||[]).length >= 8) goods.push(GAME_LANG==='pt'?'🔬 Programa de pesquisa acelerando':'🔬 Research programme accelerating');
 
   const threatHtml = threats.map(t =>
     `<div style="background:#0c0810;border:1px solid rgba(230,57,70,.25);border-radius:7px;padding:7px 10px;margin-bottom:4px;font-size:12px;color:${t.col}">${t.msg}</div>`
@@ -3004,8 +3580,8 @@ function renderYearSummary(){
 
   return `<div class="panel slide-up" style="border-color:rgba(201,162,39,.3)">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-      <div style="font-family:Cinzel,serif;color:#c9a227;font-size:13px;letter-spacing:.05em">📅 Year ${ys.year} Complete</div>
-      <div style="font-size:11px;color:#3d6880">${remaining} year${remaining!==1?'s':''} remaining</div>
+      <div style="font-family:Cinzel,serif;color:#c9a227;font-size:13px;letter-spacing:.05em">📅 ${GAME_LANG==='pt'?'Ano':'Year'} ${ys.year} ${GAME_LANG==='pt'?'Concluído':'Complete'}</div>
+      <div style="font-size:11px;color:#3d6880">${remaining} ${GAME_LANG==='pt'?(remaining!==1?'anos':'ano'):(remaining!==1?'years':'year')} ${GAME_LANG==='pt'?'restante':'remaining'}</div>
     </div>
 
     <div style="background:#040a12;border-radius:6px;height:6px;margin-bottom:10px;overflow:hidden">
@@ -3019,7 +3595,7 @@ function renderYearSummary(){
 
     <div style="display:flex;gap:6px">
       <button onclick="dismissYearSummary()" style="flex:1;background:#c9a227;color:#000;border:none;border-radius:8px;padding:10px;font-family:Cinzel,serif;font-size:12px;font-weight:600;cursor:pointer">
-        Continue to Year ${s.year} →
+        ${GAME_LANG==='pt'?'Continuar para o Ano':'Continue to Year'} ${s.year} →
       </button>
       <button onclick="G.activeTab='enc';dismissYearSummary()" style="background:transparent;border:1px solid #12203a;color:#3d6880;border-radius:8px;padding:10px 14px;font-family:Cinzel,serif;font-size:11px;cursor:pointer" title="Open encyclopedia">📖</button>
     </div>
@@ -3041,17 +3617,19 @@ function renderAchievTab(){
   const earned = s.achievements.length;
   const total  = Object.keys(ACHIEVEMENTS).length;
   let html = '<div style="display:flex;justify-content:space-between;margin-bottom:10px">'
-    +'<div class="lbl" style="margin-bottom:0">🏅 ACHIEVEMENTS</div>'
-    +'<div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px">'+earned+' / '+total+' unlocked</div>'
+    +'<div class="lbl" style="margin-bottom:0">'+t('🏅 ACHIEVEMENTS','🏅 CONQUISTAS')+'</div>'
+    +'<div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px">'+earned+' / '+total+' '+(GAME_LANG==='pt'?'desbloqueadas':'unlocked')+'</div>'
     +'</div>';
   Object.entries(ACHIEVEMENTS).forEach(([id, ach])=>{
+    const achName = (GAME_LANG==='pt' && PT.achiev[id]) ? PT.achiev[id].name : ach.name;
+    const achDesc = (GAME_LANG==='pt' && PT.achiev[id]) ? PT.achiev[id].desc  : ach.desc;
     const done = s.achievements.includes(id);
     html += '<div style="display:flex;align-items:center;gap:10px;background:#060c16;border:1px solid '
       +(done?'rgba(201,162,39,.4)':'#12203a')+';border-radius:8px;padding:9px 12px;margin-bottom:5px;'
       +'opacity:'+(done?'1':'.45')+'">'
       +'<div style="font-size:22px;flex-shrink:0">'+(done?ach.icon:'🔒')+'</div>'
-      +'<div><div style="font-family:Cinzel,serif;font-size:11px;color:'+(done?'#c9a227':'#3d6880')+'">'+ach.name+'</div>'
-      +'<div style="font-size:11px;color:#5a6a58;margin-top:2px">'+ach.desc+'</div></div>'
+      +'<div><div style="font-family:Cinzel,serif;font-size:11px;color:'+(done?'#c9a227':'#3d6880')+'">'+(GAME_LANG==="pt"&&PT.achievements[id]?PT.achievements[id].name:ach.name)+'</div>'
+      +'<div style="font-size:11px;color:#5a6a58;margin-top:2px">'+(GAME_LANG==="pt"&&PT.achievements[id]?PT.achievements[id].desc:ach.desc)+'</div></div>'
       +'</div>';
   });
   return '<div style="max-height:340px;overflow-y:auto;padding-right:2px">'+html+'</div>';
@@ -3059,10 +3637,16 @@ function renderAchievTab(){
 
 function renderUI(){
   if(!G||!G.phase) return;
-  document.getElementById('yr-d').textContent = 'Yr ' + G.year;
+  document.getElementById('yr-d').textContent = ui('yearNum') + ' ' + G.year;
   document.getElementById('yr-pg').style.width = ((G.year-1)/G.maxYears*100) + '%';
   document.getElementById('hud').innerHTML = hudHtml();
 
+  let _lt=document.getElementById('lang-toggle');
+  if(!_lt){_lt=document.createElement('button');_lt.id='lang-toggle';
+    _lt.style.cssText='position:fixed;top:8px;right:8px;background:#060c16;border:1px solid #12203a;border-radius:6px;padding:5px 11px;color:#7ab8e8;font-family:Cinzel,serif;font-size:10px;cursor:pointer;z-index:5000;letter-spacing:.04em';
+    document.body.appendChild(_lt);}
+  _lt.textContent=GAME_LANG==='pt'?'🇬🇧 EN':'🇧🇷 PT';
+  _lt.onclick=function(){setLang(GAME_LANG==='en'?'pt':'en');};
   const [headline,hlCol] = getHeadline(G);
   const headlineHtml = `<div style="font-size:10px;color:${hlCol};font-style:italic;padding:4px 12px;text-align:center;border-bottom:1px solid #12203a;margin-bottom:0">📰 ${headline}</div>`;
 
@@ -3073,7 +3657,8 @@ function renderUI(){
       return;
     }
     // Single player end or one player finished
-    const o   = OUTCOMES[G.result] || OUTCOMES.survive;
+    const oRaw = OUTCOMES[G.result] || OUTCOMES.survive;
+    const o = (GAME_LANG==='pt'&&PT.outcomes[G.result]) ? {...oRaw, title:PT.outcomes[G.result].title, body:PT.outcomes[G.result].body} : oRaw;
     const bal = G.ep - G.ed;
     const alive = Object.keys(FLAGSHIP_SPECIES).filter(k=>getSpeciesStatus(k,G).status==='Thriving').length;
     const finalScore = calcScore(G);
@@ -3100,11 +3685,11 @@ function renderUI(){
         ${renderLearningReport(G)}
         ${renderAchievSummary(G)}
         <div style="display:flex;gap:6px;margin-top:12px">
-          <button class="rebtn" style="flex:1" onclick="showStart()">🔄 Play Again</button>
-          <button onclick="shareScore()" style="background:#0d1828;color:#52b4e8;border:1px solid #12203a;border-radius:8px;padding:11px 16px;font-family:Cinzel,serif;font-size:11px;cursor:pointer">📋 Share Score</button>
+          <button class="rebtn" style="flex:1" onclick="showStart()">${GAME_LANG==='pt'?'🔄 Jogar Novamente':'🔄 Play Again'}</button>
+          <button onclick="shareScore()" style="background:#0d1828;color:#52b4e8;border:1px solid #12203a;border-radius:8px;padding:11px 16px;font-family:Cinzel,serif;font-size:11px;cursor:pointer">${GAME_LANG==='pt'?'📋 Compartilhar':'📋 Share Score'}</button>
         </div>
         ${MP.enabled?'<div style="color:#3d6880;font-size:11px;text-align:center;margin-top:8px">Waiting for other player to finish…</div>':''}
-        <div style="color:#3d6880;font-size:10px;text-align:center;margin-top:8px">${SCEN[G.sc].flag} ${SCEN[G.sc].name} · ${DIFF[G.df].label} · Year ${Math.min(G.year,G.maxYears)} of ${G.maxYears}</div>
+        <div style="color:#3d6880;font-size:10px;text-align:center;margin-top:8px">${SCEN[G.sc].flag} ${GAME_LANG==='pt'&&PT.scen[G.sc]?PT.scen[G.sc].name:SCEN[G.sc].name} · ${GAME_LANG==='pt'&&PT.diff[G.df]?PT.diff[G.df].label:DIFF[G.df].label} · ${GAME_LANG==='pt'?'Ano':'Year'} ${Math.min(G.year,G.maxYears)} ${GAME_LANG==='pt'?'de':'of'} ${G.maxYears}</div>
       </div>`;
     return;
   }
@@ -3143,6 +3728,8 @@ function renderUI(){
     actHtml = renderForestChooser();
   } else if(G.phase === 'event' && G.event){
     const ev = G.event;
+    const evTitle=(GAME_LANG==='pt'&&PT.eventTitles&&PT.eventTitles[ev.id])?PT.eventTitles[ev.id]:ev.title;
+    const evDesc =(GAME_LANG==='pt'&&PT.eventDescs&&PT.eventDescs[ev.id])?PT.eventDescs[ev.id]:ev.desc;
     const choices = ev.choices.map((c,i)=>{
       const ef=scaleEf(c.ef,G), fxs=[];
       if(ef.e!==0) fxs.push(`<span style="color:${ef.e>0?'#48cae4':'#e63946'}">${ef.e>0?'+':''}${ef.e}⚡</span>`);
@@ -3154,12 +3741,14 @@ function renderUI(){
     }).join('');
     actHtml = `${headlineHtml}<div style="padding:8px 12px 0">${advHtml}</div>
       <div class="panel event-pulse" style="border-color:rgba(244,162,97,.35)">
-        <div style="font-family:Cinzel,serif;color:#f4a261;font-size:13px;margin-bottom:6px;letter-spacing:.03em">${ev.title}</div>
-        <div style="font-size:13px;line-height:1.65;margin-bottom:12px;color:#c4b8a0">${ev.desc}</div>
-        <div class="lbl" style="margin-bottom:7px">YOUR DECISION:</div>${choices}
+        <div style="font-family:Cinzel,serif;color:#f4a261;font-size:13px;margin-bottom:6px;letter-spacing:.03em">${evTitle}</div>
+        <div style="font-size:13px;line-height:1.65;margin-bottom:12px;color:#c4b8a0">${evDesc}</div>
+        <div class="lbl" style="margin-bottom:7px">${GAME_LANG==='pt'?'SUA DECISÃO:':'YOUR DECISION:'}</div>${choices}
       </div>`;
   } else if(G.phase === 'build'){
-    const tabs = [['build','🏗️ Build'],['policy','📋 Policy'],['tech','🔬 Research'],['wildlife','🦋 Species'],['achiev','🏅 Awards'],['enc','📖 Facts']];
+    const tabKeys = ['build','policy','tech','wildlife','achiev','enc'];
+  const tabLabels = ui('tabs');
+  const tabs = tabKeys.map((k,i)=>[k, tabLabels[i]]);
     const at   = G.activeTab || 'build';
     let tabContent = '';
     if(at==='build')    tabContent = renderBuildTab();
@@ -3270,7 +3859,9 @@ function popAchievements(state){
   const id  = s.newAchievements.shift();
   const ach = ACHIEVEMENTS[id];
   if(!ach) return;
-  showToast(ach.icon + ' <strong>' + ach.name + '</strong> — ' + ach.desc, '#c9a227', 3200);
+  const achN = (GAME_LANG==='pt'&&PT.achiev[id])?PT.achiev[id].name:ach.name;
+  const achD = (GAME_LANG==='pt'&&PT.achiev[id])?PT.achiev[id].desc:ach.desc;
+  showToast(ach.icon + ' <strong>' + achN + '</strong> — ' + achD, '#c9a227', 3200);
   setTimeout(()=>popAchievements(state), 3400);
 }
 
@@ -3354,7 +3945,8 @@ function showTutorialStep(){
     tutorialActive = false;
     return;
   }
-  const step = TUTORIAL_STEPS[tutorialStep];
+  const rawStep = TUTORIAL_STEPS[tutorialStep];
+  const step = (GAME_LANG==='pt' && PT.tutorial[tutorialStep]) ? {...rawStep, title:PT.tutorial[tutorialStep].title, body:PT.tutorial[tutorialStep].body} : rawStep;
   const total = TUTORIAL_STEPS.length;
   const overlay = document.createElement('div');
   overlay.id = 'tb-tutorial';
@@ -3371,7 +3963,7 @@ function showTutorialStep(){
     + '<div style="display:flex;justify-content:space-between;align-items:center">'
     + '<button onclick="skipTutorial()" style="background:transparent;border:none;color:#3d6880;cursor:pointer;font-size:11px;font-family:Cinzel,serif">Skip tutorial</button>'
     + '<button onclick="advanceTutorial()" style="background:#c9a227;color:#000;border:none;border-radius:7px;padding:7px 20px;font-family:Cinzel,serif;font-size:11px;font-weight:600;cursor:pointer">'
-    + (tutorialStep < total-1 ? 'Next →' : 'Got it! Let\'s play')+'</button>'
+    + (tutorialStep < total-1 ? t('Next →','Próximo →') : t("Got it! Let's play",'Entendi! Vamos jogar'))+'</button>'
     + '</div></div>';
   document.body.appendChild(overlay);
 }
@@ -3404,6 +3996,25 @@ function maybeTutorial(){
 // ════════════════════════════════════════════════════════════
 //  START SCREEN
 // ════════════════════════════════════════════════════════════
+const SAVE_KEY='tb_sv3';
+function saveGame(){try{localStorage.setItem(SAVE_KEY,JSON.stringify({v:3,G:JSON.stringify(G),sc:selSc,sc2:selSc2,df:selDf,ts:Date.now(),yr:G.year,region:SCEN[selSc].flag+' '+SCEN[selSc].name}));showToast(GAME_LANG==='pt'?'💾 Guardado!':'💾 Saved!','#52b4e8',1800);}catch(e){}}
+function hasSave(){try{const r=localStorage.getItem(SAVE_KEY);if(!r)return null;const sv=JSON.parse(r);return sv.v===3?sv:null;}catch(e){return null;}}
+function deleteSave(){try{localStorage.removeItem(SAVE_KEY);renderStart();}catch(e){}}
+function loadGame(){
+  try{
+    const save=hasSave();if(!save)return;
+    G=JSON.parse(save.G);selSc=save.sc;selSc2=save.sc2||'africa';selDf=save.df;
+    document.getElementById('s-sc').style.display='none';
+    document.getElementById('g-sc').style.display='block';
+    if(!sceneReady)initScene();
+    const sc2=SCEN[G.sc]||SCEN.global;
+    earthGroup.rotation.y=sc2.earthRot||0;camTheta=sc2.camT||0;camPhi=sc2.camP||0.26;updateCamera();
+    if(animId)cancelAnimationFrame(animId);lastTs=0;animate(0);
+    document.getElementById('yr-mx').textContent=ui('of')+' '+G.maxYears;
+    showToast(GAME_LANG==='pt'?'▶ Restaurado — Ano '+G.year:'▶ Restored — Year '+G.year,'#c9a227',2400);
+    G.phase=G.phase||'build';renderUI();
+  }catch(e){showToast(GAME_LANG==='pt'?'Erro ao carregar.':'Error loading.','#e63946',2000);}
+}
 function showStart(){
   if(animId){ cancelAnimationFrame(animId); animId=null; }
   document.getElementById('s-sc').style.display = 'block';
@@ -3418,9 +4029,10 @@ function regionGrid(selectedKey, changeFunc, color){
     var sel = k===selectedKey?' sel':'';
     var bc  = k===selectedKey ? color : '#12203a';
     var fc  = k===selectedKey ? color : '#7ab8e8';
+    var sname = (GAME_LANG==='pt' && PT.scen[k]) ? PT.scen[k].name : s.name;
     return '<div class="sc-c'+sel+'" onclick="'+changeFunc+'(\''+k+'\')" style="border-color:'+bc+'">'+
       '<div style="font-size:20px;margin-bottom:2px">'+s.flag+'</div>'+
-      '<div style="font-family:Cinzel,serif;font-size:8px;color:'+fc+';line-height:1.3">'+s.name+'</div>'+
+      '<div style="font-family:Cinzel,serif;font-size:8px;color:'+fc+';line-height:1.3">'+sname+'</div>'+
       '</div>';
   });
   return '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:8px">'+cells.join('')+'</div>';
@@ -3440,77 +4052,90 @@ function statsGrid(s){
 function diffGrid(){
   var cells = Object.entries(DIFF).map(function(entry){
     var k=entry[0], d=entry[1];
+    var lbl = (GAME_LANG==='pt' && PT.diff[k]) ? PT.diff[k].label : d.label;
+    var dsc = (GAME_LANG==='pt' && PT.diff[k]) ? PT.diff[k].desc  : d.desc;
     var sel = k===selDf?' sel':'';
     return '<div class="df-b'+sel+'" onclick="pickDf(\''+k+'\')">'+
-      '<div style="font-size:11px;margin-bottom:2px">'+d.label+'</div>'+
-      '<div style="font-size:10px;color:#3d6880;font-family:\'EB Garamond\',serif">'+d.desc+'</div></div>';
+      '<div style="font-size:11px;margin-bottom:2px">'+lbl+'</div>'+
+      '<div style="font-size:10px;color:#3d6880;font-family:\'EB Garamond\',serif">'+dsc+'</div></div>';
   });
   return cells.join('');
 }
 
 function renderStart(){
   const sc  = SCEN[selSc];
+  const scPT  = GAME_LANG==='pt'&&PT.scen[selSc] ? PT.scen[selSc] : sc;
+  const sc2PT = GAME_LANG==='pt'&&PT.scen[selSc2] ? PT.scen[selSc2] : SCEN[selSc2];
   const sc2 = SCEN[selSc2];
   const mpToggle = '<div style="display:flex;gap:5px;margin-bottom:14px">'
     +'<div class="df-b'+(!selMp?' sel':'')+'" onclick="selMp=false;renderStart()" style="flex:1;text-align:center">'
     +'<div style="font-size:16px;margin-bottom:3px">🌍</div>'
-    +'<div style="font-size:12px">1 Player</div>'
+    +'<div style="font-size:12px">'+ui('mode1p')+'</div>'
     +'<div style="font-size:10px;color:#3d6880;margin-top:2px">Solo challenge</div></div>'
     +'<div class="df-b'+(selMp?' sel':'')+'" onclick="selMp=true;renderStart()" style="flex:1;text-align:center">'
     +'<div style="font-size:16px;margin-bottom:3px">🤝</div>'
-    +'<div style="font-size:12px">2 Players</div>'
+    +'<div style="font-size:12px">'+ui('mode2p')+'</div>'
     +'<div style="font-size:10px;color:#3d6880;margin-top:2px">Hot-seat vs mode</div></div></div>';
 
   let regionSection = '';
   if(!selMp){
     regionSection = '<div class="panel">'
-      +'<div class="lbl">CHOOSE YOUR REGION</div>'
+      +'<div class="lbl">'+ui('chooseRegion')+'</div>'
       +regionGrid(selSc,'pickSc',P_HEX[1])
       +'<div style="background:#040a12;border-radius:8px;padding:10px;font-size:12px;color:#c4b8a0">'
-      +'<div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px;margin-bottom:4px">'+sc.flag+' '+sc.name+'</div>'
-      +'<div style="margin-bottom:7px">'+sc.desc+'</div>'
+      +'<div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px;margin-bottom:4px">'+sc.flag+' '+scPT.name+'</div>'
+      +'<div style="margin-bottom:7px">'+scPT.desc+'</div>'
       +statsGrid(sc)
-      +'<div style="font-size:10px;color:#3d6880;border-top:1px solid #12203a;padding-top:5px">'+sc.challenges+'</div>'
+      +'<div style="font-size:10px;color:#3d6880;border-top:1px solid #12203a;padding-top:5px">'+scPT.challenges+'</div>'
       +'</div></div>';
   } else {
     regionSection = '<div class="panel">'
       +'<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px">'
       +'<div style="width:10px;height:10px;border-radius:50%;background:'+P_HEX[1]+';flex-shrink:0"></div>'
-      +'<div class="lbl" style="margin-bottom:0">PLAYER 1 — CHOOSE REGION</div></div>'
+      +'<div class="lbl" style="margin-bottom:0">'+ui('p1region')+'</div></div>'
       +regionGrid(selSc,'pickSc',P_HEX[1])
       +'<div style="background:#040a12;border-radius:7px;padding:8px 10px;font-size:11px;color:#c4b8a0;margin-bottom:12px">'
-      +'<div style="font-family:Cinzel,serif;color:'+P_HEX[1]+';font-size:10px;margin-bottom:3px">'+sc.flag+' '+sc.name+'</div>'
+      +'<div style="font-family:Cinzel,serif;color:'+P_HEX[1]+';font-size:10px;margin-bottom:3px">'+sc.flag+' '+scPT.name+'</div>'
       +statsGrid(sc)+'</div>'
       +'<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;border-top:1px solid #12203a;padding-top:10px">'
       +'<div style="width:10px;height:10px;border-radius:50%;background:'+P_HEX[2]+';flex-shrink:0"></div>'
-      +'<div class="lbl" style="margin-bottom:0">PLAYER 2 — CHOOSE REGION</div></div>'
+      +'<div class="lbl" style="margin-bottom:0">'+ui('p2region')+'</div></div>'
       +regionGrid(selSc2,'pickSc2',P_HEX[2])
       +'<div style="background:#040a12;border-radius:7px;padding:8px 10px;font-size:11px;color:#c4b8a0">'
-      +'<div style="font-family:Cinzel,serif;color:'+P_HEX[2]+';font-size:10px;margin-bottom:3px">'+sc2.flag+' '+sc2.name+'</div>'
+      +'<div style="font-family:Cinzel,serif;color:'+P_HEX[2]+';font-size:10px;margin-bottom:3px">'+sc2.flag+' '+sc2PT.name+'</div>'
       +statsGrid(sc2)+'</div>'
       +(selSc===selSc2?'<div style="color:#e63946;font-size:11px;text-align:center;margin-top:8px">⚠️ Players must choose different regions</div>':'')
       +'</div>';
   }
 
+  const _sv2=hasSave();
+  const _saveSlot=_sv2?(()=>{const isPT=GAME_LANG==='pt';const ago=Math.round((Date.now()-_sv2.ts)/60000);const agoStr=ago<60?ago+'m':Math.round(ago/60)+'h';return '<div style="background:#060e1a;border:1px solid rgba(201,162,39,.4);border-radius:10px;padding:10px 14px;margin-bottom:8px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><div style="font-family:Cinzel,serif;color:#c9a227;font-size:11px">▶ '+(isPT?'Continuar':'Continue Saved Game')+'</div><div style="font-size:10px;color:#3d6880">'+(isPT?'guardado':'saved')+' '+agoStr+(isPT?' atrás':' ago')+'</div></div><div style="display:flex;gap:5px"><button onclick="loadGame()" style="flex:1;background:#c9a227;color:#000;border:none;border-radius:7px;padding:8px;font-family:Cinzel,serif;font-size:11px;font-weight:600;cursor:pointer">▶ '+(isPT?'Continuar':'Continue')+' — '+_sv2.region+' '+(isPT?'Ano':'Year')+' '+_sv2.yr+'</button><button onclick="deleteSave()" style="background:transparent;border:1px solid #12203a;color:#3d6880;border-radius:7px;padding:8px 10px;font-family:Cinzel,serif;font-size:10px;cursor:pointer">'+(isPT?'Descartar':'Discard')+'</button></div></div>';})():'';
+  const _hsHtml='<div style="background:#060c16;border:1px solid #12203a;border-radius:10px;padding:10px 13px;margin-bottom:8px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><div style="font-family:Cinzel,serif;color:#c9a227;font-size:10px;letter-spacing:.1em">🏆 '+(GAME_LANG==='pt'?'MELHORES PONTUAÇÕES':'HIGH SCORES')+'</div><button onclick="try{localStorage.removeItem(\'tb_hs\');renderStart();}catch(e){}" style="background:transparent;border:none;color:#3d6880;cursor:pointer;font-size:10px;font-family:Cinzel,serif">'+(GAME_LANG==='pt'?'Limpar':'Clear')+'</button></div>'+renderHighScores()+'</div>';
   document.getElementById('s-sc').innerHTML =
-    '<div style="text-align:center;padding:16px 0 12px">'
-    +'<div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:26px;letter-spacing:.1em">Terra Balance</div>'
-    +'<div style="color:#7ab8e8;font-size:10px;letter-spacing:.1em;margin-top:2px">FULL SIMULATOR v3 · GLOBE EDITION</div>'
-    +'<div style="color:#3d6880;font-size:13px;margin-top:6px;font-style:italic">Build a civilisation. Protect the planet. Survive to the end.</div>'
+    _saveSlot+_hsHtml+
+    '<div style="display:flex;justify-content:flex-end;padding:8px 4px 0;gap:5px">'
+    +'<button onclick="setLang(\'en\')" style="background:'+(GAME_LANG==='en'?'#7ab8e8':'#060c16')+';color:'+(GAME_LANG==='en'?'#000':'#7ab8e8')+';border:1px solid #12203a;border-radius:6px;padding:4px 10px;font-family:Cinzel,serif;font-size:10px;cursor:pointer">🇬🇧 EN</button>'
+    +'<button onclick="setLang(\'pt\')" style="background:'+(GAME_LANG==='pt'?'#7ab8e8':'#060c16')+';color:'+(GAME_LANG==='pt'?'#000':'#7ab8e8')+';border:1px solid #12203a;border-radius:6px;padding:4px 10px;font-family:Cinzel,serif;font-size:10px;cursor:pointer">🇧🇷 PT</button>'
     +'</div>'
-    +'<div class="panel"><div class="lbl">GAME MODE</div>'+mpToggle+'</div>'
+    +'<div style="text-align:center;padding:12px 0 12px">'
+    +'<div style="font-family:Cinzel,serif;color:#7ab8e8;font-size:26px;letter-spacing:.1em">'+ui('title')+'</div>'
+    +'<div style="color:#7ab8e8;font-size:10px;letter-spacing:.1em;margin-top:2px">'+ui('subtitle')+'</div>'
+    +'<div style="color:#3d6880;font-size:13px;margin-top:6px;font-style:italic">'+ui('tagline')+'</div>'
+    +'</div>'
+    +'<div class="panel"><div class="lbl">'+ui('gameMode')+'</div>'+mpToggle+'</div>'
     +regionSection
-    +'<div class="panel"><div class="lbl">DIFFICULTY</div>'
+    +'<div class="panel"><div class="lbl">'+ui('difficulty')+'</div>'
     +'<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px">'+diffGrid()+'</div></div>'
     +'<div style="text-align:center;padding-bottom:12px">'
     +'<button class="stbtn" onclick="initGame()" '+(selMp&&selSc===selSc2?'disabled style="opacity:.4;cursor:not-allowed"':'')
-    +'>Begin Civilisation</button></div>';
+    +'>'+ui('beginCiv')+'</button></div>';
 }
 
 function pickSc(k){  selSc  = k; renderStart(); }
 function pickSc2(k){ selSc2 = k; renderStart(); }
 function pickDf(k){  selDf  = k; renderStart(); }
 
+loadLang();
 showStart();
 
 </script>
