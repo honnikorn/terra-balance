@@ -1,0 +1,12 @@
+# Build outputs
+build/
+app/build/
+
+# Signing credentials — NEVER commit these
+keystore.properties
+keystore/*.jks
+keystore/*.keystore
+local.properties
+
+# Gradle
+.gradle/

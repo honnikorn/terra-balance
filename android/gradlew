@@ -1,0 +1,60 @@
+#!/bin/sh
+# Gradle wrapper script for Unix
+# Generated for Terra Balance
+
+##############################################################################
+# Gradle start up script for UN*X
+##############################################################################
+set -e
+
+APP_NAME="Gradle"
+APP_BASE_NAME=`basename "$0"`
+
+# Default JVM options
+DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
+
+# Use the maximum available, or set MAX_FD != -1 to use that value.
+MAX_FD="maximum"
+
+die () {
+    echo
+    echo "ERROR: $*"
+    echo
+    exit 1
+}
+
+warn () {
+    echo "WARNING: $*"
+}
+
+# Determine the Java home.
+if [ -n "$JAVA_HOME" ] ; then
+    if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
+        JAVACMD="$JAVA_HOME/jre/sh/java"
+    else
+        JAVACMD="$JAVA_HOME/bin/java"
+    fi
+    if [ ! -x "$JAVACMD" ] ; then
+        die "JAVA_HOME is set to an invalid directory: $JAVA_HOME"
+    fi
+else
+    JAVACMD="java"
+    which java > /dev/null 2>&1 || die "JAVA_HOME is not set and no 'java' command could be found."
+fi
+
+APP_HOME=`cd "${APP_BASE_NAME%/*}" > /dev/null; pwd -P`
+
+CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
+
+# Determine the OS
+case `uname` in
+    CYGWIN* )
+        CLASSPATH=`cygpath --path --mixed "$CLASSPATH"`
+    ;;
+esac
+
+GRADLE_OPTS="${GRADLE_OPTS:-} $DEFAULT_JVM_OPTS"
+exec "$JAVACMD" $GRADLE_OPTS \
+    -classpath "$CLASSPATH" \
+    org.gradle.wrapper.GradleWrapperMain \
+    "$@"

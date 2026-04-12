@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Android signing — NEVER commit
+android/keystore/*.jks
+android/keystore/*.keystore
+android/keystore.properties
+android/local.properties
