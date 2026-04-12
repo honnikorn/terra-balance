@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Terra Balance adaptive icon foreground — stylised globe.
+    Designed to sit within Android's 72dp safe zone (108dp total canvas).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Atmosphere glow ring -->
+    <path
+        android:fillColor="#0052B4E8"
+        android:pathData="M54,9 A45,45 0 1,1 53.99,9 Z" />
+
+    <!-- Ocean base -->
+    <path
+        android:fillColor="#0F3764"
+        android:pathData="M54,13 A41,41 0 1,1 53.99,13 Z" />
+
+    <!-- Africa + Europe (right side) -->
+    <path
+        android:fillColor="#165032"
+        android:pathData="M60,30 L72,28 L75,38 L70,52 L64,68 L54,72 L50,60 L52,44 Z" />
+    <path
+        android:fillColor="#2D7846"
+        android:pathData="M62,32 L70,31 L73,39 L68,50 L62,63 L55,66 L52,56 L54,44 Z" />
+
+    <!-- Americas (left side) -->
+    <path
+        android:fillColor="#165032"
+        android:pathData="M28,26 L42,22 L48,30 L46,44 L36,52 L26,46 L25,34 Z" />
+    <path
+        android:fillColor="#2D7846"
+        android:pathData="M31,28 L41,25 L46,31 L44,43 L36,50 L28,45 L27,35 Z" />
+
+    <!-- South America -->
+    <path
+        android:fillColor="#165032"
+        android:pathData="M34,54 L44,52 L48,62 L44,78 L36,80 L30,70 L30,58 Z" />
+
+    <!-- Asia (top right) -->
+    <path
+        android:fillColor="#165032"
+        android:pathData="M64,18 L82,16 L85,26 L78,32 L64,34 L60,26 Z" />
+    <path
+        android:fillColor="#2D7846"
+        android:pathData="M66,20 L80,18 L82,26 L76,31 L65,33 L61,26 Z" />
+
+    <!-- Australia -->
+    <path
+        android:fillColor="#2D7846"
+        android:pathData="M72,62 L82,60 L84,70 L78,76 L70,74 L68,66 Z" />
+
+    <!-- Polar ice cap (north) -->
+    <path
+        android:fillColor="#C8DCF0"
+        android:pathData="M40,16 A16,8 0 1,1 68,16 A16,8 0 1,1 40,16 Z" />
+
+    <!-- Highlight sheen (top-left quadrant) -->
+    <path
+        android:fillColor="#18FFFFFF"
+        android:pathData="M26,28 A22,18 0 0,1 50,16 A22,18 0 0,1 26,28 Z" />
+
+    <!-- Gold orbit arc -->
+    <path
+        android:strokeColor="#C9A227"
+        android:strokeWidth="1.8"
+        android:fillColor="#00000000"
+        android:pathData="M20,65 A38,38 0 0,1 88,43" />
+
+</vector>

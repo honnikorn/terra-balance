@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Terra Balance</string>
+    <string name="launch_url">https://honnikorn.github.io/terra-balance/</string>
+</resources>
