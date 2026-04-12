@@ -1,0 +1,7 @@
+# PDF files — add your documents here locally; don't commit them
+pdfs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
